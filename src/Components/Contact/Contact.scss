@@ -1,0 +1,14 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  width: 50%;
+  height: 50px;
+}
+
+.navbar-container > div {
+  padding: 0 25px;
+  cursor: pointer;
+}
