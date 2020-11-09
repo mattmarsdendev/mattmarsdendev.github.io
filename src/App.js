@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import Welcome from "./Components/Welcome/Welcome";
+import Contact from "./Components/Contact/Contact";
+import Experience from "./Components/Experience/Experience";
 import Navbar from "./Components/Navbar/Navbar";
 import { useState } from "react";
 
@@ -36,6 +38,8 @@ function App() {
       <div className="App-container">
         <div className="card-container">
           {welcome && <Welcome />}
+          {contact && <Contact />}
+          {experience && <Experience />}
           <Navbar
             handleExperience={handleExperience}
             handlePortfolio={handlePortfolio}
