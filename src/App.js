@@ -33,6 +33,13 @@ function App() {
     setWelcome(false);
   };
 
+  const handleWelcome = () => {
+    setContact(false);
+    setPortfolio(false);
+    setExperience(false);
+    setWelcome(true);
+  };
+
   return (
     <div className="App">
       <div className="App-container">
@@ -44,6 +51,7 @@ function App() {
             handleExperience={handleExperience}
             handlePortfolio={handlePortfolio}
             handleContact={handleContact}
+            handleWelcome={handleWelcome}
           />
         </div>
       </div>
