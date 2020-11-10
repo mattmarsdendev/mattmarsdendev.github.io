@@ -9,6 +9,17 @@
   padding-left: 25px;
   font-family: "Fredoka One", cursive;
   color: #3c7a89;
+  background-color: #dbc2cf;
+  animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
 }
 
 .navbar-container > div {
