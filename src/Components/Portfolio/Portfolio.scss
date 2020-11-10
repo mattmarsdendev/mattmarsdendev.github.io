@@ -1,0 +1,22 @@
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: calc(100% - 50px);
+  font-weight: 900;
+  width: calc(100% - 25px);
+  padding-left: 25px;
+  font-family: "Fredoka One", cursive;
+  color: #3c7a89;
+  animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
