@@ -44,13 +44,13 @@ function App() {
   return (
     <div className="App">
       <div className="App-container">
-        <Navbar
-          handleExperience={handleExperience}
-          handlePortfolio={handlePortfolio}
-          handleContact={handleContact}
-          handleWelcome={handleWelcome}
-        />
         <div className="card-container">
+          <Navbar
+            handleExperience={handleExperience}
+            handlePortfolio={handlePortfolio}
+            handleContact={handleContact}
+            handleWelcome={handleWelcome}
+          />
           {welcome && <Welcome />}
           {contact && <Contact />}
           {experience && <Experience />}

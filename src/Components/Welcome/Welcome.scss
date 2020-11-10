@@ -6,13 +6,15 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  height: calc(100% - 50px);
+  // height: calc(100% - 50px);
+  height: 100%;
   font-weight: 900;
   width: calc(100% - 25px);
   padding-left: 25px;
   font-family: "Fredoka One", cursive;
   color: #3c7a89;
   animation: slide 0.5s forwards;
+  background-color: #deffd6;
 }
 
 @keyframes slide {
