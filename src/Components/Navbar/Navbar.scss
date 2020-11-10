@@ -5,6 +5,10 @@
   align-items: center;
   width: 50%;
   height: 50px;
+  position: absolute;
+  z-index: 10;
+  top: calc(100% - 75px);
+  left: 30px;
 }
 
 .navbar-container > div {
