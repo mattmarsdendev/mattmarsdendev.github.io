@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 .welcome {
-  color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  // height: calc(100% - 50px);
   height: 100%;
   font-weight: 900;
   width: calc(100% - 25px);
   padding-left: 25px;
-  font-family: "Fredoka One", cursive;
-  color: #3c7a89;
+  padding-bottom: 25px;
+  color: white;
   animation: slide 0.5s forwards;
-  background-color: #deffd6;
+  background-color: #527e99;
 }
 
 @keyframes slide {
@@ -27,8 +25,11 @@
 }
 
 .welcome > h1 {
-  //   font-weight: 900;
   font-size: 50px;
+}
+
+.full-stack {
+  font-size: 30px;
 }
 
 .name {
@@ -36,6 +37,6 @@
 }
 
 .seattle-based {
-  font-size: 30px;
-  letter-spacing: 2px;
+  font-size: 35px;
+  letter-spacing: 1.5px;
 }
