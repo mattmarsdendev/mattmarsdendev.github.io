@@ -45,12 +45,12 @@ function App() {
     <div className="App">
       <div className="App-container">
         <div className="card-container">
-          <Navbar
+          {/* <Navbar
             handleExperience={handleExperience}
             handlePortfolio={handlePortfolio}
             handleContact={handleContact}
             handleWelcome={handleWelcome}
-          />
+          /> */}
           {welcome && <Welcome />}
           {contact && <Contact />}
           {experience && <Experience />}
