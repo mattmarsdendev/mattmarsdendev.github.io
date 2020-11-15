@@ -17,7 +17,7 @@ const Welcome = () => {
 
   const toolHTML = tools.map((tool) => (
     <div className="single-tool">
-      <div>▹</div>
+      <div className="arrow">▹</div>
       <div>{tool}</div>
     </div>
   ));
@@ -32,7 +32,7 @@ const Welcome = () => {
       </div>
       <div className="tools">
         <h3>Here's some tools I use</h3>
-        {toolHTML}
+        <div className="tool-container">{toolHTML}</div>
       </div>
     </div>
   );

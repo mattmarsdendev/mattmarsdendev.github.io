@@ -3,7 +3,21 @@
   flex-direction: row;
 }
 
+.arrow {
+  margin-right: 5px;
+}
+
 .single-tool {
   display: flex;
   flex-direction: row;
+  padding: 5px;
+}
+
+.tool-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.tools {
+  width: 50%;
 }
