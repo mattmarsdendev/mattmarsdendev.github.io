@@ -5,9 +5,15 @@ const Contact = (props) => {
     <div className="contact-container">
       <div>Looking to get in touch? Feel free to reach out to me here</div>
       <div className="link-container">
-        <div>Github</div>
-        <div>LinkedIn</div>
-        <div>Email</div>
+        <a href="" target="_blank">
+          Github
+        </a>
+        <a href="" target="_blank">
+          LinkedIn
+        </a>
+        <a href="" target="_blank">
+          Email
+        </a>
       </div>
     </div>
   );
