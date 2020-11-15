@@ -1,0 +1,14 @@
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.portfolio-image {
+  width: 400px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
