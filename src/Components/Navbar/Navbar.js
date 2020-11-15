@@ -10,13 +10,13 @@ const Navbar = (props) => {
   return (
     <div className="navbar-container">
       <div onClick={handleWelcome} className="link">
-        Welcome
+        <div className="link-text">Welcome</div>
       </div>
       <div onClick={handlePortfolio} className="link">
-        Portfolio
+        <div>Portfolio</div>
       </div>
       <div onClick={handleContact} className="link">
-        Contact
+        <div>Contact</div>
       </div>
       <div className="link">Resume</div>
     </div>
