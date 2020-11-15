@@ -12,14 +12,14 @@ const Navbar = (props) => {
       <div onClick={handleWelcome} className="link">
         Welcome
       </div>
-      <div onClick={handleExperience} className="link">
-        Experience
-      </div>
       <div onClick={handlePortfolio} className="link">
         Portfolio
       </div>
       <div onClick={handleContact} className="link">
         Contact
+      </div>
+      <div onClick={handleExperience} className="link">
+        Resume
       </div>
     </div>
   );
