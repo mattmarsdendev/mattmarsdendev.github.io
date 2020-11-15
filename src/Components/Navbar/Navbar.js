@@ -9,10 +9,18 @@ const Navbar = (props) => {
   } = props;
   return (
     <div className="navbar-container">
-      <div onClick={handleWelcome}>Welcome</div>
-      <div onClick={handleExperience}>Experience</div>
-      <div onClick={handlePortfolio}>Portfolio</div>
-      <div onClick={handleContact}>Contact</div>
+      <div onClick={handleWelcome} className="link">
+        Welcome
+      </div>
+      <div onClick={handleExperience} className="link">
+        Experience
+      </div>
+      <div onClick={handlePortfolio} className="link">
+        Portfolio
+      </div>
+      <div onClick={handleContact} className="link">
+        Contact
+      </div>
     </div>
   );
 };

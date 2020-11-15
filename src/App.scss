@@ -74,6 +74,7 @@
   transform: scale(0);
   position: absolute;
   top: 90vh;
+  z-index: 10;
 }
 
 @keyframes splat {
@@ -95,7 +96,7 @@
   }
 }
 
-.below-seattle {
+.App-container {
   width: 100vw;
   background-color: #060f1d;
   position: absolute;
