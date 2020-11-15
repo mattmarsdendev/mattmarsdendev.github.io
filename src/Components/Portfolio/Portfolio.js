@@ -34,9 +34,11 @@ const Portfolio = (props) => {
   return (
     <div className="portfolio-container">
       <div className="recent-projects">
-        <h4>Recent Projects</h4>
-        <h4 onClick={handleTrividuh}>Trividuh</h4>
-        <h4>National Parks</h4>
+        <div className="project-nav">Recent Projects</div>
+        <div className="project-nav" onClick={handleTrividuh}>
+          Trividuh
+        </div>
+        <div className="project-nav">National Parks</div>
       </div>
       {trividuh && trividuhHTML}
     </div>

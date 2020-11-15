@@ -42,5 +42,20 @@ a {
   align-items: center;
 }
 
+.project-nav {
+  padding: 5px 10px;
+  border: 2px solid $teal;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  color: $teal;
+  border-radius: 5px;
+}
+
 .recent-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 25px;
 }
