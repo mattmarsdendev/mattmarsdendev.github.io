@@ -1,5 +1,5 @@
 import "./Portfolio.scss";
-import trividuh from "../../trividuh.png";
+import trividuhimg from "../../trividuh.png";
 import React, { useState } from "react";
 
 const Portfolio = (props) => {
@@ -13,7 +13,7 @@ const Portfolio = (props) => {
 
   const trividuhHTML = (
     <div className="portfolio-item">
-      <img src={trividuh} className="portfolio-image" />
+      <img src={trividuhimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">
           Trividuh, the trivia app you've always wanted. Answer questions, earn

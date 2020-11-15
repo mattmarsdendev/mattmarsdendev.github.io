@@ -90,7 +90,7 @@ function App() {
         handleContact={handleContact}
         handleWelcome={handleWelcome}
       />
-      <div className="rain front-row">{handleRain}</div>
+      {/* <div className="rain front-row">{handleRain}</div> */}
       <div className="App-container">
         {welcome && <Welcome />}
         {contact && <Contact />}

@@ -4,6 +4,16 @@
   justify-content: space-evenly;
   align-items: center;
   height: 90%;
+  animation: popup 0.3s linear;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .link-container {
