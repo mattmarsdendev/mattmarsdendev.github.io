@@ -1,6 +1,26 @@
 import "./Welcome.scss";
 
 const Welcome = () => {
+  const tools = [
+    "JavaScript",
+    "Python",
+    "SQL / PostgreSQL",
+    "React",
+    "Node",
+    "Express",
+    "MongoDb",
+    "AWS",
+    "Git / Github",
+    "HTML",
+    "(S)CSS",
+  ];
+
+  const toolHTML = tools.map((tool) => (
+    <div className="single-tool">
+      <div>▹</div>
+      <div>{tool}</div>
+    </div>
+  ));
   return (
     <div className="welcome">
       <div className="introduction">
@@ -12,6 +32,7 @@ const Welcome = () => {
       </div>
       <div className="tools">
         <h3>Here's some tools I use</h3>
+        {toolHTML}
       </div>
     </div>
   );
