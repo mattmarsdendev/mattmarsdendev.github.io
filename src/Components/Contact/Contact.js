@@ -8,6 +8,7 @@ const Contact = (props) => {
           href="https://github.com/mmarsden89"
           target="_blank"
           rel="noreferrer"
+          className="contact-link"
         >
           Github
         </a>
@@ -15,6 +16,7 @@ const Contact = (props) => {
           href="https://www.linkedin.com/in/matthewjmarsden/"
           target="_blank"
           rel="noreferrer"
+          className="contact-link"
         >
           LinkedIn
         </a>
@@ -22,6 +24,7 @@ const Contact = (props) => {
           href="mailto:mattmarsdendev@gmail.com"
           target="_blank"
           rel="noreferrer"
+          className="contact-link"
         >
           Email
         </a>

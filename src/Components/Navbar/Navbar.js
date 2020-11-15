@@ -1,24 +1,37 @@
 import "./Navbar.scss";
+import React, { useEffect } from "react";
 
 const Navbar = (props) => {
   const {
     handleWelcome,
-    handleExperience,
     handlePortfolio,
     handleContact,
+    welcome,
+    portfolio,
+    contact,
   } = props;
+
+  useEffect(() => {}, [welcome, portfolio, contact]);
   return (
     <div className="navbar-container">
       <div onClick={handleWelcome} className="link">
-        <div className="link-text">Welcome</div>
+        <div className={welcome ? "link-text current" : "link-text"}>
+          Welcome
+        </div>
       </div>
       <div onClick={handlePortfolio} className="link">
-        <div>Portfolio</div>
+        <div className={portfolio ? "link-text current" : "link-text"}>
+          Portfolio
+        </div>
       </div>
       <div onClick={handleContact} className="link">
-        <div>Contact</div>
+        <div className={contact ? "link-text current" : "link-text"}>
+          Contact
+        </div>
       </div>
-      <div className="link">Resume</div>
+      <div className="link">
+        <div className="link-text">Resume</div>
+      </div>
     </div>
   );
 };

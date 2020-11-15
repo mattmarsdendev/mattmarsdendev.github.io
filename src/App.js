@@ -4,21 +4,12 @@ import { Welcome, Contact, Navbar, Portfolio } from "./Components/index";
 import { useState } from "react";
 
 function App() {
-  const [experience, setExperience] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
   const [contact, setContact] = useState(false);
   const [welcome, setWelcome] = useState(true);
 
-  const handleExperience = () => {
-    setExperience(true);
-    setPortfolio(false);
-    setContact(false);
-    setWelcome(false);
-  };
-
   const handlePortfolio = () => {
     setPortfolio(true);
-    setExperience(false);
     setContact(false);
     setWelcome(false);
   };
@@ -26,14 +17,12 @@ function App() {
   const handleContact = () => {
     setContact(true);
     setPortfolio(false);
-    setExperience(false);
     setWelcome(false);
   };
 
   const handleWelcome = () => {
     setContact(false);
     setPortfolio(false);
-    setExperience(false);
     setWelcome(true);
   };
 
@@ -89,6 +78,9 @@ function App() {
         handlePortfolio={handlePortfolio}
         handleContact={handleContact}
         handleWelcome={handleWelcome}
+        portfolio={portfolio}
+        contact={contact}
+        welcome={welcome}
       />
       {/* <div className="rain front-row">{handleRain}</div> */}
       <div className="App-container">
