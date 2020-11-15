@@ -89,25 +89,18 @@ function App() {
     <div className="App">
       <div className="seattle">SEATTLE</div>
       <div className="based">based software engineer</div>
-      <div className="below-seattle">
-        <h1>Hi, I'm Matt! I build things for the web</h1>
-      </div>
+      <Navbar
+        handleExperience={handleExperience}
+        handlePortfolio={handlePortfolio}
+        handleContact={handleContact}
+        handleWelcome={handleWelcome}
+      />
       <div className="rain front-row">{handleRain}</div>
-      {/* <div className="rain back-row">{handleRain}</div> */}
       <div className="App-container">
-        <div className="card-container">
-          {/* <Navbar
-            handleExperience={handleExperience}
-            handlePortfolio={handlePortfolio}
-            handleContact={handleContact}
-            handleWelcome={handleWelcome}
-          /> */}
-
-          {welcome && <Welcome />}
-          {contact && <Contact />}
-          {experience && <Experience />}
-          {portfolio && <Portfolio />}
-        </div>
+        {welcome && <Welcome />}
+        {contact && <Contact />}
+        {experience && <Experience />}
+        {portfolio && <Portfolio />}
       </div>
     </div>
   );
