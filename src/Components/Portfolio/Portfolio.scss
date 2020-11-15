@@ -1,3 +1,5 @@
+@import "./Styles/_colors";
+
 a {
   text-decoration: none;
   color: white;
@@ -28,4 +30,8 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.recent-projects {
+  //   border: ;
 }
