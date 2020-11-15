@@ -11,10 +11,20 @@ const Portfolio = (props) => {
       </div>
       <div className="portfolio-item">
         <img src={trividuh} className="portfolio-image" />
-        <p>
-          Trividuh, the trivia app you've always wanted. Answer questions, earn
-          points and unlock more quetion sets! Built with React
-        </p>
+        <div>
+          <p className="portfolio-desc">
+            Trividuh, the trivia app you've always wanted. Answer questions,
+            earn points and unlock more quetion sets! Built with React
+          </p>
+          <div className="portfolio-links">
+            <a href="" target="_blank">
+              deployed app
+            </a>
+            <a href="" target="_blank">
+              front-end repo
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
