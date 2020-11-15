@@ -1,10 +1,15 @@
 .welcome {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .arrow {
   margin-right: 5px;
+}
+
+.introduction {
+  margin-left: 15px;
 }
 
 .single-tool {

@@ -21,6 +21,7 @@ const Welcome = () => {
       <div>{tool}</div>
     </div>
   ));
+
   return (
     <div className="welcome">
       <div className="introduction">
