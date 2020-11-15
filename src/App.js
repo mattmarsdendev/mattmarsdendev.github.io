@@ -1,10 +1,6 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import Welcome from "./Components/Welcome/Welcome";
-import Contact from "./Components/Contact/Contact";
-import Experience from "./Components/Experience/Experience";
-import Navbar from "./Components/Navbar/Navbar";
-import Portfolio from "./Components/Portfolio/Portfolio";
+import { Welcome, Contact, Navbar, Portfolio } from "./Components/index";
 import { useState } from "react";
 
 function App() {
@@ -98,7 +94,6 @@ function App() {
       <div className="App-container">
         {welcome && <Welcome />}
         {contact && <Contact />}
-        {experience && <Experience />}
         {portfolio && <Portfolio />}
       </div>
     </div>
