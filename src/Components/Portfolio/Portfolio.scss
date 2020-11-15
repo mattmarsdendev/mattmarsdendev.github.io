@@ -27,6 +27,7 @@ a {
 
 .portfolio-image {
   width: 400px;
+  border: 2px solid $teal;
 }
 
 .portfolio-item {
@@ -50,12 +51,13 @@ a {
   text-align: center;
   color: $teal;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .recent-projects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-left: 25px;
 }
