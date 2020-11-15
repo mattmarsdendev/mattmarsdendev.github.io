@@ -90,7 +90,6 @@ function App() {
       <div className="seattle">SEATTLE</div>
       <div className="based">based software engineer</div>
       <Navbar
-        handleExperience={handleExperience}
         handlePortfolio={handlePortfolio}
         handleContact={handleContact}
         handleWelcome={handleWelcome}

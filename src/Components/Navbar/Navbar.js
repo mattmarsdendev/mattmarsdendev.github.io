@@ -18,9 +18,7 @@ const Navbar = (props) => {
       <div onClick={handleContact} className="link">
         Contact
       </div>
-      <div onClick={handleExperience} className="link">
-        Resume
-      </div>
+      <div className="link">Resume</div>
     </div>
   );
 };
