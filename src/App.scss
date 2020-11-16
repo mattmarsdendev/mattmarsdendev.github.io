@@ -106,14 +106,15 @@
 }
 
 .seattle {
-  font-size: 280px;
+  font-size: 20vw;
   position: absolute;
-  bottom: calc(30vh + 15px);
+  bottom: 33%;
   font-family: "Montserrat", sans-serif;
+  transition: 0.5s;
 }
 
 .based {
-  font-size: 50px;
+  font-size: 4vw;
   position: absolute;
   bottom: 43vh;
   z-index: 10;
@@ -122,4 +123,24 @@
   right: 0;
   opacity: 0.8;
   padding: 5px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .seattle {
+    bottom: 35%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .based {
+    bottom: 60vh;
+  }
+  .seattle {
+    bottom: 54vh;
+  }
+
+  .App-container {
+    height: 60vh;
+    top: 40vh;
+  }
 }
