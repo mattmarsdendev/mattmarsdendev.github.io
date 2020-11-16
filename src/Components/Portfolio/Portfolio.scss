@@ -1,11 +1,11 @@
 @import "../../Styles/colors";
-
-a {
-  text-decoration: none;
-  color: white;
-  font-weight: 900;
+.portfolio-container > {
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+  }
 }
-
 .portfolio-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -72,7 +72,7 @@ a {
   margin-left: 25px;
 }
 
-@media (min-width: 350px) {
+@media (max-width: 350px) {
   .portfolio-container {
     display: flex;
     flex-direction: column;
