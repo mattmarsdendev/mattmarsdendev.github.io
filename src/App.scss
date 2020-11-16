@@ -144,3 +144,24 @@
     top: 40vh;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .seattle {
+    bottom: 55vh;
+  }
+  .App {
+    overflow-x: scroll !important;
+  }
+}
+
+@media (min-width: 350px) {
+  .seattle {
+    bottom: 57vh;
+  }
+
+  .based {
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 900;
+    bottom: 59vh;
+  }
+}
