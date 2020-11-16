@@ -54,10 +54,49 @@ a {
   cursor: pointer;
 }
 
+.project-nav-title {
+  padding: 5px 10px;
+  border: 2px solid $teal;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  color: $teal;
+  border-radius: 5px;
+}
+
 .recent-projects {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 25px;
+}
+
+@media (min-width: 350px) {
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-image {
+    width: 250px;
+    height: 125px;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .recent-projects {
+    flex-direction: row;
+    margin: 15px auto;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .project-nav-title {
+    display: none;
+  }
 }

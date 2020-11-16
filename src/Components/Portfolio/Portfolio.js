@@ -42,11 +42,8 @@ const Portfolio = (props) => {
       <img src={nationalimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">
-          A project originally started as a tech challenge, I decided to revamp
-          the idea by building out a more robust backend and adding more
-          functionality while also adding to the front-end experience. National
-          Parks is a database to keep track of the 61 parks that you've already
-          visited. Built with MongoDb, Express, React and Node with
+          National Parks is a database to keep track of the 61 parks that you've
+          already visited. Built with MongoDb, Express, React and Node with
           authorization handled by Auth0.
         </p>
         <div className="portfolio-links">
@@ -64,7 +61,7 @@ const Portfolio = (props) => {
   return (
     <div className="portfolio-container">
       <div className="recent-projects">
-        <div className="project-nav">Recent Projects</div>
+        <div className="project-nav-title">Recent Projects</div>
         <div className="project-nav" onClick={handleTrividuh}>
           Trividuh
         </div>
