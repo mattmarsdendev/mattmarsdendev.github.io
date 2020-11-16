@@ -147,14 +147,11 @@
 
 @media screen and (max-width: 600px) {
   .seattle {
-    bottom: 55vh;
+    bottom: 57vh;
   }
-  .App {
-    overflow-x: scroll !important;
-  }
-}
-
-@media (max-width: 350px) {
+  // .App {
+  //   overflow-x: scroll !important;
+  // }
   .seattle {
     bottom: 57vh;
   }
