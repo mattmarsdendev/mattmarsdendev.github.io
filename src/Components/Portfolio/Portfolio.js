@@ -19,6 +19,7 @@ const Portfolio = (props) => {
 
   const trividuhHTML = (
     <div className="portfolio-item">
+      <div className="color-block"></div>
       <img src={trividuhimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">
@@ -39,6 +40,7 @@ const Portfolio = (props) => {
 
   const nationalHTML = (
     <div className="portfolio-item">
+      <div className="color-block"></div>
       <img src={nationalimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">

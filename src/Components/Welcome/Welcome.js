@@ -4,7 +4,7 @@ const Welcome = () => {
   const tools = [
     "JavaScript",
     "Python",
-    "SQL / PostgreSQL",
+    "(Postgre)SQL",
     "React",
     "Node",
     "Express",

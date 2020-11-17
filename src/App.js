@@ -71,11 +71,13 @@ function App() {
   ));
 
   return (
-    <div className="App">
-      <div className="seattle">SEATTLE</div>
-      <div className="based">based software engineer</div>
+    <div className="app">
+      <div className="top-container">
+        <div className="seattle">SEATTLE</div>
+        <div className="based">based software engineer</div>
+      </div>
       {/* <div className="rain front-row">{handleRain}</div> */}
-      <div className="App-container">
+      <div className="app-container">
         {welcome && <Welcome />}
         {contact && <Contact />}
         {portfolio && <Portfolio />}

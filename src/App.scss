@@ -1,24 +1,17 @@
 @import "./Styles/colors";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  // background-color: white;
+#root {
+  height: 100vh;
 }
 
-.App {
-  // height: 100vh;
-  // width: 100vw;
-  // background-color: #22344e;
-  // animation: backgroundColor 10s linear infinite;
-  overflow-x: hidden !important;
+.app {
+  height: 100%;
+  width: 100vw;
+  // overflow-x: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 // @keyframes backgroundColor {
@@ -108,27 +101,23 @@
   }
 }
 
-.App-container {
+.app-container {
   width: 100vw;
-  // background-color: $darkblue;
-  position: absolute;
-  height: 43vh;
-  top: 57vh;
+  background-color: $darkblue;
+  height: 50%;
   color: #ccd6f6;
 }
 
 .seattle {
   font-size: 20vw;
-  position: absolute;
-  bottom: 33%;
   font-family: "Montserrat", sans-serif;
   transition: 0.5s;
+  margin-bottom: -0.26em;
 }
 
 .based {
   font-size: 4vw;
   position: absolute;
-  bottom: 43vh;
   z-index: 10;
   background-color: #22344e;
   color: white;
@@ -137,44 +126,12 @@
   padding: 5px 10px;
 }
 
-@media screen and (max-width: 1000px) {
-  .seattle {
-    bottom: 35%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .based {
-    bottom: 60vh;
-  }
-  .seattle {
-    bottom: 54vh;
-  }
-
-  .App-container {
-    height: 60vh;
-    top: 40vh;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .seattle {
-    bottom: 57vh;
-  }
-  .seattle {
-    bottom: 57vh;
-  }
-
-  .based {
-    background-color: rgba(0, 0, 0, 0);
-    font-weight: 900;
-    bottom: 59vh;
-  }
-}
-
-@media (orientation: portrait) {
-  // .App-container {
-  //   // height: 43vh;
-  //   top: 30vh;
-  // }
+.top-container {
+  height: 50%;
+  background-color: #22344e;
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-start;
+  align-items: flex-end;
+  text-align: start;
 }
