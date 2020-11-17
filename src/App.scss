@@ -30,7 +30,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
   // z-index: 2;
 }
 
@@ -65,7 +65,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(90vh);
+    transform: translateY(49vh);
     opacity: 0;
   }
 }
@@ -78,7 +78,7 @@
   opacity: 1;
   transform: scale(0);
   position: absolute;
-  top: 90vh;
+  top: 50vh;
   z-index: 10;
 }
 

@@ -49,7 +49,19 @@ function App() {
     [99, 1.6, Math.random() * (0.8 - 0.3) + 0.3],
   ];
 
-  const handleRain = rainArr.map((rain, idx) => (
+  const handlehiddenrain = () => {
+    const nothidden = [...rainArr];
+    if (welcome) {
+      nothidden.splice(0, 5);
+    } else if (portfolio) {
+      nothidden.splice(5, 5);
+    } else {
+      nothidden.splice(10, 5);
+    }
+    return nothidden;
+  };
+
+  const handleRain = handlehiddenrain().map((rain, idx) => (
     <div>
       <div
         className="drop"
@@ -76,7 +88,6 @@ function App() {
         <div className="seattle">SEATTLE</div>
         <div className="based">based software engineer</div>
       </div>
-      {/* <div className="rain front-row">{handleRain}</div> */}
       <div className="app-container">
         {welcome && <Welcome />}
         {contact && <Contact />}
@@ -90,6 +101,7 @@ function App() {
         contact={contact}
         welcome={welcome}
       />
+      <div className="rain front-row">{handleRain}</div>
     </div>
   );
 }
