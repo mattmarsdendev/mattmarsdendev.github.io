@@ -162,3 +162,9 @@
     bottom: 59vh;
   }
 }
+
+@media only screen and (device-width: 375px) and (orientation: portrait) {
+  .app-container {
+    top: 20vh;
+  }
+}
