@@ -1,6 +1,12 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import { Welcome, Contact, Navbar, Portfolio } from "./Components/index";
+import {
+  Welcome,
+  Contact,
+  Navbar,
+  Portfolio,
+  Footer,
+} from "./Components/index";
 import { useState } from "react";
 
 function App() {
@@ -102,6 +108,7 @@ function App() {
         welcome={welcome}
       />
       <div className="rain front-row">{handleRain}</div>
+      <Footer />
     </div>
   );
 }

@@ -27,8 +27,8 @@ const Portfolio = (props) => {
       <img src={trividuhimg} className="portfolio-image" />
       <div className="desc-cont">
         <p className="portfolio-desc">
-          Trividuh, the trivia app you've always wanted. Answer questions, earn
-          points and unlock more quetion sets! Built with React
+          A trivia application (and great timekiller) built with JavaScript and
+          React. Answer questions, earn points and unlock new question sets!
         </p>
         <div className="portfolio-links">
           <a href="https://mmarsden89.github.io/trividuh/" target="_blank">
@@ -50,9 +50,10 @@ const Portfolio = (props) => {
       <img src={nationalimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">
-          National Parks is a database to keep track of the 61 parks that you've
-          already visited. Built with MongoDb, Express, React and Node with
-          authorization handled by Auth0.
+          I wanted a place to keep track of the national parks I've been to so I
+          created a full stack application to so! Client was built using
+          JavaScript and React and the API was built using Node, Express and
+          MongoDB with authorization handled by Auth0.
         </p>
         <div className="portfolio-links">
           <a
