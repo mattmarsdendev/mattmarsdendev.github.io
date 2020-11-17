@@ -5,6 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   animation: popup 0.3s linear;
+  background-color: $darkblue;
 }
 
 @keyframes popup {
@@ -53,11 +54,11 @@
 
   h1 {
     margin: 0;
-    margin-top: -50px;
+    // margin-top: -50px;
   }
   h1 {
     font-size: 20px;
-    margin-top: -100px;
+    // margin-top: -100px;
   }
 
   h3 {

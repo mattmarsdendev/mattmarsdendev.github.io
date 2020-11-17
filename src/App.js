@@ -74,6 +74,12 @@ function App() {
     <div className="App">
       <div className="seattle">SEATTLE</div>
       <div className="based">based software engineer</div>
+      {/* <div className="rain front-row">{handleRain}</div> */}
+      <div className="App-container">
+        {welcome && <Welcome />}
+        {contact && <Contact />}
+        {portfolio && <Portfolio />}
+      </div>
       <Navbar
         handlePortfolio={handlePortfolio}
         handleContact={handleContact}
@@ -82,12 +88,6 @@ function App() {
         contact={contact}
         welcome={welcome}
       />
-      {/* <div className="rain front-row">{handleRain}</div> */}
-      <div className="App-container">
-        {welcome && <Welcome />}
-        {contact && <Contact />}
-        {portfolio && <Portfolio />}
-      </div>
     </div>
   );
 }

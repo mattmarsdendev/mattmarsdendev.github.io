@@ -1,25 +1,37 @@
 @import "./Styles/colors";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  // background-color: white;
+}
+
 .App {
-  height: 100vh;
-  width: 100vw;
-  background-color: #22344e;
+  // height: 100vh;
+  // width: 100vw;
+  // background-color: #22344e;
   // animation: backgroundColor 10s linear infinite;
   overflow-x: hidden !important;
 }
 
-@keyframes backgroundColor {
-  0% {
-    background-color: $navy;
-  }
-  50% {
-    background-color: #22344e;
-  }
-  100% {
-    background-color: $navy;
-  }
-}
+// @keyframes backgroundColor {
+//   0% {
+//     background-color: $navy;
+//   }
+//   50% {
+//     background-color: #22344e;
+//   }
+//   100% {
+//     background-color: $navy;
+//   }
+// }
 
 .rain {
   position: absolute;
@@ -98,7 +110,7 @@
 
 .App-container {
   width: 100vw;
-  background-color: $darkblue;
+  // background-color: $darkblue;
   position: absolute;
   height: 43vh;
   top: 57vh;
@@ -149,9 +161,6 @@
   .seattle {
     bottom: 57vh;
   }
-  // .App {
-  //   overflow-x: scroll !important;
-  // }
   .seattle {
     bottom: 57vh;
   }
@@ -164,7 +173,8 @@
 }
 
 @media (orientation: portrait) {
-  .app-container {
-    top: 20vh;
-  }
+  // .App-container {
+  //   // height: 43vh;
+  //   top: 30vh;
+  // }
 }
