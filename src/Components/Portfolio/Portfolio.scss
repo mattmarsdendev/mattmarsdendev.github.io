@@ -24,7 +24,6 @@
 }
 
 .portfolio-desc {
-  margin: 25px;
 }
 
 .portfolio-image {
@@ -43,6 +42,7 @@
   opacity: 0.3;
   mix-blend-mode: screen;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .color-block:hover {
@@ -120,3 +120,23 @@
 //     display: none;
 //   }
 // }
+
+.active {
+  background-color: $teal;
+  color: $navy !important;
+  padding: 5px 10px;
+  border: 2px solid $teal;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portfolio-desc {
+  margin-left: -150px;
+  background-color: $lightblue;
+  padding: 25px;
+  width: 400px;
+  z-index: 100 !important;
+}

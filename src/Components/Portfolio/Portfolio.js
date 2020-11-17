@@ -80,10 +80,16 @@ const Portfolio = (props) => {
     <div className="portfolio-container">
       <div className="recent-projects">
         <div className="project-nav-title">Recent Projects</div>
-        <div className="project-nav" onClick={handleTrividuh}>
+        <div
+          className={trividuh ? "active" : "project-nav"}
+          onClick={handleTrividuh}
+        >
           Trividuh
         </div>
-        <div className="project-nav" onClick={handleNational}>
+        <div
+          className={nationalPark ? "active" : "project-nav"}
+          onClick={handleNational}
+        >
           National Parks
         </div>
       </div>

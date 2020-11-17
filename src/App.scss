@@ -19,7 +19,7 @@
 //     background-color: $navy;
 //   }
 //   50% {
-//     background-color: #22344e;
+//     background-color: $lightblue;
 //   }
 //   100% {
 //     background-color: $navy;
@@ -119,7 +119,7 @@
   font-size: 4vw;
   position: absolute;
   z-index: 10;
-  background-color: #22344e;
+  background-color: $lightblue;
   color: white;
   right: 0;
   opacity: 0.8;
@@ -128,7 +128,7 @@
 
 .top-container {
   height: 50%;
-  background-color: #22344e;
+  background-color: $lightblue;
   display: flex;
   flex-direction: row;
   // justify-content: flex-start;
