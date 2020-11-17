@@ -21,7 +21,7 @@ const Portfolio = (props) => {
     <div className="portfolio-item">
       <div className="color-block"></div>
       <img src={trividuhimg} className="portfolio-image" />
-      <div>
+      <div className="desc-cont">
         <p className="portfolio-desc">
           Trividuh, the trivia app you've always wanted. Answer questions, earn
           points and unlock more quetion sets! Built with React
