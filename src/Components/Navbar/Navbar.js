@@ -14,11 +14,10 @@ const Navbar = (props) => {
   useEffect(() => {}, [welcome, portfolio, contact]);
   return (
     <div className="navbar-container">
-      <div
-        onClick={handleWelcome}
-        className={welcome ? "link current " : "link"}
-      >
-        <div className="link-text">Welcome</div>
+      <div onClick={handleWelcome} className="link">
+        <div className={welcome ? "link-text current" : "link-text"}>
+          Welcome
+        </div>
       </div>
       <div onClick={handlePortfolio} className="link">
         <div className={portfolio ? "link-text current" : "link-text"}>

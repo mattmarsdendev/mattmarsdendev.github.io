@@ -3,41 +3,41 @@
 .navbar-container {
   position: absolute;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  // bottom: 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   z-index: 9;
 }
 
 .link {
-  box-shadow: inset -2px -151px 0px 0px $lightblue;
+  box-shadow: inset 0px -151px 0px 0px $lightblue;
   cursor: pointer;
-  width: 200px;
+  width: 400px;
   height: 100%;
   transition: 1s;
   color: $white;
   font-weight: 900;
   transition: 1s;
   text-align: center;
-  padding-top: 50px;
-  border-radius: 10px;
+  padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .current {
-  background-color: $teal;
+  background-color: $darkblue;
   padding-top: 100px !important;
-  padding-bottom: 27px !important;
+  padding-bottom: 7px !important;
   margin-top: -95px;
   border-radius: 10px !important;
 }
 
 .link:hover {
   color: $white !important;
-  box-shadow: inset 0px 0px 0px 0px $lightblue;
-  background-color: teal;
+  box-shadow: inset 0px -20px 0px 0px $lightblue;
+  background-color: $darkblue;
 }
 
 .link-text {

@@ -1,6 +1,8 @@
 import "./Portfolio.scss";
 import trividuhimg from "../../trividuh.png";
 import nationalimg from "../../nationalparks.png";
+import nationalphone from "../../nationalparkphone.png";
+import trividuhphone from "../../trividuhphone.png";
 import React, { useState } from "react";
 
 const Portfolio = (props) => {
@@ -19,7 +21,9 @@ const Portfolio = (props) => {
 
   const trividuhHTML = (
     <div className="portfolio-item">
-      <div className="color-block"></div>
+      <div className="color-block">
+        <img src={trividuhphone} className="phone-image" />
+      </div>
       <img src={trividuhimg} className="portfolio-image" />
       <div className="desc-cont">
         <p className="portfolio-desc">
@@ -40,7 +44,9 @@ const Portfolio = (props) => {
 
   const nationalHTML = (
     <div className="portfolio-item">
-      <div className="color-block"></div>
+      <div className="color-block">
+        <img src={nationalphone} className="phone-image" />
+      </div>
       <img src={nationalimg} className="portfolio-image" />
       <div>
         <p className="portfolio-desc">

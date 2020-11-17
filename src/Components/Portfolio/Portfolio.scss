@@ -26,25 +26,24 @@
 .portfolio-image {
   width: 400px;
   height: 215px;
-  border: 10px solid rgb(66, 66, 66);
+  border: 7px solid rgb(94, 92, 92);
+  padding-top: 5px;
   border-radius: 5px;
-  // filter: hue-rotate(180deg);
   transition: 0.1s;
-  // box-shadow: ;
+  background-color: rgb(94, 92, 92);
+  box-shadow: 0px 0px 0px 2px #000000;
 }
 
 .color-block {
-  height: 215px;
-  width: 400px;
-  background-color: $teal;
-  position: absolute;
-  opacity: 0.3;
-  mix-blend-mode: screen;
-  transition: 0.5s;
-}
-
-.color-block:hover {
-  opacity: 0;
+  height: 130px;
+  width: 69px;
+  background-color: rgb(94, 92, 92);
+  border-radius: 9px;
+  border: 2px solid black;
+  transform: rotate(0deg) skew(0deg);
+  -webkit-transform: rotate(0deg) skew(0deg);
+  margin-right: -50px;
+  margin-top: 75px;
 }
 
 .portfolio-item {
@@ -141,4 +140,13 @@
 
 .desc-cont {
   z-index: 100;
+}
+
+.phone-image {
+  width: 60px;
+  margin-top: 4px;
+  margin-left: 4px;
+  border-radius: 5px;
+  height: 120px;
+  border: 1px solid black;
 }
