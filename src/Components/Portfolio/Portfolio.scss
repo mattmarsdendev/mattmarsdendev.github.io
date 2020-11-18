@@ -1,14 +1,8 @@
 @import "../../Styles/colors";
-.portfolio-container > {
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: 900;
-  }
-}
+
 .portfolio-container {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 15% 85%;
   animation: popup 0.3s linear;
   background-color: $darkblue;
   height: 100%;
@@ -63,15 +57,30 @@
   width: 300px;
 }
 
+.portfolio-links > a {
+  padding: 2px;
+  transition: 0.2s;
+}
+
+.portfolio-links > a:hover {
+  opacity: 0.3 !important;
+  color: $white !important;
+}
+
 .project-nav {
   padding: 5px 10px;
-  border: 2px solid $teal;
+  border: 2px solid $lightblue;
   margin: 5px 0;
   width: 150px;
   text-align: center;
-  color: $teal;
+  color: $white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-nav:hover {
+  background-color: $lightblue;
 }
 
 .project-nav-title {
@@ -121,10 +130,10 @@
 // }
 
 .active {
-  background-color: $teal;
-  color: $navy !important;
+  background-color: $lightblue;
+  // color: $navy !important;
   padding: 5px 10px;
-  border: 2px solid $teal;
+  border: 2px solid $lightblue;
   margin: 5px 0;
   width: 150px;
   text-align: center;
