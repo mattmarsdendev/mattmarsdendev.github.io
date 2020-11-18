@@ -3,13 +3,25 @@
 .footer-container {
   position: absolute;
   bottom: 0;
-  height: 60px;
+  height: 40px;
   width: 100%;
   background-color: $darkestblue;
   color: $white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  width: 250px;
+  text-align: center;
+}
+
+.time {
+  margin-right: 25px;
+  width: 250px;
+  text-align: right;
 }
 
 .weather-container {
