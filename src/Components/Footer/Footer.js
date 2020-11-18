@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="weather-container">
-        <div className="weather-temp">{Math.round(temp)} F</div>
+        <div className="weather-temp">{Math.round(temp)}°F</div>
         <img
           src={`http://openweathermap.org/img/wn/${icon}.png`}
           alt={description}
@@ -34,6 +34,7 @@ const Footer = () => {
         />
         <div className="weather-desc">{description}</div>
       </div>
+      <div></div>
     </div>
   );
 };

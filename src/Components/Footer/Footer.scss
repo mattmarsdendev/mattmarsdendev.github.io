@@ -7,13 +7,18 @@
   width: 100%;
   background-color: $darkestblue;
   color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .weather-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 100px;
+  width: 250px;
+  align-items: center;
+  margin-left: 25px;
+  justify-content: space-evenly;
 }
 
 .weather-desc {
