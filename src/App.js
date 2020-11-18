@@ -8,7 +8,6 @@ import {
   Footer,
 } from "./Components/index";
 import { useState } from "react";
-// require("dotenv").config();
 
 function App() {
   const [portfolio, setPortfolio] = useState(false);

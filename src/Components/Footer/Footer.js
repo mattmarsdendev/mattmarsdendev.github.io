@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Footer = () => {
   //   console.log(process.env);
@@ -11,11 +11,27 @@ const Footer = () => {
       `https://api.openweathermap.org/data/2.5/weather?q=Seattle&units=imperial&appid=${process.env.REACT_APP_WEATHER}`
     );
     console.log(weatherData.data);
-    setWeather(weatherData.data.main);
+    setWeather(weatherData.data);
   };
 
-  callWeather();
-  return <div className="footer-container">{weather.temp} F</div>;
+  useEffect(() => {
+    callWeather();
+  }, []);
+
+  return (
+    <div className="footer-container">
+      <div>
+        {weather.main && (
+          <div>
+            {weather.main.temp} F {weather.weather[0].description}
+            <img
+              src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+            />
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
