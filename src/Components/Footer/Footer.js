@@ -3,15 +3,20 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 const Footer = () => {
-  //   console.log(process.env);
-  const [weather, setWeather] = useState({});
+  const [weatherObj, setWeatherObj] = useState({
+    main: {},
+    weather: [{}],
+  });
+
+  const { main, weather } = weatherObj;
+  const { temp } = main;
+  const { description, icon } = weather[0];
 
   const callWeather = async () => {
     const weatherData = await axios(
       `https://api.openweathermap.org/data/2.5/weather?q=Seattle&units=imperial&appid=${process.env.REACT_APP_WEATHER}`
     );
-    console.log(weatherData.data);
-    setWeather(weatherData.data);
+    setWeatherObj(weatherData.data);
   };
 
   useEffect(() => {
@@ -20,15 +25,14 @@ const Footer = () => {
 
   return (
     <div className="footer-container">
-      <div>
-        {weather.main && (
-          <div>
-            {weather.main.temp} F {weather.weather[0].description}
-            <img
-              src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
-            />
-          </div>
-        )}
+      <div className="weather-container">
+        <div className="weather-temp">{Math.round(temp)} F</div>
+        <img
+          src={`http://openweathermap.org/img/wn/${icon}.png`}
+          alt={description}
+          className="weather-icon"
+        />
+        <div className="weather-desc">{description}</div>
       </div>
     </div>
   );

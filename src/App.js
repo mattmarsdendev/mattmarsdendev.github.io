@@ -107,7 +107,7 @@ function App() {
         contact={contact}
         welcome={welcome}
       />
-      <div className="rain front-row">{handleRain}</div>
+      {/* <div className="rain front-row">{handleRain}</div> */}
       <Footer />
     </div>
   );
