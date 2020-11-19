@@ -6,6 +6,9 @@ import github from "../../github.png";
 const Contact = (props) => {
   return (
     <div className="contact-container">
+      <div className="get-in-touch">
+        Looking to get in touch? Feel free to reach out to me here
+      </div>
       <div className="link-container">
         <a
           href="https://github.com/mmarsden89"
@@ -34,9 +37,6 @@ const Contact = (props) => {
           <img src={email} className="contact-icon" />
           Email
         </a>
-      </div>
-      <div className="get-in-touch">
-        Looking to get in touch? Feel free to reach out to me here
       </div>
     </div>
   );
