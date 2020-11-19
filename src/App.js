@@ -6,6 +6,7 @@ import {
   Navbar,
   Portfolio,
   Footer,
+  Header,
 } from "./Components/index";
 import { useState } from "react";
 
@@ -90,10 +91,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="top-container">
-        <div className="seattle">SEATTLE</div>
-        <div className="based">based software engineer</div>
-      </div>
+      <Header />
       <div className="app-container">
         {welcome && <Welcome />}
         {contact && <Contact />}
