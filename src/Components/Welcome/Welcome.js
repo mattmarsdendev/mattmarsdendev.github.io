@@ -25,8 +25,8 @@ const Welcome = () => {
   return (
     <div className="welcome">
       <div className="introduction">
-        <h1>Hi, I'm Matt! I build things for the web</h1>
-        <h3>
+        <h1 className="hello">Hi, I'm Matt! I build things for the web</h1>
+        <h3 className="specialize">
           I specialize in the front end but have professional full stack
           experience
         </h3>

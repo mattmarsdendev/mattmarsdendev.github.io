@@ -42,6 +42,16 @@
 .tools {
   width: 50%;
   margin: 0 25px;
+  white-space: nowrap;
+}
+
+.hello {
+  font-size: clamp(25px, 2.5vw, 40px);
+  white-space: nowrap;
+}
+
+.specialize {
+  font-size: clamp(18px, 1vw, 20px);
 }
 
 @media screen and (max-width: 600px) {
