@@ -4,7 +4,6 @@ import nationalimg from "../../nationalparks.png";
 import nationalphone from "../../nationalparkphone.png";
 import trividuhphone from "../../trividuhphone.png";
 import React, { useState } from "react";
-import Loading from "../Loading/Loading";
 
 const Portfolio = (props) => {
   const [trividuh, setTrividuh] = useState(false);
@@ -21,7 +20,6 @@ const Portfolio = (props) => {
   };
 
   const newWindow = (e) => {
-    console.log(e);
     window.open(e.target.id, "mywin", "left=20,top=20,width=480,height=800");
   };
 
@@ -33,10 +31,19 @@ const Portfolio = (props) => {
           className="phone-image"
           onClick={(e) => newWindow(e)}
           id="https://mmarsden89.github.io/trividuh"
+          alt="trividuh phone"
         />
       </div>
-      <a href="https://mmarsden89.github.io/trividuh" target="_blank">
-        <img src={trividuhimg} className="portfolio-image" />
+      <a
+        href="https://mmarsden89.github.io/trividuh"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src={trividuhimg}
+          className="portfolio-image"
+          alt="trividuh computer"
+        />
       </a>
       <div className="desc-cont">
         <p className="portfolio-desc">
@@ -44,10 +51,18 @@ const Portfolio = (props) => {
           React. Answer questions, earn points and unlock new question sets!
         </p>
         <div className="portfolio-links">
-          <a href="https://mmarsden89.github.io/trividuh/" target="_blank">
+          <a
+            href="https://mmarsden89.github.io/trividuh/"
+            target="_blank"
+            rel="noreferrer"
+          >
             deployed app
           </a>
-          <a href="https://github.com/mmarsden89/trividuh" target="_blank">
+          <a
+            href="https://github.com/mmarsden89/trividuh"
+            target="_blank"
+            rel="noreferrer"
+          >
             front-end repo
           </a>
         </div>
@@ -63,10 +78,19 @@ const Portfolio = (props) => {
           className="phone-image"
           onClick={(e) => newWindow(e)}
           id="https://mmarsden89.github.io/national-park"
+          alt="national park phone"
         />
       </div>
-      <a href="https://mmarsden89.github.io/national-park" target="_blank">
-        <img src={nationalimg} className="portfolio-image" />
+      <a
+        href="https://mmarsden89.github.io/national-park"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src={nationalimg}
+          className="portfolio-image"
+          alt="national park computer"
+        />
       </a>
       <div className="desc-cont">
         <p className="portfolio-desc">
