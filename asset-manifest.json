@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.eea9fc04.chunk.css",
-    "main.js": "/static/js/main.bc2eefab.chunk.js",
-    "main.js.map": "/static/js/main.bc2eefab.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7bbabb81.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7bbabb81.js.map",
-    "static/js/2.9076832b.chunk.js": "/static/js/2.9076832b.chunk.js",
-    "static/js/2.9076832b.chunk.js.map": "/static/js/2.9076832b.chunk.js.map",
-    "static/js/3.7d7cf6cc.chunk.js": "/static/js/3.7d7cf6cc.chunk.js",
-    "static/js/3.7d7cf6cc.chunk.js.map": "/static/js/3.7d7cf6cc.chunk.js.map",
+    "main.css": "/static/css/main.6ea454ae.chunk.css",
+    "main.js": "/static/js/main.38cddcdd.chunk.js",
+    "main.js.map": "/static/js/main.38cddcdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1e2ac6d7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1e2ac6d7.js.map",
+    "static/js/2.414fd8a1.chunk.js": "/static/js/2.414fd8a1.chunk.js",
+    "static/js/2.414fd8a1.chunk.js.map": "/static/js/2.414fd8a1.chunk.js.map",
+    "static/js/3.9f3f914c.chunk.js": "/static/js/3.9f3f914c.chunk.js",
+    "static/js/3.9f3f914c.chunk.js.map": "/static/js/3.9f3f914c.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.eea9fc04.chunk.css.map": "/static/css/main.eea9fc04.chunk.css.map",
-    "static/js/2.9076832b.chunk.js.LICENSE.txt": "/static/js/2.9076832b.chunk.js.LICENSE.txt",
+    "static/css/main.6ea454ae.chunk.css.map": "/static/css/main.6ea454ae.chunk.css.map",
+    "static/js/2.414fd8a1.chunk.js.LICENSE.txt": "/static/js/2.414fd8a1.chunk.js.LICENSE.txt",
     "static/media/email.ac710258.png": "/static/media/email.ac710258.png",
     "static/media/github.77a97279.png": "/static/media/github.77a97279.png",
     "static/media/logo.103b5fa1.svg": "/static/media/logo.103b5fa1.svg",
+    "static/media/nationalparkphone.07797e69.png": "/static/media/nationalparkphone.07797e69.png",
     "static/media/nationalparks.d64d9d68.png": "/static/media/nationalparks.d64d9d68.png",
-    "static/media/trividuh.b9532eff.png": "/static/media/trividuh.b9532eff.png"
+    "static/media/trividuh.b9532eff.png": "/static/media/trividuh.b9532eff.png",
+    "static/media/trividuhphone.724d0a8f.png": "/static/media/trividuhphone.724d0a8f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7bbabb81.js",
-    "static/js/2.9076832b.chunk.js",
-    "static/css/main.eea9fc04.chunk.css",
-    "static/js/main.bc2eefab.chunk.js"
+    "static/js/runtime-main.1e2ac6d7.js",
+    "static/js/2.414fd8a1.chunk.js",
+    "static/css/main.6ea454ae.chunk.css",
+    "static/js/main.38cddcdd.chunk.js"
   ]
 }
