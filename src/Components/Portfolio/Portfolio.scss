@@ -217,3 +217,24 @@
     padding-top: 20px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .recent-projects {
+    width: 90%;
+  }
+
+  .color-block {
+    margin-left: -325px;
+    margin-bottom: -200px;
+  }
+
+  .portfolio-item {
+    margin-left: 5px;
+    margin-top: 60px;
+  }
+
+  .portfolio-desc {
+    width: 360px;
+    margin-right: 10px;
+  }
+}
