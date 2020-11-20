@@ -24,7 +24,7 @@ const Portfolio = (props) => {
     window.open(
       "https://mmarsden89.github.io/trividuh",
       "mywin",
-      "left=20,top=20,width=500,height=500,toolbar=1,resizable=0"
+      "left=20,top=20,width=480,height=800,toolbar=1,resizable=0"
     );
   };
 
