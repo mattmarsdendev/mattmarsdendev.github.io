@@ -7,6 +7,7 @@ import {
   Portfolio,
   Footer,
   Header,
+  Loading,
 } from "./Components/index";
 import { useState } from "react";
 
@@ -107,6 +108,7 @@ function App() {
       />
       {/* <div className="rain front-row">{handleRain}</div> */}
       <Footer />
+      <Loading />
     </div>
   );
 }
