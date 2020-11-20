@@ -51,7 +51,7 @@ const Portfolio = (props) => {
       <div className="desc-cont">
         <p className="portfolio-desc">
           I wanted a place to keep track of the national parks I've been to so I
-          created a full stack application to so! Client was built using
+          created a full stack application to do so! Client was built using
           JavaScript and React and the API was built using Node, Express and
           MongoDB with authorization handled by Auth0.
         </p>
