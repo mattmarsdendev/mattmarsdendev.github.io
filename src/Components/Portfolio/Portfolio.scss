@@ -22,24 +22,25 @@
 .portfolio-image {
   width: 400px;
   height: 215px;
-  border: 7px solid rgb(94, 92, 92);
+  border: 7px solid $gray;
   padding-top: 5px;
   border-radius: 5px;
   transition: 0.1s;
-  background-color: rgb(94, 92, 92);
+  background-color: $gray;
   box-shadow: 0px 0px 0px 2px #000000;
 }
 
 .color-block {
   height: 130px;
   width: 69px;
-  background-color: rgb(94, 92, 92);
+  background-color: $gray;
   border-radius: 9px;
   border: 2px solid black;
   transform: rotate(0deg) skew(0deg);
   -webkit-transform: rotate(0deg) skew(0deg);
   margin-right: -50px;
   margin-top: 75px;
+  z-index: 10;
 }
 
 .portfolio-item {
@@ -102,67 +103,6 @@
   margin-left: 25px;
 }
 
-@media screen and (max-width: 1100px) {
-  .portfolio-container {
-    width: 100%;
-  }
-
-  .portfolio-item {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .project-nav-title {
-    display: none;
-  }
-
-  .portfolio-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .recent-projects {
-    flex-direction: row;
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    margin: 25px auto 0 auto;
-  }
-
-  .portfolio-item {
-    margin-top: 25px;
-  }
-}
-
-// @media screen and (max-width: 600px) {
-//   .portfolio-container {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   .portfolio-image {
-//     width: 250px;
-//     height: 125px;
-//   }
-
-//   .portfolio-item {
-//     flex-direction: column;
-//     align-items: center;
-//     margin: 0;
-//   }
-
-//   .recent-projects {
-//     flex-direction: row;
-//     margin: 15px auto;
-//     justify-content: space-evenly;
-//     width: 100%;
-//   }
-
-//   .project-nav-title {
-//     display: none;
-//   }
-// }
-
 .active {
   background-color: $lightblue;
   // color: $navy !important;
@@ -194,4 +134,92 @@
   border-radius: 5px;
   height: 120px;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 1100px) {
+  .portfolio-container {
+    width: 100%;
+  }
+
+  .portfolio-item {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-nav-title {
+    display: none;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-projects {
+    flex-direction: row;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0 auto;
+  }
+
+  .portfolio-item {
+    margin-top: 25px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .color-block {
+    margin: 0;
+    margin-bottom: -210px;
+    margin-left: -400px;
+  }
+
+  .desc-cont {
+    z-index: 1;
+  }
+  .portfolio-desc {
+    margin: 0;
+    margin-top: -20px;
+    background-color: $lightblueopac;
+    z-index: 1;
+    width: 550px;
+  }
+
+  .portfolio-image {
+    width: 350px;
+    height: 190px;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .portfolio-links {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .recent-projects {
+    width: 65%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .color-block {
+  }
+
+  .portfolio-desc {
+    padding: 20px;
+    padding-top: 20px;
+  }
+
+  .portfolio-item {
+  }
 }

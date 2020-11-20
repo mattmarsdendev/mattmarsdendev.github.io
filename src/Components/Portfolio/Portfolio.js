@@ -48,7 +48,7 @@ const Portfolio = (props) => {
         <img src={nationalphone} className="phone-image" />
       </div>
       <img src={nationalimg} className="portfolio-image" />
-      <div>
+      <div className="desc-cont">
         <p className="portfolio-desc">
           I wanted a place to keep track of the national parks I've been to so I
           created a full stack application to so! Client was built using
