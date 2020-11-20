@@ -116,4 +116,7 @@
   .app-container {
     height: 70vh;
   }
+  .tool-container {
+    grid-template-columns: 33% 33% 33%;
+  }
 }
