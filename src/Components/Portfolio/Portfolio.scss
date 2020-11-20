@@ -46,6 +46,12 @@
   margin-right: -50px;
   margin-top: 75px;
   z-index: 9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.color-block:hover {
+  transform: scale(0.97);
 }
 
 .color-block::before {

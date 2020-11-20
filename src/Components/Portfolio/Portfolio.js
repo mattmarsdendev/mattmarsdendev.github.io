@@ -20,20 +20,20 @@ const Portfolio = (props) => {
     setNationalPark(true);
   };
 
-  const newWindow = () => {
-    window.open(
-      "https://mmarsden89.github.io/trividuh",
-      "mywin",
-      "left=20,top=20,width=480,height=800,toolbar=1,resizable=0"
-    );
+  const newWindow = (e) => {
+    console.log(e);
+    window.open(e.target.id, "mywin", "left=20,top=20,width=480,height=800");
   };
 
   const trividuhHTML = (
     <div className="portfolio-item">
       <div className="color-block">
-        {/* <a href="https://mmarsden89.github.io/trividuh" onClick={}> */}
-        <img src={trividuhphone} className="phone-image" onClick={newWindow} />
-        {/* </a> */}
+        <img
+          src={trividuhphone}
+          className="phone-image"
+          onClick={(e) => newWindow(e)}
+          id="https://mmarsden89.github.io/trividuh"
+        />
       </div>
       <a href="https://mmarsden89.github.io/trividuh" target="_blank">
         <img src={trividuhimg} className="portfolio-image" />
@@ -58,7 +58,12 @@ const Portfolio = (props) => {
   const nationalHTML = (
     <div className="portfolio-item">
       <div className="color-block">
-        <img src={nationalphone} className="phone-image" />
+        <img
+          src={nationalphone}
+          className="phone-image"
+          onClick={(e) => newWindow(e)}
+          id="https://mmarsden89.github.io/national-park"
+        />
       </div>
       <a href="https://mmarsden89.github.io/national-park" target="_blank">
         <img src={nationalimg} className="portfolio-image" />
