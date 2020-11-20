@@ -20,12 +20,24 @@ const Portfolio = (props) => {
     setNationalPark(true);
   };
 
+  const newWindow = () => {
+    window.open(
+      "https://mmarsden89.github.io/trividuh",
+      "mywin",
+      "left=20,top=20,width=500,height=500,toolbar=1,resizable=0"
+    );
+  };
+
   const trividuhHTML = (
     <div className="portfolio-item">
       <div className="color-block">
-        <img src={trividuhphone} className="phone-image" />
+        {/* <a href="https://mmarsden89.github.io/trividuh" onClick={}> */}
+        <img src={trividuhphone} className="phone-image" onClick={newWindow} />
+        {/* </a> */}
       </div>
-      <img src={trividuhimg} className="portfolio-image" />
+      <a href="https://mmarsden89.github.io/trividuh" target="_blank">
+        <img src={trividuhimg} className="portfolio-image" />
+      </a>
       <div className="desc-cont">
         <p className="portfolio-desc">
           A trivia application (and great timekiller) built with JavaScript and
@@ -48,7 +60,9 @@ const Portfolio = (props) => {
       <div className="color-block">
         <img src={nationalphone} className="phone-image" />
       </div>
-      <img src={nationalimg} className="portfolio-image" />
+      <a href="https://mmarsden89.github.io/national-park" target="_blank">
+        <img src={nationalimg} className="portfolio-image" />
+      </a>
       <div className="desc-cont">
         <p className="portfolio-desc">
           I wanted a place to keep track of the national parks I've been to so I
