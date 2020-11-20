@@ -102,6 +102,38 @@
   margin-left: 25px;
 }
 
+@media screen and (max-width: 1100px) {
+  .portfolio-container {
+    width: 100%;
+  }
+
+  .portfolio-item {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-nav-title {
+    display: none;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-projects {
+    flex-direction: row;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0 auto;
+  }
+
+  .portfolio-item {
+    margin-top: 25px;
+  }
+}
+
 // @media screen and (max-width: 600px) {
 //   .portfolio-container {
 //     display: flex;

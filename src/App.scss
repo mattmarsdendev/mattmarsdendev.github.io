@@ -105,3 +105,9 @@
   height: 50%;
   color: #ccd6f6;
 }
+
+@media screen and (max-width: 1000px) {
+  .app-container {
+    height: 100%;
+  }
+}

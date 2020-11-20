@@ -23,7 +23,7 @@ const Welcome = () => {
   ));
 
   return (
-    <div className="welcome">
+    <div className="welcome-container">
       <div className="introduction">
         <h1 className="hello">Hi, I'm Matt! I build things for the web</h1>
         <h3 className="specialize">

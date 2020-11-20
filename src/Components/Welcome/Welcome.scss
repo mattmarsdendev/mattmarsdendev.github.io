@@ -1,6 +1,6 @@
 @import "../../Styles/colors";
 
-.welcome {
+.welcome-container {
   display: flex;
   flex-direction: row;
   animation: popup 0.3s linear;
@@ -54,17 +54,36 @@
   font-size: clamp(18px, 1vw, 20px);
 }
 
-@media screen and (max-width: 600px) {
-  .welcome {
+@media screen and (max-width: 900px) {
+  .welcome-container {
     flex-direction: column;
+    align-items: center;
   }
+
+  .introduction {
+    margin-top: 25px;
+  }
+
+  .hello {
+    font-size: 40px;
+  }
+
+  .specialize {
+    font-size: 27px;
+  }
+
   .tools {
-    width: 100%;
-    margin: 0;
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .tools > h3 {
+    text-align: center;
   }
 
   .tool-container {
     grid-template-columns: 25% 25% 25% 25%;
     width: 100%;
+    margin-left: 7vw;
   }
 }
