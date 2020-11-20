@@ -9,12 +9,13 @@ import {
   Header,
   Loading,
 } from "./Components/index";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [portfolio, setPortfolio] = useState(false);
   const [contact, setContact] = useState(false);
   const [welcome, setWelcome] = useState(true);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   const handlePortfolio = () => {
     setPortfolio(true);
@@ -69,6 +70,15 @@ function App() {
     return nothidden;
   };
 
+  const flipAnimation = () => {
+    setHasAnimated(true);
+  };
+
+  useEffect(() => {
+    // flipAnimation();
+    console.log(hasAnimated);
+  }, []);
+
   const handleRain = handlehiddenrain().map((rain, idx) => (
     <div>
       <div
@@ -108,7 +118,7 @@ function App() {
       />
       {/* <div className="rain front-row">{handleRain}</div> */}
       <Footer />
-      <Loading />
+      {<Loading sizeX={100} sizeY={100} />}
     </div>
   );
 }

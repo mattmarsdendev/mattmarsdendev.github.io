@@ -4,6 +4,7 @@ import nationalimg from "../../nationalparks.png";
 import nationalphone from "../../nationalparkphone.png";
 import trividuhphone from "../../trividuhphone.png";
 import React, { useState } from "react";
+import Loading from "../Loading/Loading";
 
 const Portfolio = (props) => {
   const [trividuh, setTrividuh] = useState(false);

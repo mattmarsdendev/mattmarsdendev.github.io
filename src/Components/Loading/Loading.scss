@@ -2,8 +2,108 @@
 
 .loading-container {
   position: absolute;
-  height: 100%;
-  width: 100%;
   background-color: $darkblue;
   z-index: 100;
+  animation: loadingContainer 5s linear;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes loadingContainer {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  85% {
+    opacity: 1;
+  }
+  97% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.loading-animation {
+  animation: loading 1.5s linear infinite;
+  margin: auto 0;
+  font-size: 100px;
+  height: 40px;
+  width: 40px;
+  border: 5px solid $darkblue;
+  border-top: 5px solid $teal;
+  border-radius: 50%;
+  opacity: 0.8;
+  margin: 5px;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.outer-ring,
+.inner-ring {
+  border: 5px solid $teal;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  animation: outer-ring 2s ease-out infinite;
+  transform: scale(0);
+}
+
+.inner-ring {
+  animation-delay: 1s;
+}
+
+@keyframes outer-ring {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.letter-m {
+  position: absolute;
+  color: $teal;
+  animation: letter 5s linear infinite;
+}
+
+@keyframes letter {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  65% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0;
+  }
 }
