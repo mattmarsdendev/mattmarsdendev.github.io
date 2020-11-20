@@ -111,3 +111,9 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .app-container {
+    height: 70vh;
+  }
+}
