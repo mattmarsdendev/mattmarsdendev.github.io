@@ -16,7 +16,7 @@ const Contact = (props) => {
           rel="noreferrer"
           className="contact-link"
         >
-          <img src={github} className="contact-icon" />
+          <img src={github} className="contact-icon" alt="github" />
           Github
         </a>
         <a
@@ -25,7 +25,7 @@ const Contact = (props) => {
           rel="noreferrer"
           className="contact-link"
         >
-          <img src={linkedin} className="contact-icon" />
+          <img src={linkedin} className="contact-icon" alt="linkedin" />
           LinkedIn
         </a>
         <a
@@ -34,7 +34,7 @@ const Contact = (props) => {
           rel="noreferrer"
           className="contact-link"
         >
-          <img src={email} className="contact-icon" />
+          <img src={email} className="contact-icon" alt="email" />
           Email
         </a>
       </div>

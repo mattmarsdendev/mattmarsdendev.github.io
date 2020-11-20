@@ -1,7 +1,6 @@
 import "./Footer.scss";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import moment from "moment-timezone/moment-timezone";
 
 const Footer = () => {
   const [weatherObj, setWeatherObj] = useState({
@@ -22,13 +21,13 @@ const Footer = () => {
   };
 
   const setTime = () => {
-    moment.tz.add("America/Los_Angeles|PST PDT|80 70|0101|1Lzm0 1zb0 Op0");
-    setCurrentTime(moment.tz("America/Los_Angeles").format("h:mm a"));
+    // moment.tz.add("America/Los_Angeles|PST|80 70|0101|1Lzm0 1zb0 Op0");
+    // setCurrentTime(moment.tz("America/Los_Angeles").format("h:mm a"));
   };
 
   useEffect(() => {
     callWeather();
-    setCurrentTime(moment().format("h:mm a"));
+    // setCurrentTime(moment().format("h:mm a"));
     setInterval(setTime, 10000);
   }, []);
 
@@ -44,7 +43,7 @@ const Footer = () => {
         <div className="weather-desc">{description}</div>
       </div>
       <div className="copyright">© Matt Marsden 2020</div>
-      <div className="time">{currentTime} PT</div>
+      {/* <div className="time">{currentTime} PT</div> */}
     </div>
   );
 };

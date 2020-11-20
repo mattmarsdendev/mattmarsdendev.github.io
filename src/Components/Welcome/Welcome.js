@@ -15,9 +15,9 @@ const Welcome = () => {
     "(S)CSS",
   ];
 
-  const toolHTML = tools.map((tool) => (
-    <div className="single-tool">
-      <div className="arrow">▹</div>
+  const toolHTML = tools.map((tool, idx) => (
+    <div className="single-tool" key={idx}>
+      <div className="arrow"></div>
       <div>{tool}</div>
     </div>
   ));
