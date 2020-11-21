@@ -1,6 +1,6 @@
 let apiUrl;
 const apiUrls = {
-  production: "https://national-parks-mm.herokuapp.com",
+  production: "https://portfolio-mm-server.herokuapp.com",
   development: "http://localhost:8080",
 };
 
