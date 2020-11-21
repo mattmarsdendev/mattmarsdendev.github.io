@@ -1,6 +1,7 @@
 import "./Footer.scss";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import apiUrl from "../../apiConfig";
 const dayjs = require("dayjs");
 var utc = require("dayjs/plugin/utc");
 dayjs.extend(utc);
@@ -17,9 +18,7 @@ const Footer = () => {
   const { description, icon } = weather[0];
 
   const callWeather = async () => {
-    const weatherData = await axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=Seattle&units=imperial&appid=${process.env.REACT_APP_WEATHER}`
-    );
+    const weatherData = await axios(apiUrl);
     setWeatherObj(weatherData.data);
   };
 
