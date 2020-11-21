@@ -14,6 +14,7 @@ function App() {
   const [portfolio, setPortfolio] = useState(false);
   const [contact, setContact] = useState(false);
   const [welcome, setWelcome] = useState(true);
+  const [selected, setSelected] = useState(<Welcome />);
 
   const handlePortfolio = () => {
     setPortfolio(true);
@@ -33,24 +34,25 @@ function App() {
     setWelcome(true);
   };
 
+  const handleSelection = (e) => {
+    setSelected();
+  };
+
   return (
     <div className="app">
       <Header />
-      <div className="app-container">
-        {welcome && <Welcome />}
-        {contact && <Contact />}
-        {portfolio && <Portfolio />}
-      </div>
+      <div className="app-container">{selected}</div>
       <Navbar
         handlePortfolio={handlePortfolio}
         handleContact={handleContact}
         handleWelcome={handleWelcome}
+        handleSelection={handleSelection}
         portfolio={portfolio}
         contact={contact}
         welcome={welcome}
       />
       <Footer />
-      {<Loading sizeX={100} sizeY={100} />}
+      <Loading sizeX={100} sizeY={100} />
     </div>
   );
 }
