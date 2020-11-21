@@ -1,8 +1,10 @@
 import "./Portfolio.scss";
-import trividuhimg from "../../trividuh.png";
-import nationalimg from "../../nationalparks.png";
-import nationalphone from "../../nationalparkphone.png";
-import trividuhphone from "../../trividuhphone.png";
+import {
+  trividuhimg,
+  nationalimg,
+  nationalphone,
+  trividuhphone,
+} from "../../Styles/images/index";
 import React, { useState } from "react";
 
 const Portfolio = (props) => {

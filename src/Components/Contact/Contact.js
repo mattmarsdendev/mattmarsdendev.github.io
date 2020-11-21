@@ -1,7 +1,5 @@
 import "./Contact.scss";
-import email from "../../email.png";
-import linkedin from "../../linkedin.png";
-import github from "../../github.png";
+import { email, linkedin, github } from "../../Styles/images/index";
 
 const Contact = (props) => {
   return (
