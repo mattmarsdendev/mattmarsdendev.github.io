@@ -17,7 +17,7 @@ const Welcome = () => {
 
   const toolHTML = tools.map((tool, idx) => (
     <div className="single-tool" key={idx}>
-      <div className="arrow"></div>
+      <div className="arrow">▹</div>
       <div>{tool}</div>
     </div>
   ));

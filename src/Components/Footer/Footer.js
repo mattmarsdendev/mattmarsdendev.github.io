@@ -20,7 +20,6 @@ const Footer = () => {
   const callWeather = async () => {
     const weatherData = await axios(apiUrl);
     setWeatherObj(weatherData.data);
-    console.clear();
   };
 
   const setTime = () => {
