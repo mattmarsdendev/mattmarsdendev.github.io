@@ -22,7 +22,9 @@
 
 .link-text {
   font-family: $raleway;
-  font-weight: $regular;
+  font-weight: $bold;
+  color: $white;
+  transition: 0.3s;
 }
 
 .current {

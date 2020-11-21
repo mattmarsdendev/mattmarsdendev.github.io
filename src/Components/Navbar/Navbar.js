@@ -1,35 +1,38 @@
 import "./Navbar.scss";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
-  const {
-    handleWelcome,
-    handlePortfolio,
-    handleContact,
-    handleSelection,
-    welcome,
-    portfolio,
-    contact,
-  } = props;
+  const currentPath = window.location.pathname;
 
-  useEffect(() => {}, [welcome, portfolio, contact]);
+  const [current, setCurrent] = useState("/");
+
+  const checkActive = (nav) => {
+    return current === nav;
+  };
+
+  console.log(currentPath);
   return (
     <div className="navbar-container">
-      <div onClick={handleSelection} className="link" id="Welcome">
-        <div className={welcome ? "link-text current" : "link-text"}>
-          Welcome
-        </div>
-      </div>
-      <div onClick={handleSelection} className="link" id="Portfolio">
-        <div className={portfolio ? "link-text current" : "link-text"}>
-          Portfolio
-        </div>
-      </div>
-      <div onClick={handleSelection} className="link" id="Contact">
-        <div className={contact ? "link-text current" : "link-text"}>
-          Contact
-        </div>
-      </div>
+      <NavLink exact to="/" className="link-text" activeClassName="current">
+        Welcome
+      </NavLink>
+      <NavLink
+        exact
+        to="/portfolio"
+        className="link-text"
+        activeClassName="current"
+      >
+        Portfolio
+      </NavLink>
+      <NavLink
+        exact
+        to="/contact"
+        className="link-text"
+        activeClassName="current"
+      >
+        Contact
+      </NavLink>
       <div className="link">
         <div className="link-text">Resume</div>
       </div>
