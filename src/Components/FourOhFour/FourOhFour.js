@@ -69,8 +69,6 @@ const FourOhFour = () => {
         </div>
         <div className="just-space">NO PAGE HERE, JUST SPACE</div>
       </div>
-      <div className="cloud"></div>
-      <div className="cloud2"></div>
       <div className="spaceship-container">
         <div className="spaceship">
           {/* <div className="left-engine"></div>
@@ -78,6 +76,9 @@ const FourOhFour = () => {
           <div className="back-engine"></div>
         </div>
       </div>
+
+      <div className="cloud"></div>
+      <div className="cloud2"></div>
     </div>
   );
 };

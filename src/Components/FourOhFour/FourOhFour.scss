@@ -263,7 +263,7 @@
 }
 
 .spaceship-container {
-  z-index: 3;
+  //   z-index: 3;
   //   position: relative;
 }
 
@@ -281,15 +281,15 @@
   box-shadow: inset 0px 10px 0px 2px white;
   //   z-index: 3;
   //   transform: scale(0.4) rotate(90deg);
-  animation: spaceshipfly 10s linear infinite;
+  animation: spaceshipfly 30s linear infinite;
 }
 
 @keyframes spaceshipfly {
   0% {
-    transform: translateY(200%) translateX(0%) rotate(85deg) scale(0.4);
+    transform: translateY(200%) translateX(-100%) rotate(85deg) scale(0.4);
   }
   100% {
-    transform: translateX(5000%) rotate(85deg) scale(0.4) translateY(0%);
+    transform: translateX(15000%) rotate(85deg) scale(0.4) translateY(-5000%);
   }
 }
 
@@ -354,15 +354,45 @@
 
 .back-engine::after {
   content: "";
-  height: 500px;
+  height: 800px;
   width: 15px;
   background: linear-gradient(
     225deg,
     rgba(172, 171, 171, 1) 0%,
     rgba(94, 94, 94, 0) 100%
   );
-  margin-left: 10px;
+  margin-left: 8px;
   position: absolute;
+}
+
+.back-engine::before {
+  content: "";
+  height: 25px;
+  width: 50px;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(172, 171, 171, 1) 0%,
+    rgba(94, 94, 94, 0) 100%
+  );
+  border-top-right-radius: 80%;
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin-left: -8px;
+  margin-top: 5px;
+  animation: smokeplume 2s linear infinite;
+}
+
+@keyframes smokeplume {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3) translateY(40%);
+    opacity: 0;
+  }
 }
 
 .sun {
