@@ -142,3 +142,13 @@
   width: calc(100% - 25px);
   margin-left: 5px;
 }
+
+.tool-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools-link {
+  cursor: pointer;
+  display: inline-block;
+}

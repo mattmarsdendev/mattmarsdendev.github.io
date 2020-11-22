@@ -1,6 +1,7 @@
 import "./Welcome.scss";
 import Tools from "./Tools";
 import React, { useState, useEffect } from "react";
+import DirectoryItems from "./DirectoryItems";
 
 const Welcome = () => {
   const [inputText, setInputText] = useState("");
@@ -22,6 +23,10 @@ const Welcome = () => {
     } else if (inputText.includes("cd")) {
       setTerminalReturn([...terminalReturn, `$ ${inputText}`]);
       setInputText("");
+    } else if (inputText === "ls") {
+      const updated = [...terminalReturn, `$ ${inputText}`];
+      setTerminalReturn([...updated, DirectoryItems[workingDirectory]]);
+      setInputText("");
     } else {
       setTerminalReturn([
         ...terminalReturn,
@@ -31,8 +36,15 @@ const Welcome = () => {
     }
   };
 
+  const aboutLsHTML = <div>{DirectoryItems[workingDirectory]}</div>;
+
   const handleAboutLink = () => {
-    setTerminalReturn([...terminalReturn, "AboutMe.txt"]);
+    // const updated = [...terminalReturn, `$ ${inputText}`];
+    const updatedDirectory = "/users/MattMarsden/AboutMe/";
+    setWorkingDirectory(updatedDirectory);
+    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
+    const ls = [...cd, "$ ls"];
+    setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
   };
 
   const handleChange = (e) => {
@@ -40,10 +52,21 @@ const Welcome = () => {
     console.log(inputText);
   };
 
+  const handleTerminalClick = (e) => {
+    console.log(e.target.id);
+  };
+
   useEffect(() => {}, [terminalReturn]);
 
   const terminalReturnHTML = terminalReturn.map((item) => (
-    <div className="termain-return">{item}</div>
+    <div
+      className="terminal-return"
+      onClick={item.includes("txt") ? handleTerminalClick : null}
+      id={item}
+    >
+      {console.log(item)}
+      {item}
+    </div>
   ));
   return (
     <div className="welcome-container">
@@ -60,7 +83,9 @@ const Welcome = () => {
           Feel free to click a link below
         </div>
         <div className="tool-text-container">
-          <div className="tools-link">About Me</div>
+          <div className="tools-link" onClick={handleAboutLink}>
+            AboutMe
+          </div>
           <div className="tools-link">Contact</div>
           <div className="tools-link">Portfolio</div>
           <div className="tools-link">Tools</div>
