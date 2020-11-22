@@ -7,6 +7,7 @@
   flex-direction: column;
   //   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .cloud,
@@ -235,4 +236,76 @@
   100% {
     transform: scale(1);
   }
+}
+
+.spaceship {
+  position: absolute;
+  height: 70px;
+  width: 50px;
+  background-color: rgb(230, 196, 152);
+  left: 25px;
+  bottom: 200px;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 5px solid darkred;
+  box-shadow: inset 0px -13px 0px 2px orange;
+  z-index: 3;
+  transform: scale(0.4) rotate(90deg);
+  animation: spaceshipfly 5s linear infinite;
+}
+
+@keyframes spaceshipfly {
+  0% {
+    transform: translateY(200%) translateX(0%) rotate(85deg) scale(0.4);
+  }
+  100% {
+    transform: translateX(5000%) rotate(85deg) scale(0.4) translateY(0%);
+  }
+}
+
+.left-engine {
+  background-color: rgb(116, 1, 1);
+  height: 30px;
+  width: 18px;
+  margin-top: 40px;
+  margin-left: -15px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+}
+
+.left-engine::after,
+.right-engine::after {
+  content: "";
+  height: 100px;
+  width: 5px;
+  background-color: orange;
+  position: absolute;
+  margin-left: 0px;
+  z-index: -1;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.right-engine {
+  background-color: rgb(116, 1, 1);
+  height: 30px;
+  width: 18px;
+  margin-top: 40px;
+  margin-left: 45px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+}
+
+.back-engine {
+  background-color: rgb(116, 1, 1);
+  height: 25px;
+  width: 40px;
+  margin-left: 3px;
+  margin-top: 60px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
 }

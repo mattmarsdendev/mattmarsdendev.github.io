@@ -32,7 +32,7 @@ const FourOhFour = () => {
     <div
       className="star"
       style={{
-        bottom: `${Math.random() * 50}%`,
+        bottom: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         animationDelay: `${Math.random() * 5}s`,
       }}
@@ -53,6 +53,13 @@ const FourOhFour = () => {
       <div className="just-space">NO PAGE HERE, JUST SPACE</div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
+      <div className="spaceship">
+        <div className="left-engine">
+          <div className="engine-fire"></div>
+        </div>
+        <div className="right-engine"></div>
+        <div className="back-engine"></div>
+      </div>
     </div>
   );
 };
