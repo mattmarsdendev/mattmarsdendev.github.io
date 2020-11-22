@@ -144,14 +144,14 @@
 @keyframes flypast {
   0% {
     margin-left: -50px;
-    box-shadow: $darkblue -6px 5px 0 -2px;
+    box-shadow: -6px 0px 1px -2px $darkblue;
   }
   25% {
     margin-top: 50px;
-    box-shadow: $darkblue -12px 2px 0 2px;
+    box-shadow: -12px 2px 1px -2px $darkblue;
   }
   50% {
-    box-shadow: $darkblue -25px 5px 0 -2px;
+    box-shadow: -25px 0px 1px -2px $darkblue;
     margin-top: 40px;
     margin-left: 125px;
     opacity: 1;
