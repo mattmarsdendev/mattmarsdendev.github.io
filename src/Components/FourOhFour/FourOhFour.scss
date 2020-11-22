@@ -5,7 +5,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  //   justify-content: center;
+  justify-content: center;
   align-items: center;
   position: relative;
   overflow-y: hidden;
@@ -14,6 +14,7 @@
 
 .title-container {
   //   dont forget to change sunanimation time length
+  margin-bottom: 50px;
   animation: sunblock 50s linear infinite;
 }
 @keyframes sunblock {
@@ -109,6 +110,19 @@
   letter-spacing: 1px;
 }
 
+.go-home {
+  font-weight: 900;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.go-home:hover {
+  color: $darkblue;
+}
+
 .moon-container {
   display: flex;
   flex-direction: row;
@@ -118,7 +132,7 @@
   font-size: 100px;
   z-index: 2;
   position: relative;
-  margin-top: 50px;
+  //   margin-top: 50px;
 }
 
 .moon {
