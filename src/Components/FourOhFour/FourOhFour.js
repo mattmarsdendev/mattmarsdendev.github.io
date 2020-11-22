@@ -42,6 +42,16 @@ const FourOhFour = () => {
     38,
     39,
     40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
   ];
   const starsHTML = starArr.map((star) => (
     <div
@@ -53,6 +63,7 @@ const FourOhFour = () => {
       }}
     ></div>
   ));
+
   return (
     <div className="fourohfour-container">
       {starsHTML}
@@ -76,7 +87,7 @@ const FourOhFour = () => {
           <div className="back-engine"></div>
         </div>
       </div>
-
+      <div className="comet"></div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
     </div>
