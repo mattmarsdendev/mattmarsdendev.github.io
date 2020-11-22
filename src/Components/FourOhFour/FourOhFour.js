@@ -83,8 +83,6 @@ const FourOhFour = () => {
       </div>
       <div className="spaceship-container">
         <div className="spaceship">
-          {/* <div className="left-engine"></div>
-          <div className="right-engine"></div> */}
           <div className="back-engine"></div>
         </div>
       </div>
