@@ -123,6 +123,9 @@
   font-family: "Monaco";
   color: $teal;
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .hello-text {

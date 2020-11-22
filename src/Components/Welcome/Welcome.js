@@ -12,14 +12,27 @@ const Welcome = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText === "pwd") {
-      setTerminalReturn([...terminalReturn, inputText]);
-      setTerminalReturn([...terminalReturn, workingDirectory]);
+      const updated = [...terminalReturn, `$ ${inputText}`];
+      setTerminalReturn([...updated, workingDirectory]);
       setInputText("");
     } else if (inputText === "clear") {
       const blankArr = [];
       setTerminalReturn(blankArr);
       setInputText("");
+    } else if (inputText.includes("cd")) {
+      setTerminalReturn([...terminalReturn, `$ ${inputText}`]);
+      setInputText("");
+    } else {
+      setTerminalReturn([
+        ...terminalReturn,
+        `-snap: ${inputText}: command not found`,
+      ]);
+      setInputText("");
     }
+  };
+
+  const handleAboutLink = () => {
+    setTerminalReturn([...terminalReturn, "AboutMe.txt"]);
   };
 
   const handleChange = (e) => {
