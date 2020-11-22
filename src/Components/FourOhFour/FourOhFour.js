@@ -79,7 +79,9 @@ const FourOhFour = () => {
           <div className="four">4</div>
         </div>
         <div className="just-space">NO PAGE HERE, JUST SPACE</div>
-        <div className="go-home">GO HOME?</div>
+        <div className="go-home">
+          <a href="/">GO HOME?</a>
+        </div>
       </div>
       <div className="spaceship-container">
         <div className="spaceship">
