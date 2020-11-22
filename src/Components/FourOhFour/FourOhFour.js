@@ -71,12 +71,12 @@ const FourOhFour = () => {
       </div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
-      <div className="spaceship">
-        <div className="left-engine">
-          <div className="engine-fire"></div>
+      <div className="spaceship-container">
+        <div className="spaceship">
+          {/* <div className="left-engine"></div>
+          <div className="right-engine"></div> */}
+          <div className="back-engine"></div>
         </div>
-        <div className="right-engine"></div>
-        <div className="back-engine"></div>
       </div>
     </div>
   );
