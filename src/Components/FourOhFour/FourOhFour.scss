@@ -1,0 +1,238 @@
+@import "../../Styles/colors";
+
+.fourohfour-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //   justify-content: center;
+  align-items: center;
+}
+
+.cloud,
+.cloud2 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: $teal;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.cloud {
+  animation: floatby 60s linear infinite;
+}
+
+.cloud2 {
+  animation: floatby2 120s linear infinite;
+  animation-delay: 15s;
+  transform: scale(1.5) translateX(-200px);
+}
+
+.cloud::before,
+.cloud2::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-color: $teal;
+  border-radius: 50%;
+  margin-left: -50px;
+  margin-top: 50px;
+}
+
+.cloud::after,
+.cloud2::after {
+  content: "";
+  height: 125px;
+  width: 125px;
+  position: absolute;
+  background-color: $teal;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 75px;
+}
+
+.four {
+  z-index: 4;
+}
+
+@keyframes floatby {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(1000%);
+  }
+}
+
+@keyframes floatby2 {
+  0% {
+    transform: translateX(-225px) scale(1.3);
+    // transform: scale(1.5);
+  }
+  100% {
+    transform: translateX(1000%) scale(1.3);
+    // transform: scale(1.5);
+  }
+}
+
+.just-space {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.moon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  align-items: center;
+  font-size: 100px;
+  z-index: 2;
+  position: relative;
+  margin-top: 50px;
+}
+
+.moon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: linear-gradient(
+    225deg,
+    rgba(200, 200, 200, 1) 0%,
+    rgba(34, 52, 78, 1) 85%
+  );
+}
+
+.moon::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  background: linear-gradient(
+    225deg,
+    rgba(101, 69, 151, 1) 50%,
+    rgba(34, 52, 78, 1) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 40px;
+  animation: flypast 20s linear infinite;
+}
+
+.moon::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  background: linear-gradient(
+    225deg,
+    rgba(101, 69, 151, 0.8) 50%,
+    rgba(34, 52, 78, 1) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 40px;
+  animation: flybehind 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes flypast {
+  0% {
+    margin-left: -50px;
+    box-shadow: $darkblue -6px 5px 0 -2px;
+  }
+  25% {
+    margin-top: 50px;
+    box-shadow: $darkblue -12px 2px 0 2px;
+  }
+  50% {
+    box-shadow: $darkblue -25px 5px 0 -2px;
+    margin-top: 40px;
+    margin-left: 125px;
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 100px;
+    opacity: 0;
+  }
+}
+
+@keyframes flybehind {
+  0% {
+    margin-left: 125px;
+    opacity: 0;
+  }
+  49% {
+    margin-left: 125px;
+    opacity: 0;
+  }
+  50% {
+    margin-left: 125px;
+    opacity: 1;
+    margin-top: 40px;
+  }
+  75% {
+    margin-top: 30px;
+  }
+  100% {
+    margin-left: -50px;
+  }
+}
+
+// this code could be cool somewhere else
+
+.fourohfour {
+  color: $darkblue;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  font-size: 100px;
+}
+.fourohfour:before {
+  content: attr(data-hover);
+  position: absolute;
+  color: white;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: filltext 5s linear;
+  animation-delay: 0.9s;
+}
+
+@keyframes filltext {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.star {
+  height: 2px;
+  width: 2px;
+  background-color: rgb(161, 161, 117);
+  position: absolute;
+  animation: starshine 2s linear infinite;
+}
+
+@keyframes starshine {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -5,5 +5,15 @@ import Portfolio from "./Portfolio/Portfolio";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
+import FourOhFour from "./FourOhFour/FourOhFour";
 
-export { Welcome, Contact, Navbar, Portfolio, Footer, Header, Loading };
+export {
+  Welcome,
+  Contact,
+  Navbar,
+  Portfolio,
+  Footer,
+  Header,
+  Loading,
+  FourOhFour,
+};

@@ -7,6 +7,7 @@ import {
   Footer,
   Header,
   Loading,
+  FourOhFour,
 } from "./Components/index";
 import { Route } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" component={Welcome} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
+        <Route component={FourOhFour} />
       </div>
       <Navbar />
       <Footer />
