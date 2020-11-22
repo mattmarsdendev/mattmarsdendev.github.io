@@ -27,6 +27,21 @@ const FourOhFour = () => {
     23,
     24,
     25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
   ];
   const starsHTML = starArr.map((star) => (
     <div
@@ -45,12 +60,15 @@ const FourOhFour = () => {
       {/* <div data-hover="404" className="fourohfour">
         404
       </div> */}
-      <div className="moon-container">
-        <div className="four">4</div>
-        <div className="moon"></div>
-        <div className="four">4</div>
+      <div className="sun"></div>
+      <div className="title-container">
+        <div className="moon-container">
+          <div className="four">4</div>
+          <div className="moon"></div>
+          <div className="four">4</div>
+        </div>
+        <div className="just-space">NO PAGE HERE, JUST SPACE</div>
       </div>
-      <div className="just-space">NO PAGE HERE, JUST SPACE</div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
       <div className="spaceship">
