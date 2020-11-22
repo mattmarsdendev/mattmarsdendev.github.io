@@ -115,3 +115,27 @@
     }
   }
 }
+
+.terminal-container {
+  width: 65%;
+  height: 80%;
+  background-color: $darkestblue;
+  font-family: "Monaco";
+  color: $teal;
+  overflow-y: hidden;
+}
+
+.hello-text {
+  color: $teal;
+}
+
+.terminal-input {
+  border: none;
+  background-color: $darkestblue;
+  outline: none;
+  color: $teal;
+  font-size: 15px;
+  font-family: "Monaco";
+  width: calc(100% - 25px);
+  margin-left: 5px;
+}
