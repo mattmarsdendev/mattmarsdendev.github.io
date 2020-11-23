@@ -11,6 +11,7 @@ const Welcome = () => {
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
   const [help, setHelp] = useState(false);
+  const [clear, setClear] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ const Welcome = () => {
       setTerminalReturn([...updated, workingDirectory]);
       setInputText("");
     } else if (inputText === "clear") {
+      setClear(true);
       const blankArr = [];
       setTerminalReturn(blankArr);
       setInputText("");
@@ -44,13 +46,22 @@ const Welcome = () => {
         setTerminalReturn(updated);
       });
       setInputText("");
-    } else if (inputText === "--help") {
-      setHelp(true);
-      const help =
-        "Hey, thanks for trying out the terminal! Current working commands: cd, pwd, ls, clear are all functioning. Type 'home' to return to home directory";
-      setTerminalReturn([...terminalReturn, help]);
-      setInputText("");
+    } else if (inputText.includes("snap")) {
+      if (inputText.includes("--help")) {
+        const updated = [...terminalReturn, `$ ${inputText}`];
+        setHelp(true);
+        const help =
+          "Hey, thanks for trying out the terminal! Current working commands: cd, pwd, ls, clear are all functioning. Type 'home' to return to home directory";
+        setTerminalReturn([...updated, help]);
+        setInputText("");
+      } else {
+        const updated = [...terminalReturn, `$ ${inputText}`];
+        const snap =
+          "Currently only the --help flag is supported but there are more features planned! Stay tuned!";
+        setTerminalReturn([...updated, snap]);
+      }
     } else if (inputText === "home") {
+      setClear(false);
       setWorkingDirectory("/users/MattMarsden/");
       setTerminalReturn([...terminalReturn, "$ cd /users/MattMarsden/"]);
       setInputText("");
@@ -91,6 +102,14 @@ const Welcome = () => {
     });
   };
 
+  const handleToolsLink = () => {
+    const updatedDirectory = "/users/MattMarsden/Languages&Tools/";
+    setWorkingDirectory(updatedDirectory);
+    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
+    const ls = [...cd, "$ ls"];
+    setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
+  };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setInputText(value);
@@ -122,7 +141,7 @@ const Welcome = () => {
     }
   };
 
-  useEffect(() => {}, [terminalReturn]);
+  useEffect(() => {}, [terminalReturn, clear]);
 
   const handleFileLink = (item) => {
     const file = item.target.id;
@@ -134,6 +153,8 @@ const Welcome = () => {
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
+    } else if (file.includes("$") && !file.includes(" ")) {
+      setWorkingDirectory(`/users/MattMarsden/${file.split("$")[1]}/`);
     }
   };
 
@@ -158,51 +179,58 @@ const Welcome = () => {
 
   const helpHtml = (
     <div className="help-window">
-      <div>cd</div>
-      <div>ls</div>
-      <div>pwd</div>
-      <div>clear</div>
+      {help && (
+        <>
+          <div>cd</div>
+          <div>ls</div>
+          <div>pwd</div>
+          <div>clear</div>
+          <div>whim</div>
+        </>
+      )}
     </div>
   );
 
   return (
     <div className="welcome-container">
       <div className="terminal-container">
-        <div className="terminal-hello-container">
-          <div className="hello-text">
-            Hi! I'm Matt. I build things for the web!
-          </div>
-          <div className="specialize-text">
-            I specialize in front end development but have experience as a full
-            stack developer working on enterprise software. I love to build
-            clean UI and have a passion for improving user experiences.
-          </div>
-          <div className="click-instructions">
-            <br />
-            <span>
-              Feel free to click an{" "}
-              <div className="orange">&nbsp;$orange&nbsp;</div>
-              link below or try out the terminal! <br />
-            </span>
-            Type --help for more info
-          </div>
-          <div className="tool-text-container">
-            <div className="tools-link" onClick={handleAboutLink}>
-              $AboutMe
+        {!clear && (
+          <div className="terminal-hello-container">
+            <div className="hello-text">
+              Hi! I'm Matt. I build things for the web!
             </div>
-            <div className="tools-link" onClick={handleContactLink}>
-              $Contact
+            <div className="specialize-text">
+              I specialize in front end development but have experience as a
+              full stack developer working on enterprise software. I love to
+              build clean UI and have a passion for improving user experiences.
             </div>
-            <div className="tools-link" onClick={handlePortfolioLink}>
-              $Portfolio
+            <div className="click-instructions">
+              <br />
+              <span>
+                Feel free to click an{" "}
+                <div className="orange">&nbsp;$orange&nbsp;</div>
+                link below or try out the terminal! <br />
+              </span>
+              Type snap --help for more info
             </div>
-            <div className="tools-link">$Tools</div>
+            <div className="tool-text-container">
+              <div className="tools-link" onClick={handleAboutLink}>
+                $AboutMe
+              </div>
+              <div className="tools-link" onClick={handleContactLink}>
+                $Contact
+              </div>
+              <div className="tools-link" onClick={handlePortfolioLink}>
+                $Portfolio
+              </div>
+              <div className="tools-link" onClick={handleToolsLink}>
+                $Languages&Tools
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="terminal-return-container" tabindex="-1">
-          {terminalReturnHTML}
-        </div>
-        <form onSubmit={handleSubmit} tabindex="-1">
+        )}
+        <div className="terminal-return-container">{terminalReturnHTML}</div>
+        <form onSubmit={handleSubmit}>
           <label>
             $
             <input
@@ -217,7 +245,7 @@ const Welcome = () => {
           </label>
         </form>
       </div>
-      {help && helpHtml}
+      {helpHtml}
     </div>
   );
 };

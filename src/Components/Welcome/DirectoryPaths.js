@@ -64,21 +64,21 @@ const DirectoryPaths = {
       message: "/users/MattMarsden/Contact/",
       directory: "/users/MattMarsden/Contact/",
     },
-    Tools: {
-      message: "/users/MattMarsden/Tools/",
-      directory: "/users/MattMarsden/Tools/",
+    "Languages&Tools": {
+      message: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
-    "./Tools": {
-      message: "/users/MattMarsden/Tools/",
-      directory: "/users/MattMarsden/Tools/",
+    "./Languages&Tools": {
+      message: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
-    $Tools: {
-      message: "/users/MattMarsden/Tools/",
-      directory: "/users/MattMarsden/Tools/",
+    "$Languages&Tools": {
+      message: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
-    tools: {
-      message: "/users/MattMarsden/Tools/",
-      directory: "/users/MattMarsden/Tools/",
+    "languages&tools": {
+      message: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
   },
   "/users/MattMarsden/AboutMe/": {
@@ -117,14 +117,14 @@ const DirectoryPaths = {
       directory: "/users/MattMarsden/Portfolio/",
     },
   },
-  "/users/MattMarsden/Tools/": {
+  "/users/MattMarsden/Languages&Tools/": {
     "~": {
       message: "/users/MattMarsden/",
       directory: "/users/MattMarsden/",
     },
     "./": {
-      message: "/users/MattMarsden/Tools/",
-      directory: "/users/MattMarsden/Tools/",
+      message: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
     "../": {
       message: "/users/MattMarsden/",
@@ -132,7 +132,7 @@ const DirectoryPaths = {
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Tools/",
+      directory: "/users/MattMarsden/Languages&Tools/",
     },
   },
   "/users/MattMarsden/Contact/": {

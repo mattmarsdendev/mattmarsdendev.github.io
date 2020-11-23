@@ -1,17 +1,20 @@
 @import "../../Styles/colors";
+$orange: rgb(189, 144, 61);
 
 .welcome-container {
   display: flex;
   flex-direction: row;
-  // animation: popup 0.3s linear;
+  // animation: popup 4s linear;
+  align-items: center;
   background-color: $darkblue;
   justify-content: space-evenly;
   height: calc(50% - 40px);
   width: 100%;
   margin: 0 auto;
-  z-index: 1000 !important;
+  z-index: 8 !important;
   overflow-y: hidden;
   position: fixed;
+  animation-delay: 3s;
 }
 
 @keyframes popup {
@@ -131,30 +134,67 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-top: 15px;
-  animation: loadterminal 7s linear;
+  animation: loadterminal 4s linear;
 }
 
 @keyframes loadterminal {
   0% {
     transform: scaleY(0);
   }
-  15% {
+  5% {
     transform: scaleY(0);
   }
-  100% {
+  25% {
+    background-color: $darkblue;
+  }
+  45% {
     transform: scaleY(1);
+    opacity: 0.7;
+  }
+  100% {
+    background-color: $darkestblue;
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 
 .terminal-hello-container {
-  animation: terminaltext 10s linear;
+  animation: terminaltext 5s linear;
+  // z-index: 3;
+}
+
+.terminal-container::before {
+  animation: whiteLineRise 1s linear 2;
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  color: white;
+  background: linear-gradient(
+    0deg,
+    rgb(239, 239, 240) 00%,
+    rgb(41, 26, 66) 90%
+  );
+  z-index: 9;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes whiteLineRise {
+  0% {
+    bottom: 10%;
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes terminaltext {
   0% {
     opacity: 0;
   }
-  50% {
+  75% {
     opacity: 0;
   }
   100% {
@@ -184,7 +224,7 @@
 
 .tools-link {
   cursor: pointer;
-  color: orange;
+  color: $orange;
   transition: 0.3s;
   width: 125px;
 }
@@ -214,11 +254,11 @@ form {
 
 span {
   display: flex;
-  flex-direction: row;
+  // flex-direction: row;
 }
 
 .orange {
-  color: orange !important;
+  color: $orange !important;
 }
 
 .help-window {
