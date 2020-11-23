@@ -2,11 +2,12 @@ import "./Welcome.scss";
 import Tools from "./Tools";
 import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
+import DirectoryPaths from "./DirectoryPaths";
 
 const Welcome = () => {
   const [inputText, setInputText] = useState("");
   const [workingDirectory, setWorkingDirectory] = useState(
-    "/users/MattMarsden"
+    "/users/MattMarsden/"
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
 
@@ -22,7 +23,22 @@ const Welcome = () => {
       setInputText("");
     } else if (inputText.includes("cd")) {
       setTerminalReturn([...terminalReturn, `$ ${inputText}`]);
-      setInputText("");
+      if (DirectoryPaths[workingDirectory][inputText.split(" ")[1]]) {
+        setWorkingDirectory(
+          DirectoryPaths[workingDirectory][inputText.split(" ")[1]].directory
+        );
+        setTerminalReturn([
+          ...terminalReturn,
+          DirectoryPaths[workingDirectory][inputText.split(" ")[1]].message,
+        ]);
+        setInputText("");
+      } else {
+        setTerminalReturn([
+          ...terminalReturn,
+          `-snap ${inputText}: No such file or directory`,
+        ]);
+        setInputText("");
+      }
     } else if (inputText === "ls") {
       const updated = [...terminalReturn, `$ ${inputText}`];
       setTerminalReturn([...updated, DirectoryItems[workingDirectory]]);
@@ -33,8 +49,8 @@ const Welcome = () => {
       setTerminalReturn([...terminalReturn, help]);
       setInputText("");
     } else if (inputText === "home") {
-      setWorkingDirectory("/users/MattMarsden");
-      setTerminalReturn([...terminalReturn, "$ cd /users/MattMarsden"]);
+      setWorkingDirectory("/users/MattMarsden/");
+      setTerminalReturn([...terminalReturn, "$ cd /users/MattMarsden/"]);
       setInputText("");
     } else {
       setTerminalReturn([
@@ -45,10 +61,7 @@ const Welcome = () => {
     }
   };
 
-  const aboutLsHTML = <div>{DirectoryItems[workingDirectory]}</div>;
-
   const handleAboutLink = () => {
-    // const updated = [...terminalReturn, `$ ${inputText}`];
     const updatedDirectory = "/users/MattMarsden/AboutMe/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
@@ -69,7 +82,7 @@ const Welcome = () => {
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
-    const updated = [...terminalReturn];
+    const updated = [...ls];
     DirectoryItems[updatedDirectory].map((item) => {
       updated.push(item);
       setTerminalReturn(updated);
@@ -77,21 +90,33 @@ const Welcome = () => {
   };
 
   const handleChange = (e) => {
-    setInputText(e.target.value);
-    console.log(inputText);
+    const value = e.target.value;
+    setInputText(value);
   };
 
-  const handleTerminalClick = (file) => {
+  const handleTerminalClick = (file, updated) => {
     if (file === "AboutMe.txt") {
       const aboutMe =
         "Hey! Thanks for stopping by in the terminal and checking out the about me. Obviously, I love to be creative in my development work. In my free time, I love to cook and bake and am a hobby musician. I love to meet new people so feel free to drop me a line whenever!";
-      setTerminalReturn([...terminalReturn, aboutMe]);
+      setTerminalReturn([...updated, aboutMe]);
     } else if (file.includes(".com")) {
       window.open(
         "mailto:mattmarsdendev@gmail.com?subject=Wow, this terminal is really neat!"
       );
     } else if (file.includes(".io")) {
       window.open("/#/portfolio");
+    } else if (file === "portfolioWebsite.txt") {
+      const portfolio =
+        "This portfolio has turned into a bit of a passion project for me and I think it's a great showcase for my front-end skills. This terminal was created from scratch and presented a lot of interesting challenges to overcome. ";
+      setTerminalReturn([...updated, portfolio]);
+    } else if (file === "trividuh.txt") {
+      const trividuh =
+        "Trividuh was a fun trivia front end project that I put together to help me kill time when I'm on the go";
+      setTerminalReturn([...updated, trividuh]);
+    } else if (file === "nationalParks.txt") {
+      const nationalparks =
+        "I built this project to help me keep track of the national parks I've already visited. It helps me plan where to stop along roadtrips";
+      setTerminalReturn([...updated, nationalparks]);
     }
   };
 
@@ -99,22 +124,30 @@ const Welcome = () => {
 
   const handleFileLink = (item) => {
     const file = item.target.id;
-    console.log(file);
-    if (file.includes("txt") || file.includes(".com") || file.includes(".io"))
-      handleTerminalClick(file);
+    if (
+      (file.includes("txt") && !file.includes("whim")) ||
+      (file.includes(".com") && !file.includes("whim")) ||
+      (file.includes(".io") && !file.includes("whim"))
+    ) {
+      const updated = [...terminalReturn, `$ whim ${file}`];
+      setTerminalReturn(updated);
+      handleTerminalClick(file, updated);
+    }
   };
 
   const terminalReturnHTML = terminalReturn.map((item) => (
     <div
       className={
-        item.includes("txt") || item.includes(".com") || item.includes(".io")
+        (item.includes("txt") ||
+          item.includes(".com") ||
+          item.includes(".io")) &&
+        !item.includes("whim")
           ? "terminal-return txt-link"
           : "terminal-return"
       }
       onClick={(item) => handleFileLink(item)}
       id={item}
     >
-      {console.log(item)}
       {item}
     </div>
   ));
