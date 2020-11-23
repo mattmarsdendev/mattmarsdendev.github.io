@@ -5,6 +5,7 @@
   flex-direction: row;
   animation: popup 0.3s linear;
   background-color: $darkblue;
+  justify-content: space-evenly;
   height: 100%;
   width: 95%;
   margin: 0 auto;
@@ -130,6 +131,9 @@
   margin-top: 15px;
 }
 
+.terminal-hello-container {
+}
+
 .hello-text {
   color: $teal;
 }
@@ -154,6 +158,7 @@
   cursor: pointer;
   color: orange;
   transition: 0.3s;
+  width: 125px;
 }
 
 .tools-link:hover {
@@ -168,4 +173,27 @@
 
 .txt-link:hover {
   color: rgb(90, 1, 90);
+}
+
+form {
+  position: absolute;
+}
+
+.terminal-return-container {
+  margin-bottom: 20px;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+}
+
+.orange {
+  color: orange !important;
+}
+
+.help-window {
+  height: 200px;
+  width: 200px;
+  background-color: $darkestblue;
 }

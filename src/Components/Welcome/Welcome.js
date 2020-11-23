@@ -10,6 +10,7 @@ const Welcome = () => {
     "/users/MattMarsden/"
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
+  const [help, setHelp] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,6 +45,7 @@ const Welcome = () => {
       });
       setInputText("");
     } else if (inputText === "--help") {
+      setHelp(true);
       const help =
         "Hey, thanks for trying out the terminal! Current working commands: cd, pwd, ls, clear are all functioning. Type 'home' to return to home directory";
       setTerminalReturn([...terminalReturn, help]);
@@ -153,33 +155,43 @@ const Welcome = () => {
       {item}
     </div>
   ));
+
+  const helpHtml = <div className="help-window"></div>;
   return (
     <div className="welcome-container">
       <div className="terminal-container">
-        <div className="hello-text">
-          Hi! I'm Matt. I build things for the web
-        </div>
-        <div className="specialize-text">
-          I specialize in front end development but have experience as a full
-          stack developer working on enterprise software. I love to build clean
-          UI and have a passion for improving user experiences.
-        </div>
-        <div className="click-instructions">
-          Feel free to click a link below
-        </div>
-        <div className="tool-text-container">
-          <div className="tools-link" onClick={handleAboutLink}>
-            $AboutMe
+        <div className="terminal-hello-container">
+          <div className="hello-text">
+            Hi! I'm Matt. I build things for the web!
           </div>
-          <div className="tools-link" onClick={handleContactLink}>
-            $Contact
+          <div className="specialize-text">
+            I specialize in front end development but have experience as a full
+            stack developer working on enterprise software. I love to build
+            clean UI and have a passion for improving user experiences.
           </div>
-          <div className="tools-link" onClick={handlePortfolioLink}>
-            $Portfolio
+          <div className="click-instructions">
+            <br />
+            <span>
+              Feel free to click an{" "}
+              <div className="orange">&nbsp;$orange&nbsp;</div>
+              link below or try out the terminal! <br />
+            </span>
+            Type --help for more info
           </div>
-          <div className="tools-link">$Tools</div>
+          <div className="tool-text-container">
+            <div className="tools-link" onClick={handleAboutLink}>
+              $AboutMe
+            </div>
+            <div className="tools-link" onClick={handleContactLink}>
+              $Contact
+            </div>
+            <div className="tools-link" onClick={handlePortfolioLink}>
+              $Portfolio
+            </div>
+            <div className="tools-link">$Tools</div>
+          </div>
         </div>
-        <div className="termain-return-container">{terminalReturnHTML}</div>
+        <div className="terminal-return-container">{terminalReturnHTML}</div>
         <form onSubmit={handleSubmit}>
           <label>
             $
@@ -194,6 +206,7 @@ const Welcome = () => {
           </label>
         </form>
       </div>
+      {help && helpHtml}
     </div>
   );
 };
