@@ -9,32 +9,65 @@ const DirectoryPaths = {
       directory: "/users/MattMarsden/",
     },
     AboutMe: {
-      message: "changed drives",
+      message: "/users/MattMarsden/AboutMe",
       directory: "/users/MattMarsden/AboutMe",
     },
     "./AboutMe": {
-      message: "changed drives",
+      message: "/users/MattMarsden/AboutMe",
       directory: "/users/MattMarsden/AboutMe",
     },
     Portfolio: {
-      message: "changed drives",
+      message: "/users/MattMarsden/Portfolio",
       directory: "/users/MattMarsden/Portfolio",
     },
     "./Portfolio": {
-      message: "changed drives",
+      message: "/users/MattMarsden/Portfolio",
       directory: "/users/MattMarsden/Portfolio",
     },
     Contact: {
-      message: "changed drives",
+      message: "/users/MattMarsden/Contact",
       directory: "/users/MattMarsden/Contact",
     },
     "./Contact": {
-      message: "changed drives",
+      message: "/users/MattMarsden/Contact",
       directory: "/users/MattMarsden/Contact",
     },
-    Tools: { message: "changed drives", directory: "/users/MattMarsden/Tools" },
+    Tools: {
+      message: "/users/MattMarsden/Tools",
+      directory: "/users/MattMarsden/Tools",
+    },
     "./Tools": {
-      message: "changed drives",
+      message: "/users/MattMarsden/Tools",
+      directory: "/users/MattMarsden/Tools",
+    },
+  },
+  "/users/MattMarsden/AboutMe": {
+    "../": {
+      message: "/users/MattMarsden/",
+      directory: "/users/MattMarsden/",
+    },
+    "../../": {
+      message: "You do not have required permissions to change into this drive",
+      directory: "/users/MattMarsden/AboutMe",
+    },
+  },
+  "/users/MattMarsden/Portfolio": {
+    "../": {
+      message: "/users/MattMarsden/",
+      directory: "/users/MattMarsden/",
+    },
+    "../../": {
+      message: "You do not have required permissions to change into this drive",
+      directory: "/users/MattMarsden/Portfolio",
+    },
+  },
+  "/users/MattMarsden/Tools": {
+    "../": {
+      message: "/users/MattMarsden/",
+      directory: "/users/MattMarsden/",
+    },
+    "../../": {
+      message: "You do not have required permissions to change into this drive",
       directory: "/users/MattMarsden/Tools",
     },
   },

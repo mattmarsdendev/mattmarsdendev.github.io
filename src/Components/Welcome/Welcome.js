@@ -41,7 +41,10 @@ const Welcome = () => {
       }
     } else if (inputText === "ls") {
       const updated = [...terminalReturn, `$ ${inputText}`];
-      setTerminalReturn([...updated, DirectoryItems[workingDirectory]]);
+      DirectoryItems[workingDirectory].map((item) => {
+        updated.push(item);
+        setTerminalReturn(updated);
+      });
       setInputText("");
     } else if (inputText === "--help") {
       const help =
@@ -143,6 +146,8 @@ const Welcome = () => {
           item.includes(".io")) &&
         !item.includes("whim")
           ? "terminal-return txt-link"
+          : item.includes("$") && !item.includes("$ ")
+          ? "terminal-return tools-link"
           : "terminal-return"
       }
       onClick={(item) => handleFileLink(item)}
@@ -192,14 +197,6 @@ const Welcome = () => {
           </label>
         </form>
       </div>
-      {/* <div className="introduction">
-        <h1 className="hello">Hi, I'm Matt! I build things for the web</h1>
-        <h3 className="specialize">
-          I specialize in the front end but have professional full stack
-          experience
-        </h3>
-      </div>
-      <Tools /> */}
     </div>
   );
 };

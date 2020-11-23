@@ -1,4 +1,5 @@
 const DirectoryItems = {
+  "/users/MattMarsden/": ["$AboutMe", "$Contact", "$Portfolio"],
   "/users/MattMarsden/AboutMe/": ["AboutMe.txt"],
   "/users/MattMarsden/Contact": ["mattmarsdendev@gmail.com"],
   "/users/MattMarsden/Portfolio": [
