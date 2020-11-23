@@ -22,15 +22,12 @@ const Welcome = () => {
       setTerminalReturn(blankArr);
       setInputText("");
     } else if (inputText.includes("cd")) {
+      const directPath =
+        DirectoryPaths[workingDirectory][inputText.split(" ")[1]];
       setTerminalReturn([...terminalReturn, `$ ${inputText}`]);
-      if (DirectoryPaths[workingDirectory][inputText.split(" ")[1]]) {
-        setWorkingDirectory(
-          DirectoryPaths[workingDirectory][inputText.split(" ")[1]].directory
-        );
-        setTerminalReturn([
-          ...terminalReturn,
-          DirectoryPaths[workingDirectory][inputText.split(" ")[1]].message,
-        ]);
+      if (directPath) {
+        setWorkingDirectory(directPath.directory);
+        setTerminalReturn([...terminalReturn, directPath.message]);
         setInputText("");
       } else {
         setTerminalReturn([
