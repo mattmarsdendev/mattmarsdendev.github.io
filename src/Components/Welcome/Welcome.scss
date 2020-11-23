@@ -3,13 +3,15 @@
 .welcome-container {
   display: flex;
   flex-direction: row;
-  animation: popup 0.3s linear;
+  // animation: popup 0.3s linear;
   background-color: $darkblue;
   justify-content: space-evenly;
-  height: 100%;
-  width: 95%;
+  height: calc(50% - 40px);
+  width: 100%;
   margin: 0 auto;
   z-index: 1000 !important;
+  overflow-y: hidden;
+  position: fixed;
 }
 
 @keyframes popup {
@@ -123,15 +125,41 @@
   background-color: $darkestblue;
   font-family: "Monaco";
   color: $teal;
-  overflow-y: scroll;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   margin-top: 15px;
+  animation: loadterminal 7s linear;
+}
+
+@keyframes loadterminal {
+  0% {
+    transform: scaleY(0);
+  }
+  15% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .terminal-hello-container {
+  animation: terminaltext 10s linear;
+}
+
+@keyframes terminaltext {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hello-text {
@@ -176,7 +204,8 @@
 }
 
 form {
-  position: absolute;
+  position: fixed;
+  width: 65%;
 }
 
 .terminal-return-container {
@@ -194,6 +223,6 @@ span {
 
 .help-window {
   height: 200px;
-  width: 200px;
+  width: 300px;
   background-color: $darkestblue;
 }

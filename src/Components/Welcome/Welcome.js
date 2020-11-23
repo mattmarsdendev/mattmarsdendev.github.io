@@ -72,7 +72,7 @@ const Welcome = () => {
   };
 
   const handleContactLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Contact";
+    const updatedDirectory = "/users/MattMarsden/Contact/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -80,7 +80,7 @@ const Welcome = () => {
   };
 
   const handlePortfolioLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Portfolio";
+    const updatedDirectory = "/users/MattMarsden/Portfolio/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -156,7 +156,15 @@ const Welcome = () => {
     </div>
   ));
 
-  const helpHtml = <div className="help-window"></div>;
+  const helpHtml = (
+    <div className="help-window">
+      <div>cd</div>
+      <div>ls</div>
+      <div>pwd</div>
+      <div>clear</div>
+    </div>
+  );
+
   return (
     <div className="welcome-container">
       <div className="terminal-container">
@@ -191,8 +199,10 @@ const Welcome = () => {
             <div className="tools-link">$Tools</div>
           </div>
         </div>
-        <div className="terminal-return-container">{terminalReturnHTML}</div>
-        <form onSubmit={handleSubmit}>
+        <div className="terminal-return-container" tabindex="-1">
+          {terminalReturnHTML}
+        </div>
+        <form onSubmit={handleSubmit} tabindex="-1">
           <label>
             $
             <input
@@ -202,6 +212,7 @@ const Welcome = () => {
               className="terminal-input"
               onChange={handleChange}
               value={inputText || ""}
+              tabindex="-1"
             />
           </label>
         </form>
