@@ -118,14 +118,16 @@
 
 .terminal-container {
   width: 65%;
-  height: 80%;
+  height: 250px;
   background-color: $darkestblue;
   font-family: "Monaco";
   color: $teal;
-  overflow-y: hidden;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 15px;
 }
 
 .hello-text {
@@ -150,5 +152,20 @@
 
 .tools-link {
   cursor: pointer;
-  display: inline-block;
+  color: orange;
+  transition: 0.3s;
+}
+
+.tools-link:hover {
+  color: rgb(150, 100, 0);
+}
+
+.txt-link {
+  color: purple;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.txt-link:hover {
+  color: rgb(90, 1, 90);
 }
