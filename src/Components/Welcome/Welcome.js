@@ -59,6 +59,7 @@ const Welcome = () => {
         const snap =
           "Currently only the --help flag is supported but there are more features planned! Stay tuned!";
         setTerminalReturn([...updated, snap]);
+        setInputText("");
       }
     } else if (inputText === "home") {
       setClear(false);
@@ -194,6 +195,7 @@ const Welcome = () => {
   return (
     <div className="welcome-container">
       <div className="terminal-container">
+        <div className="terminal-loader"></div>
         {!clear && (
           <div className="terminal-hello-container">
             <div className="hello-text">

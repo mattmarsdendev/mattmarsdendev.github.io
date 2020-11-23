@@ -285,7 +285,7 @@
   border-bottom-right-radius: 25%;
   //   border: 5px solid darkred;
   box-shadow: inset 0px 10px 0px 2px white;
-  //   z-index: 3;
+  // z-index: 3;
   //   transform: scale(0.4) rotate(90deg);
   animation: spaceshipfly 30s linear infinite;
 }
@@ -307,6 +307,7 @@
   width: 30px;
   position: absolute;
   z-index: -1;
+  box-shadow: inset 0px -3px 0px 2px rgb(58, 0, 0);
 }
 
 .spaceship::before {
