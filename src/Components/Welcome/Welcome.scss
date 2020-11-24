@@ -135,7 +135,7 @@ $orange: rgb(189, 144, 61);
   justify-content: flex-end;
   align-items: flex-start;
   margin-top: 15px;
-  animation: loadterminal 4s linear;
+  // animation: loadterminal 4s linear;
 }
 
 @keyframes loadterminal {
@@ -160,10 +160,32 @@ $orange: rgb(189, 144, 61);
 }
 .terminal-hello-container {
   // z-index: 3;
+  // display: none;
+  animation: loaderrr 6.5s linear;
+  // opacity: 0;
+}
+
+@keyframes loaderrr {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  75% {
+    opacity: 0;
+    height: 0;
+  }
+  85% {
+    height: 100%;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 .terminal-container::before {
-  animation: whiteLineRise 1s linear 2;
+  // animation: whiteLineRise 1s linear 2;
   content: "";
   position: absolute;
   height: 10px;
@@ -202,6 +224,23 @@ $orange: rgb(189, 144, 61);
   font-family: "Monaco";
   width: calc(100% - 25px);
   margin-left: 5px;
+}
+
+.input-container {
+  animation: terminalInputAnimation 10s linear;
+  // animation-delay: 3s;
+}
+
+@keyframes terminalInputAnimation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .tool-text-container {
@@ -266,4 +305,50 @@ span {
   display: inline-block;
   color: $orange !important;
   margin: 0;
+}
+
+.loading-snap {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textAnimation 1s steps(10, end) 3;
+  letter-spacing: 0.2em;
+  opacity: 0;
+  // display: inline-block;
+}
+
+@keyframes textAnimation {
+  from {
+    width: 0%;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.loaded-snap {
+  // display: inline-block;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textAnimation 1.5s steps(8, end);
+  animation-delay: 3s;
+  letter-spacing: 0.4em;
+  // animation: textAnimation 4.5s linear infinite;
+}
+
+@keyframes loadedSnap {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-snap-container {
 }

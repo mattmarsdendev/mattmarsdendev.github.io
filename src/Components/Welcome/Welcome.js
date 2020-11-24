@@ -194,6 +194,10 @@ const Welcome = () => {
   return (
     <div className="welcome-container">
       <div className="terminal-container">
+        <div className="loading-snap-container">
+          <div className="loading-snap">Loading...</div>
+          <div className="loaded-snap">Loaded</div>
+        </div>
         {!clear && (
           <div className="terminal-hello-container">
             <div className="hello-text">
@@ -227,7 +231,7 @@ const Welcome = () => {
           </div>
         )}
         <div className="terminal-return-container">{terminalReturnHTML}</div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="input-container">
           <label>
             $
             <input
