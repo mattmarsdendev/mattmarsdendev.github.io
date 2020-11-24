@@ -3,6 +3,7 @@ import Tools from "./Tools";
 import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
+import SnapHelp from "./SnapHelp";
 
 const Welcome = () => {
   const [inputText, setInputText] = useState("");
@@ -50,9 +51,11 @@ const Welcome = () => {
       if (inputText.includes("--help")) {
         const updated = [...terminalReturn, `$ ${inputText}`];
         setHelp(true);
-        const help =
-          "Hey, thanks for trying out the terminal! Current working commands: cd, pwd, ls, clear are all functioning. Type 'home' to return to home directory";
-        setTerminalReturn([...updated, help]);
+        setTerminalReturn([updated]);
+        for (const [key, value] of Object.entries(SnapHelp)) {
+          updated.push(`${key}: ${value}`);
+          setTerminalReturn(updated);
+        }
         setInputText("");
       } else {
         const updated = [...terminalReturn, `$ ${inputText}`];
@@ -65,6 +68,17 @@ const Welcome = () => {
       setClear(false);
       setWorkingDirectory("/users/MattMarsden/");
       setInputText("");
+    } else if (inputText.includes("whim")) {
+      if (inputText.includes("txt")) {
+        handleTerminalClick(inputText.split(" ")[1], terminalReturn);
+        setInputText("");
+      } else {
+        setTerminalReturn([
+          ...terminalReturn,
+          `whim does not recognize ${inputText.split(" ")[1]} as a txt file`,
+        ]);
+        setInputText("");
+      }
     } else {
       setTerminalReturn([
         ...terminalReturn,

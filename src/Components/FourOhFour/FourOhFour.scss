@@ -437,3 +437,39 @@
   margin-left: 4px;
   //   box-shadow: 0px 0px 10px 1px rgb(77, 132, 150);
 }
+
+.alien {
+  position: absolute;
+  height: 25px;
+  width: 120px;
+  background-color: gray;
+  // margin-top: 50px;
+  top: 100px;
+  left: 200px;
+  border-radius: 40%;
+  // border-top-left-radius: 50%;
+}
+
+.alien::after {
+  content: "";
+  position: absolute;
+  height: 45px;
+  width: 50px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: lightblue;
+  margin-top: -45px;
+  margin-left: 35px;
+}
+
+.alien::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  background-color: darkgray;
+  margin-top: -15px;
+  margin-left: 20px;
+}

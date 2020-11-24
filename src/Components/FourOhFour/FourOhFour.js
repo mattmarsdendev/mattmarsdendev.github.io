@@ -88,6 +88,9 @@ const FourOhFour = () => {
           <div className="back-engine"></div>
         </div>
       </div>
+      <div className="alien-container">
+        <div className="alien"></div>
+      </div>
       <div className="comet"></div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
