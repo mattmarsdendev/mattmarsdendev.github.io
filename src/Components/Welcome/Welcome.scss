@@ -158,17 +158,6 @@ $orange: rgb(189, 144, 61);
     opacity: 1;
   }
 }
-
-.terminal-loader {
-  position: absolute;
-  height: 250px;
-  width: 65%;
-  background-color: $darkestblue;
-  z-index: 6;
-  animation: terminaltext 5s linear;
-  opacity: 0;
-}
-
 .terminal-hello-container {
   // z-index: 3;
 }
@@ -196,18 +185,6 @@ $orange: rgb(189, 144, 61);
   }
   100% {
     bottom: 100%;
-    opacity: 0;
-  }
-}
-
-@keyframes terminaltext {
-  0% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
     opacity: 0;
   }
 }
@@ -267,12 +244,26 @@ span {
   // flex-direction: row;
 }
 
-.orange {
-  color: $orange !important;
-}
+// .orange {
+//   color: $orange !important;
+// }
 
 .help-window {
   height: 200px;
   width: 300px;
   background-color: $darkestblue;
+}
+
+.click-instructions {
+  display: inline-block;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+}
+
+.orange {
+  display: inline-block;
+  color: $orange !important;
+  margin: 0;
 }

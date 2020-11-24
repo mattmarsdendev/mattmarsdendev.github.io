@@ -64,7 +64,6 @@ const Welcome = () => {
     } else if (inputText === "home") {
       setClear(false);
       setWorkingDirectory("/users/MattMarsden/");
-      setTerminalReturn([...terminalReturn, "$ cd /users/MattMarsden/"]);
       setInputText("");
     } else {
       setTerminalReturn([
@@ -195,7 +194,6 @@ const Welcome = () => {
   return (
     <div className="welcome-container">
       <div className="terminal-container">
-        <div className="terminal-loader"></div>
         {!clear && (
           <div className="terminal-hello-container">
             <div className="hello-text">
@@ -208,11 +206,8 @@ const Welcome = () => {
             </div>
             <div className="click-instructions">
               <br />
-              <span>
-                Feel free to click an{" "}
-                <div className="orange">&nbsp;$orange&nbsp;</div>
-                link below or try out the terminal! <br />
-              </span>
+              Feel free to click an <p className="orange">$orange&nbsp;</p>
+              link below or try out the terminal! <br />
               Type snap --help for more info
             </div>
             <div className="tool-text-container">
