@@ -158,11 +158,11 @@ $orange: rgb(189, 144, 61);
     opacity: 1;
   }
 }
-.terminal-hello-container {
-  animation: loaderrr 6.5s linear;
+.terminal-hello-container-animated {
+  animation: animateHelloText 6.5s linear;
 }
 
-@keyframes loaderrr {
+@keyframes animateHelloText {
   0% {
     opacity: 0;
     height: 0;
@@ -197,8 +197,7 @@ $orange: rgb(189, 144, 61);
 }
 
 .input-container {
-  animation: terminalInputAnimation 10s linear;
-  // animation-delay: 3s;
+  animation: terminalInputAnimation 8.5s linear;
 }
 
 @keyframes terminalInputAnimation {

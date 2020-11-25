@@ -1,156 +1,156 @@
 const DirectoryPaths = {
-  "/users/MattMarsden/": {
+  "/users/MattMarsden/Home/": {
     "~": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "./": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/",
+      directory: "/users/MattMarsden/Home/",
     },
     AboutMe: {
-      message: "/users/MattMarsden/AboutMe/",
-      directory: "/users/MattMarsden/AboutMe/",
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
     "./AboutMe": {
-      message: "/users/MattMarsden/AboutMe/",
-      directory: "/users/MattMarsden/AboutMe/",
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
     $AboutMe: {
-      message: "/users/MattMarsden/AboutMe/",
-      directory: "/users/MattMarsden/AboutMe/",
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
     aboutme: {
-      message: "/users/MattMarsden/AboutMe/",
-      directory: "/users/MattMarsden/AboutMe/",
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
     Portfolio: {
-      message: "/users/MattMarsden/Portfolio/",
-      directory: "/users/MattMarsden/Portfolio/",
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
     "./Portfolio": {
-      message: "/users/MattMarsden/Portfolio/",
-      directory: "/users/MattMarsden/Portfolio/",
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
     $Portfolio: {
-      message: "/users/MattMarsden/Portfolio/",
-      directory: "/users/MattMarsden/Portfolio/",
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
     portfolio: {
-      message: "/users/MattMarsden/Portfolio/",
-      directory: "/users/MattMarsden/Portfolio/",
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
     Contact: {
-      message: "/users/MattMarsden/Contact/",
-      directory: "/users/MattMarsden/Contact/",
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
     "./Contact": {
-      message: "/users/MattMarsden/Contact/",
-      directory: "/users/MattMarsden/Contact/",
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
     $Contact: {
-      message: "/users/MattMarsden/Contact/",
-      directory: "/users/MattMarsden/Contact/",
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
     contact: {
-      message: "/users/MattMarsden/Contact/",
-      directory: "/users/MattMarsden/Contact/",
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
     "Languages&Tools": {
-      message: "/users/MattMarsden/Languages&Tools/",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
     "./Languages&Tools": {
-      message: "/users/MattMarsden/Languages&Tools/",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
     "$Languages&Tools": {
-      message: "/users/MattMarsden/Languages&Tools/",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
     "languages&tools": {
-      message: "/users/MattMarsden/Languages&Tools/",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
   },
-  "/users/MattMarsden/AboutMe/": {
+  "/users/MattMarsden/Home/AboutMe/": {
     "~": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "./": {
-      message: "/users/MattMarsden/AboutMe/",
-      directory: "/users/MattMarsden/AboutMe/",
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
     "../": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
     },
   },
-  "/users/MattMarsden/Portfolio/": {
+  "/users/MattMarsden/Home/Portfolio/": {
     "~": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "./": {
-      message: "/users/MattMarsden/Portfolio/",
-      directory: "/users/MattMarsden/Portfolio/",
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
     "../": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
     },
   },
-  "/users/MattMarsden/Languages&Tools/": {
+  "/users/MattMarsden/Home/Languages&Tools/": {
     "~": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "./": {
-      message: "/users/MattMarsden/Languages&Tools/",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
     "../": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
   },
-  "/users/MattMarsden/Contact/": {
+  "/users/MattMarsden/Home/Contact/": {
     "~": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "./": {
-      message: "/users/MattMarsden/Contact/",
-      directory: "/users/MattMarsden/Contact/",
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
     "../": {
-      message: "/users/MattMarsden/",
-      directory: "/users/MattMarsden/",
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
     },
   },
 };

@@ -8,12 +8,14 @@ import SnapHelp from "./SnapHelp";
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
   const [workingDirectory, setWorkingDirectory] = useState(
-    "/users/MattMarsden/"
+    "/users/MattMarsden/Home/"
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
   const [clear, setClear] = useState(false);
   const [previousCommands, setPreviousCommands] = useState([]);
   const [commandIndex, setCommandIndex] = useState(0);
+
+  const defaultDirectory = "/users/MattMarsden/Home/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,8 +65,10 @@ const Terminal = () => {
         setInputText("");
       }
     } else if (inputText === "home") {
+      updated.pop();
+      setTerminalReturn(updated);
       setClear(false);
-      setWorkingDirectory("/users/MattMarsden/");
+      setWorkingDirectory("/users/MattMarsden/Home/");
       setInputText("");
     } else if (inputText.includes("whim")) {
       if (inputText.includes("txt")) {
@@ -84,9 +88,7 @@ const Terminal = () => {
   };
 
   const handleKeyDown = (e) => {
-    console.log(e.keyCode);
     if (e.keyCode === 38 && commandIndex > 0) {
-      console.log(inputText);
       setCommandIndex(commandIndex - 1);
       setInputText(previousCommands[commandIndex]);
     } else if (e.keyCode === 40 && commandIndex < previousCommands.length) {
@@ -95,8 +97,19 @@ const Terminal = () => {
     }
   };
 
+  const listFilesCommand = (directory) => {
+    const updatedTerminalReturn = [...terminalReturn];
+    const directoryItemsMap =
+      DirectoryItems[directory] ||
+      DirectoryItems[DirectoryItems["aliases"][directory]];
+    directoryItemsMap.map((item) => {
+      updatedTerminalReturn.push(item);
+    });
+    setTerminalReturn(updatedTerminalReturn);
+  };
+
   const handleAboutLink = () => {
-    const updatedDirectory = "/users/MattMarsden/AboutMe/";
+    const updatedDirectory = "/users/MattMarsden/Home/AboutMe/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -104,7 +117,7 @@ const Terminal = () => {
   };
 
   const handleContactLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Contact/";
+    const updatedDirectory = "/users/MattMarsden/Home/Contact/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -112,7 +125,7 @@ const Terminal = () => {
   };
 
   const handlePortfolioLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Portfolio/";
+    const updatedDirectory = "/users/MattMarsden/Home/Portfolio/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -124,7 +137,7 @@ const Terminal = () => {
   };
 
   const handleToolsLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Languages&Tools/";
+    const updatedDirectory = "/users/MattMarsden/Home/Languages&Tools/";
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
@@ -159,6 +172,17 @@ const Terminal = () => {
       const nationalparks =
         "I built this project to help me keep track of the national parks I've already visited. It helps me plan where to stop along roadtrips";
       setTerminalReturn([...updated, nationalparks]);
+    } else if (file.includes("$")) {
+      const newDirectory = file.includes("home")
+        ? defaultDirectory
+        : `${defaultDirectory}${file}`;
+      console.log(newDirectory);
+      setWorkingDirectory(newDirectory);
+      const updatedReturn = [...terminalReturn];
+      updatedReturn.push(`$ cd ${newDirectory}`);
+      updatedReturn.push(`$ ls`);
+      setTerminalReturn(updatedReturn);
+      listFilesCommand(newDirectory);
     }
   };
 
@@ -169,13 +193,14 @@ const Terminal = () => {
     if (
       (file.includes("txt") && !file.includes("whim")) ||
       (file.includes(".com") && !file.includes("whim")) ||
-      (file.includes(".io") && !file.includes("whim"))
+      (file.includes(".io") && !file.includes("whim")) ||
+      (file.includes("$") && !file.includes("whim"))
     ) {
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
     } else if (file.includes("$") && !file.includes(" ")) {
-      setWorkingDirectory(`/users/MattMarsden/${file.split("$")[1]}/`);
+      setWorkingDirectory(`/users/MattMarsden/Home/${file.split("$")[1]}/`);
     }
   };
 
@@ -205,7 +230,13 @@ const Terminal = () => {
         <div className="loaded-snap">Loaded</div>
       </div>
       {!clear && (
-        <div className="terminal-hello-container">
+        <div
+          className={
+            previousCommands.length > 1
+              ? "terminal-hello-container"
+              : "terminal-hello-container-animated"
+          }
+        >
           <div className="hello-text">
             Hi! I'm Matt. I build things for the web!
           </div>
