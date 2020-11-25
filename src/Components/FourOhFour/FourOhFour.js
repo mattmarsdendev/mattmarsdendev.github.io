@@ -71,6 +71,8 @@ const FourOhFour = () => {
       {/* <div data-hover="404" className="fourohfour">
         404
       </div> */}
+      <div className="comet"></div>
+      <div className="comet2"></div>
       <div className="sun"></div>
       <div className="title-container">
         <div className="moon-container">
@@ -88,10 +90,13 @@ const FourOhFour = () => {
           <div className="back-engine"></div>
         </div>
       </div>
-      <div className="alien-container">
-        <div className="alien"></div>
+      <div className="alien">
+        <div className="alien-smoke"></div>
+        <div className="alien-smoke2"></div>
+        <div className="alien-smoke3"></div>
+        <div className="alien-smoke4"></div>
+        <div className="alien-smoke5"></div>
       </div>
-      <div className="comet"></div>
       <div className="cloud"></div>
       <div className="cloud2"></div>
     </div>

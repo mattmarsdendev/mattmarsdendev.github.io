@@ -12,11 +12,16 @@ const Terminal = () => {
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
   const [clear, setClear] = useState(false);
+  const [previousCommands, setPreviousCommands] = useState([]);
+  const [commandIndex, setCommandIndex] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const updated = [...terminalReturn, `$ ${inputText}`];
+    setCommandIndex(previousCommands.length);
+    setPreviousCommands([...previousCommands, inputText, ""]);
+    setTerminalReturn(updated);
     if (inputText === "pwd") {
-      const updated = [...terminalReturn, `$ ${inputText}`];
       setTerminalReturn([...updated, workingDirectory]);
       setInputText("");
     } else if (inputText === "clear") {
@@ -27,20 +32,18 @@ const Terminal = () => {
     } else if (inputText.includes("cd")) {
       const directPath =
         DirectoryPaths[workingDirectory][inputText.split(" ")[1]];
-      setTerminalReturn([...terminalReturn, `$ ${inputText}`]);
       if (directPath) {
         setWorkingDirectory(directPath.directory);
-        setTerminalReturn([...terminalReturn, directPath.message]);
+        setTerminalReturn([...updated, directPath.message]);
         setInputText("");
       } else {
         setTerminalReturn([
-          ...terminalReturn,
+          ...updated,
           `-snap ${inputText}: No such file or directory`,
         ]);
         setInputText("");
       }
     } else if (inputText === "ls") {
-      const updated = [...terminalReturn, `$ ${inputText}`];
       DirectoryItems[workingDirectory].map((item) => {
         updated.push(item);
         setTerminalReturn(updated);
@@ -48,15 +51,12 @@ const Terminal = () => {
       setInputText("");
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
-        const updated = [...terminalReturn, `$ ${inputText}`];
-        setTerminalReturn([updated]);
         for (const [key, value] of Object.entries(SnapHelp)) {
           updated.push(`${key}: ${value}`);
           setTerminalReturn(updated);
         }
         setInputText("");
       } else {
-        const updated = [...terminalReturn, `$ ${inputText}`];
         const snap =
           "Currently only the --help flag is supported but there are more features planned! Stay tuned!";
         setTerminalReturn([...updated, snap]);
@@ -72,17 +72,26 @@ const Terminal = () => {
         setInputText("");
       } else {
         setTerminalReturn([
-          ...terminalReturn,
+          ...updated,
           `whim does not recognize ${inputText.split(" ")[1]} as a txt file`,
         ]);
         setInputText("");
       }
     } else {
-      setTerminalReturn([
-        ...terminalReturn,
-        `-snap: ${inputText}: command not found`,
-      ]);
+      setTerminalReturn([...updated, `-snap: ${inputText}: command not found`]);
       setInputText("");
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    console.log(e.keyCode);
+    if (e.keyCode === 38 && commandIndex > 0) {
+      console.log(inputText);
+      setCommandIndex(commandIndex - 1);
+      setInputText(previousCommands[commandIndex]);
+    } else if (e.keyCode === 40 && commandIndex < previousCommands.length) {
+      setCommandIndex(commandIndex + 1);
+      setInputText(previousCommands[commandIndex]);
     }
   };
 
@@ -239,6 +248,7 @@ const Terminal = () => {
             onChange={handleChange}
             value={inputText || ""}
             tabindex="-1"
+            onKeyDown={handleKeyDown}
           />
         </label>
       </form>
