@@ -19,31 +19,27 @@ const Terminal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updated = [...terminalReturn, `$ ${inputText}`];
+    let updated = [...terminalReturn, `$ ${inputText}`];
+    let updatedDir = workingDirectory;
     setCommandIndex(previousCommands.length);
     setPreviousCommands([...previousCommands, inputText, ""]);
-    setTerminalReturn(updated);
     if (inputText === "pwd") {
-      setTerminalReturn([...updated, workingDirectory]);
+      updated.push(updatedDir);
       setInputText("");
     } else if (inputText === "clear") {
       setClear(true);
-      const blankArr = [];
-      setTerminalReturn(blankArr);
+      updated = [];
       setInputText("");
     } else if (inputText.includes("cd")) {
-      console.log(`${workingDirectory}/${inputText.split(" ")[1]}`);
       const directPath =
-        DirectoryPaths[workingDirectory][inputText.split(" ")[1]] ||
+        DirectoryPaths[updatedDir][inputText.split(" ")[1]] ||
         DirectoryPaths[
-          DirectoryPaths["aliases"][
-            `${workingDirectory}/${inputText.split(" ")[1]}`
-          ]
+          DirectoryPaths["aliases"][`${updatedDir}/${inputText.split(" ")[1]}`]
         ];
-      console.log("cd directpath --->", directPath);
       if (directPath) {
+        updatedDir = directPath.directory;
         setWorkingDirectory(directPath.directory);
-        setTerminalReturn([...updated, directPath.message]);
+        updated.push(directPath.message);
         setInputText("");
       } else {
         setTerminalReturn([
@@ -60,13 +56,12 @@ const Terminal = () => {
       if (inputText.includes("--help")) {
         for (const [key, value] of Object.entries(SnapHelp)) {
           updated.push(`${key}: ${value}`);
-          setTerminalReturn(updated);
         }
         setInputText("");
       } else {
-        const snap =
-          "Currently only the --help flag is supported but there are more features planned! Stay tuned!";
-        setTerminalReturn([...updated, snap]);
+        updated.push(
+          "Currently only the --help flag is supported but there are more features planned! Stay tuned!"
+        );
         setInputText("");
       }
     } else if (inputText === "home") {
@@ -80,25 +75,50 @@ const Terminal = () => {
         handleTerminalClick(inputText.split(" ")[1], terminalReturn);
         setInputText("");
       } else {
-        setTerminalReturn([
-          ...updated,
-          `whim does not recognize ${inputText.split(" ")[1]} as a txt file`,
-        ]);
+        updated.push(
+          `whim does not recognize ${inputText.split(" ")[1]} as a txt file`
+        );
         setInputText("");
       }
     } else {
-      setTerminalReturn([...updated, `-snap: ${inputText}: command not found`]);
+      updated.push(`-snap: ${inputText}: command not found`);
       setInputText("");
     }
+    if (updatedDir !== workingDirectory) {
+      console.log(updatedDir, workingDirectory);
+      updated.push(updatedDir);
+    }
+    setTerminalReturn(updated);
+    // setTerminalReturn([...updated, workingDirectory]);
   };
 
   const handleKeyDown = (e) => {
+    console.log(e.keyCode);
     if (e.keyCode === 38 && commandIndex > 0) {
       setCommandIndex(commandIndex - 1);
       setInputText(previousCommands[commandIndex]);
     } else if (e.keyCode === 40 && commandIndex < previousCommands.length) {
       setCommandIndex(commandIndex + 1);
       setInputText(previousCommands[commandIndex]);
+    } else if (e.keyCode === 39) {
+      const directoryItemsKey =
+        DirectoryItems[workingDirectory] ||
+        DirectoryItems[DirectoryItems["aliases"][workingDirectory]];
+      const textToSearch = inputText.includes(" ")
+        ? inputText.split(" ")[1]
+        : inputText;
+      const updatedText = inputText.includes(" ")
+        ? inputText.split(" ")[0]
+        : "";
+      console.log("directory items key--->", directoryItemsKey);
+      console.log("input text--->", textToSearch, textToSearch.length);
+      const possibilities = directoryItemsKey.filter((item) => {
+        console.log("item---->", item);
+        return item.includes(textToSearch);
+      });
+      if (possibilities.length < 2) {
+        setInputText(`${updatedText} ${possibilities[0]}`);
+      }
     }
   };
 
