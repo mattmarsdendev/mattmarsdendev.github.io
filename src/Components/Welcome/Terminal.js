@@ -32,8 +32,15 @@ const Terminal = () => {
       setTerminalReturn(blankArr);
       setInputText("");
     } else if (inputText.includes("cd")) {
+      console.log(`${workingDirectory}/${inputText.split(" ")[1]}`);
       const directPath =
-        DirectoryPaths[workingDirectory][inputText.split(" ")[1]];
+        DirectoryPaths[workingDirectory][inputText.split(" ")[1]] ||
+        DirectoryPaths[
+          DirectoryPaths["aliases"][
+            `${workingDirectory}/${inputText.split(" ")[1]}`
+          ]
+        ];
+      console.log("cd directpath --->", directPath);
       if (directPath) {
         setWorkingDirectory(directPath.directory);
         setTerminalReturn([...updated, directPath.message]);
@@ -46,10 +53,8 @@ const Terminal = () => {
         setInputText("");
       }
     } else if (inputText === "ls") {
-      DirectoryItems[workingDirectory].map((item) => {
-        updated.push(item);
-        setTerminalReturn(updated);
-      });
+      const directoryToMap = workingDirectory;
+      listFilesCommand(directoryToMap);
       setInputText("");
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
@@ -99,13 +104,16 @@ const Terminal = () => {
 
   const listFilesCommand = (directory) => {
     const updatedTerminalReturn = [...terminalReturn];
+
     const directoryItemsMap =
       DirectoryItems[directory] ||
       DirectoryItems[DirectoryItems["aliases"][directory]];
+    // console.log("directoryItem--->", directoryItemsMap);
     directoryItemsMap.map((item) => {
       updatedTerminalReturn.push(item);
+      setTerminalReturn(updatedTerminalReturn);
+      //   console.log("updated terminal return --->", updatedTerminalReturn);
     });
-    setTerminalReturn(updatedTerminalReturn);
   };
 
   const handleAboutLink = () => {
@@ -113,6 +121,7 @@ const Terminal = () => {
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
+    listFilesCommand(updatedDirectory);
     setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
   };
 
@@ -176,7 +185,6 @@ const Terminal = () => {
       const newDirectory = file.includes("home")
         ? defaultDirectory
         : `${defaultDirectory}${file}`;
-      console.log(newDirectory);
       setWorkingDirectory(newDirectory);
       const updatedReturn = [...terminalReturn];
       updatedReturn.push(`$ cd ${newDirectory}`);

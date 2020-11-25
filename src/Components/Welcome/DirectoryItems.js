@@ -6,18 +6,23 @@ const DirectoryItems = {
     "$Languages&Tools",
   ],
   "/users/MattMarsden/Home/AboutMe/": ["AboutMe.txt", "$Home"],
-  "/users/MattMarsden/Home/Contact/": ["mattmarsdendev@gmail.com"],
+  "/users/MattMarsden/Home/Contact/": ["mattmarsdendev@gmail.com", "$Home"],
   "/users/MattMarsden/Home/Portfolio/": [
     "mmarsden89.github.io/#/portfolio",
     "portfolioWebsite.txt",
     "trividuh.txt",
     "nationalParks.txt",
+    "$Home",
   ],
   "/users/MattMarsden/Home/Languages&Tools/": [
     "JavaScript, Python, (Postgre)SQL, React, Node, Express, MongoDb, AWS, Git / Github, HTML, (S)CSS,",
+    "$Home",
   ],
   aliases: {
-    "/users/MattMarsden/$AboutMe/": "/users/MattMarsden/Home/",
+    "/users/MattMarsden/Home/$AboutMe/": "/users/MattMarsden/Home/AboutMe/",
+    "/users/MattMarsden/$Home/": "/users/MattMarsden/Home/",
+    "/users/MattMarsden/$Home/$Home": "/users/MattMarsden/Home/",
+    "/users/MattMarsden/Home/$Home": "/users/MattMarsden/Home/",
   },
 };
 

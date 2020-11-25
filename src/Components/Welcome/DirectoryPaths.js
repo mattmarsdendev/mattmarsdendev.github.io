@@ -153,6 +153,9 @@ const DirectoryPaths = {
       directory: "/users/MattMarsden/Home/Contact/",
     },
   },
+  aliases: {
+    "/users/MattMarsden/Home/$Home": "/users/MattMarsden/Home/",
+  },
 };
 
 export default DirectoryPaths;
