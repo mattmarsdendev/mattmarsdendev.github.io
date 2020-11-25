@@ -13,7 +13,9 @@ const DirectoryItems = {
     "trividuh.txt",
     "nationalParks.txt",
   ],
-  "/users/MattMarsden/Languages&Tools/": ["hello"],
+  "/users/MattMarsden/Languages&Tools/": [
+    "JavaScript, Python, (Postgre)SQL, React, Node, Express, MongoDb, AWS, Git / Github, HTML, (S)CSS,",
+  ],
 };
 
 export default DirectoryItems;

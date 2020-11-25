@@ -2,15 +2,7 @@ import "./Welcome.scss";
 import Terminal from "./Terminal";
 
 const Welcome = () => {
-  const helpHtml = (
-    <div className="help-window">
-      <div>cd</div>
-      <div>ls</div>
-      <div>pwd</div>
-      <div>clear</div>
-      <div>whim</div>
-    </div>
-  );
+  const helpHtml = <div className="help-window"></div>;
 
   return (
     <div className="welcome-container">

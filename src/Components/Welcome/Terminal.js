@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
 import SnapHelp from "./SnapHelp";
-import Snap from "./Snap";
 
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
@@ -12,7 +11,6 @@ const Terminal = () => {
     "/users/MattMarsden/"
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
-  const [help, setHelp] = useState(false);
   const [clear, setClear] = useState(false);
 
   const handleSubmit = (e) => {
@@ -51,7 +49,6 @@ const Terminal = () => {
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
         const updated = [...terminalReturn, `$ ${inputText}`];
-        setHelp(true);
         setTerminalReturn([updated]);
         for (const [key, value] of Object.entries(SnapHelp)) {
           updated.push(`${key}: ${value}`);
@@ -191,20 +188,6 @@ const Terminal = () => {
       {item}
     </div>
   ));
-
-  const helpHtml = (
-    <div className="help-window">
-      {help && (
-        <>
-          <div>cd</div>
-          <div>ls</div>
-          <div>pwd</div>
-          <div>clear</div>
-          <div>whim</div>
-        </>
-      )}
-    </div>
-  );
 
   return (
     <div className="terminal-container">
