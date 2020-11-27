@@ -42,10 +42,7 @@ const Terminal = () => {
         updated.push(directPath.message);
         setInputText("");
       } else {
-        setTerminalReturn([
-          ...updated,
-          `-snap ${inputText}: No such file or directory`,
-        ]);
+        updated.push(`-snap ${inputText}: No such file or directory`);
         setInputText("");
       }
     } else if (inputText === "ls") {
@@ -133,8 +130,9 @@ const Terminal = () => {
     setWorkingDirectory(updatedDirectory);
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
-    listFilesCommand(updatedDirectory);
-    setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
+    const updated = listFilesCommand(updatedDirectory, terminalReturn);
+    updated.push(`${DirectoryItems[updatedDirectory]}`);
+    setTerminalReturn(updated);
   };
 
   const handleContactLink = () => {
