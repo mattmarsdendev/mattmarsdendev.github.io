@@ -49,8 +49,7 @@ const Terminal = () => {
         setInputText("");
       }
     } else if (inputText === "ls") {
-      const directoryToMap = workingDirectory;
-      listFilesCommand(directoryToMap);
+      updated = listFilesCommand(workingDirectory, updated);
       setInputText("");
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
@@ -85,15 +84,12 @@ const Terminal = () => {
       setInputText("");
     }
     if (updatedDir !== workingDirectory) {
-      console.log(updatedDir, workingDirectory);
       updated.push(updatedDir);
     }
     setTerminalReturn(updated);
-    // setTerminalReturn([...updated, workingDirectory]);
   };
 
   const handleKeyDown = (e) => {
-    console.log(e.keyCode);
     if (e.keyCode === 38 && commandIndex > 0) {
       setCommandIndex(commandIndex - 1);
       setInputText(previousCommands[commandIndex]);
@@ -110,10 +106,7 @@ const Terminal = () => {
       const updatedText = inputText.includes(" ")
         ? inputText.split(" ")[0]
         : "";
-      console.log("directory items key--->", directoryItemsKey);
-      console.log("input text--->", textToSearch, textToSearch.length);
       const possibilities = directoryItemsKey.filter((item) => {
-        console.log("item---->", item);
         return item.includes(textToSearch);
       });
       if (possibilities.length < 2) {
@@ -122,18 +115,17 @@ const Terminal = () => {
     }
   };
 
-  const listFilesCommand = (directory) => {
-    const updatedTerminalReturn = [...terminalReturn];
-
+  const listFilesCommand = (directory, updatedTerminalReturn) => {
     const directoryItemsMap =
       DirectoryItems[directory] ||
       DirectoryItems[DirectoryItems["aliases"][directory]];
-    // console.log("directoryItem--->", directoryItemsMap);
+
     directoryItemsMap.map((item) => {
       updatedTerminalReturn.push(item);
-      setTerminalReturn(updatedTerminalReturn);
-      //   console.log("updated terminal return --->", updatedTerminalReturn);
+      console.log("item-->", item);
+      console.log("updated ---.", updatedTerminalReturn);
     });
+    return updatedTerminalReturn;
   };
 
   const handleAboutLink = () => {
@@ -210,8 +202,9 @@ const Terminal = () => {
       updatedReturn.push(`$ cd ${newDirectory}`);
       updatedReturn.push(`$ ls`);
       setTerminalReturn(updatedReturn);
-      listFilesCommand(newDirectory);
+      updated = listFilesCommand(newDirectory, updated);
     }
+    setTerminalReturn(updated);
   };
 
   useEffect(() => {}, [terminalReturn, clear]);
