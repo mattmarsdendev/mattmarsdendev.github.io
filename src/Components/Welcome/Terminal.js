@@ -115,11 +115,9 @@ const Terminal = () => {
   };
 
   const listFilesCommand = (directory, updatedTerminalReturn) => {
-    console.log("direcotry 118----->", directory);
     const directoryItemsMap =
       DirectoryItems[directory] ||
       DirectoryItems[DirectoryItems["aliases"][directory]];
-    console.log("listfiles directory --->", directoryItemsMap);
     directoryItemsMap.map((item) => {
       updatedTerminalReturn.push(item);
     });
@@ -132,7 +130,6 @@ const Terminal = () => {
     const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
     const ls = [...cd, "$ ls"];
     const updated = listFilesCommand(updatedDirectory, terminalReturn);
-    updated.push(`${DirectoryItems[updatedDirectory]}`);
     setTerminalReturn(updated);
   };
 
@@ -193,13 +190,12 @@ const Terminal = () => {
         "I built this project to help me keep track of the national parks I've already visited. It helps me plan where to stop along roadtrips";
       setTerminalReturn([...updated, nationalparks]);
     } else if (file.includes("$")) {
-      console.log("file 194--->", file);
       const newDirectory = file.includes("home" || "Home")
         ? defaultDirectory
         : `${defaultDirectory}${file.split("$")[1]}`;
       setWorkingDirectory(newDirectory);
-      //   updated.push(`$ cd ${newDirectory}`);
-      //   updated.push(`$ ls`);
+      updated.push(`$ cd ${newDirectory}`);
+      updated.push(`$ ls`);
 
       //   const listed = listFilesCommand(newDirectory, updated);
       //   updated.push(listed);
@@ -210,7 +206,6 @@ const Terminal = () => {
   useEffect(() => {}, [terminalReturn, clear]);
 
   const handleFileLink = (item) => {
-    console.log("item 213--->", item);
     const file = item.target.id;
     if (
       (file.includes("txt") && !file.includes("whim")) ||
