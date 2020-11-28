@@ -60,8 +60,7 @@ const Terminal = () => {
         setInputText("");
       }
     } else if (inputText === "home") {
-      updated.pop();
-      setTerminalReturn(updated);
+      updated = [];
       setClear(false);
       setWorkingDirectory("/users/MattMarsden/Home/");
       setInputText("");
@@ -128,9 +127,10 @@ const Terminal = () => {
   const handleAboutLink = () => {
     const updatedDirectory = "/users/MattMarsden/Home/AboutMe/";
     setWorkingDirectory(updatedDirectory);
-    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
-    const ls = [...cd, "$ ls"];
-    const updated = listFilesCommand(updatedDirectory, terminalReturn);
+    let updatedTerminal = [...terminalReturn];
+    updatedTerminal.push(`$ cd ${workingDirectory}`);
+    updatedTerminal.push("$ ls");
+    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
     setTerminalReturn(updated);
   };
 
