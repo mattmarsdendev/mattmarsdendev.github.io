@@ -39,7 +39,6 @@ const Terminal = () => {
       if (directPath) {
         updatedDir = directPath.directory;
         setWorkingDirectory(directPath.directory);
-        updated.push(directPath.message);
         setInputText("");
       } else {
         updated.push(`-snap ${inputText}: No such file or directory`);
@@ -97,30 +96,32 @@ const Terminal = () => {
       const directoryItemsKey =
         DirectoryItems[workingDirectory] ||
         DirectoryItems[DirectoryItems["aliases"][workingDirectory]];
+
       const textToSearch = inputText.includes(" ")
         ? inputText.split(" ")[1]
         : inputText;
+
       const updatedText = inputText.includes(" ")
         ? inputText.split(" ")[0]
         : "";
+
       const possibilities = directoryItemsKey.filter((item) => {
         return item.includes(textToSearch);
       });
-      if (possibilities.length < 2) {
+      if (possibilities.length < 2 && possibilities.length > 0) {
         setInputText(`${updatedText} ${possibilities[0]}`);
       }
     }
   };
 
   const listFilesCommand = (directory, updatedTerminalReturn) => {
+    console.log("direcotry 118----->", directory);
     const directoryItemsMap =
       DirectoryItems[directory] ||
       DirectoryItems[DirectoryItems["aliases"][directory]];
-
+    console.log("listfiles directory --->", directoryItemsMap);
     directoryItemsMap.map((item) => {
       updatedTerminalReturn.push(item);
-      console.log("item-->", item);
-      console.log("updated ---.", updatedTerminalReturn);
     });
     return updatedTerminalReturn;
   };
@@ -192,15 +193,16 @@ const Terminal = () => {
         "I built this project to help me keep track of the national parks I've already visited. It helps me plan where to stop along roadtrips";
       setTerminalReturn([...updated, nationalparks]);
     } else if (file.includes("$")) {
-      const newDirectory = file.includes("home")
+      console.log("file 194--->", file);
+      const newDirectory = file.includes("home" || "Home")
         ? defaultDirectory
-        : `${defaultDirectory}${file}`;
+        : `${defaultDirectory}${file.split("$")[1]}`;
       setWorkingDirectory(newDirectory);
-      const updatedReturn = [...terminalReturn];
-      updatedReturn.push(`$ cd ${newDirectory}`);
-      updatedReturn.push(`$ ls`);
-      setTerminalReturn(updatedReturn);
-      updated = listFilesCommand(newDirectory, updated);
+      //   updated.push(`$ cd ${newDirectory}`);
+      //   updated.push(`$ ls`);
+
+      //   const listed = listFilesCommand(newDirectory, updated);
+      //   updated.push(listed);
     }
     setTerminalReturn(updated);
   };
@@ -208,12 +210,14 @@ const Terminal = () => {
   useEffect(() => {}, [terminalReturn, clear]);
 
   const handleFileLink = (item) => {
+    console.log("item 213--->", item);
     const file = item.target.id;
     if (
       (file.includes("txt") && !file.includes("whim")) ||
       (file.includes(".com") && !file.includes("whim")) ||
-      (file.includes(".io") && !file.includes("whim")) ||
-      (file.includes("$") && !file.includes("whim"))
+      (file.includes(".io") && !file.includes("whim"))
+      //    ||
+      //   (file.includes("$") && !file.includes("whim"))
     ) {
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
