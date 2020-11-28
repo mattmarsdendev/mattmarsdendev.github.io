@@ -5,13 +5,13 @@ const DirectoryItems = {
     "$Portfolio",
     "$Languages&Tools",
   ],
-  "/users/MattMarsden/Home/AboutMe/": ["AboutMe.txt", "$Home"],
+  "/users/MattMarsden/Home/AboutMe/": ["#AboutMe.txt", "$Home"],
   "/users/MattMarsden/Home/Contact/": ["mattmarsdendev@gmail.com", "$Home"],
   "/users/MattMarsden/Home/Portfolio/": [
     "mmarsden89.github.io/#/portfolio",
-    "portfolioWebsite.txt",
-    "trividuh.txt",
-    "nationalParks.txt",
+    "#portfolioWebsite.txt",
+    "#trividuh.txt",
+    "#nationalParks.txt",
     "$Home",
   ],
   "/users/MattMarsden/Home/Languages&Tools/": [

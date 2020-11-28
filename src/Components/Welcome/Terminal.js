@@ -118,6 +118,7 @@ const Terminal = () => {
     const directoryItemsMap =
       DirectoryItems[directory] ||
       DirectoryItems[DirectoryItems["aliases"][directory]];
+
     directoryItemsMap.map((item) => {
       updatedTerminalReturn.push(item);
     });
@@ -207,18 +208,17 @@ const Terminal = () => {
 
   const handleFileLink = (item) => {
     const file = item.target.id;
-    if (
-      (file.includes("txt") && !file.includes("whim")) ||
-      (file.includes(".com") && !file.includes("whim")) ||
-      (file.includes(".io") && !file.includes("whim"))
-      //    ||
-      //   (file.includes("$") && !file.includes("whim"))
-    ) {
+    if (file.includes("#") && !file.includes("whim")) {
+      console.log("file if---->", file);
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
     } else if (file.includes("$") && !file.includes(" ")) {
-      setWorkingDirectory(`/users/MattMarsden/Home/${file.split("$")[1]}/`);
+      console.log("file---->", file);
+      const newDirectory = file.includes("Home")
+        ? defaultDirectory
+        : `/users/MattMarsden/Home/${file.split("$")[1]}/`;
+      setWorkingDirectory(newDirectory);
     }
   };
 
