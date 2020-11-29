@@ -20,7 +20,7 @@ const DirectoryItems = {
     "/users/MattMarsden/$home/": "/users/mattmarsden/home/",
     "/users/MattMarsden/$home/$home": "/users/mattmarsden/home/",
     "/users/mattmarsden/home/$Home": "/users/mattmarsden/home/",
-    "/users/mattmarsden/home/Home/": "/users/mattmarsden/home/",
+    "/users/mattmarsden/home/home/": "/users/mattmarsden/home/",
   },
 };
 
