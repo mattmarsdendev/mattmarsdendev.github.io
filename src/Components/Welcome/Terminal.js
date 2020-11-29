@@ -124,7 +124,7 @@ const Terminal = () => {
     return updatedTerminalReturn;
   };
 
-  const handleAboutLink = () => {
+  const handleAboutLink = (e) => {
     const updatedDirectory = "/users/MattMarsden/Home/AboutMe/";
     setWorkingDirectory(updatedDirectory);
     let updatedTerminal = [...terminalReturn];
@@ -137,29 +137,31 @@ const Terminal = () => {
   const handleContactLink = () => {
     const updatedDirectory = "/users/MattMarsden/Home/Contact/";
     setWorkingDirectory(updatedDirectory);
-    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
-    const ls = [...cd, "$ ls"];
-    setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
+    let updatedTerminal = [...terminalReturn];
+    updatedTerminal.push(`$ cd ${workingDirectory}`);
+    updatedTerminal.push("$ ls");
+    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
+    setTerminalReturn(updated);
   };
 
   const handlePortfolioLink = () => {
     const updatedDirectory = "/users/MattMarsden/Home/Portfolio/";
     setWorkingDirectory(updatedDirectory);
-    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
-    const ls = [...cd, "$ ls"];
-    const updated = [...ls];
-    DirectoryItems[updatedDirectory].map((item) => {
-      updated.push(item);
-      setTerminalReturn(updated);
-    });
+    let updatedTerminal = [...terminalReturn];
+    updatedTerminal.push(`$ cd ${workingDirectory}`);
+    updatedTerminal.push("$ ls");
+    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
+    setTerminalReturn(updated);
   };
 
   const handleToolsLink = () => {
     const updatedDirectory = "/users/MattMarsden/Home/Languages&Tools/";
     setWorkingDirectory(updatedDirectory);
-    const cd = [...terminalReturn, `$ cd ${workingDirectory}`];
-    const ls = [...cd, "$ ls"];
-    setTerminalReturn([...ls, `${DirectoryItems[updatedDirectory]}`]);
+    let updatedTerminal = [...terminalReturn];
+    updatedTerminal.push(`$ cd ${workingDirectory}`);
+    updatedTerminal.push("$ ls");
+    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
+    setTerminalReturn(updated);
   };
 
   const handleChange = (e) => {

@@ -15,7 +15,12 @@ const DirectoryItems = {
     "$Home",
   ],
   "/users/MattMarsden/Home/Languages&Tools/": [
-    "JavaScript, Python, (Postgre)SQL, React, Node, Express, MongoDb, AWS, Git / Github, HTML, (S)CSS,",
+    "JavaScript, Python",
+    "(Postgre)SQL, MongoDb",
+    "React, Node",
+    "Express, Amazon Web Services(AWS)",
+    "Git / Github",
+    "HTML, CSS / SASS",
     "$Home",
   ],
   aliases: {
