@@ -15,6 +15,7 @@ const Terminal = () => {
   const [clear, setClear] = useState(false);
   const [previousCommands, setPreviousCommands] = useState([]);
   const [commandIndex, setCommandIndex] = useState(0);
+  const [clickedLink, setClickedLink] = useState(false);
 
   const defaultDirectory = "/users/MattMarsden/Home/";
 
@@ -130,11 +131,10 @@ const Terminal = () => {
   };
 
   const handleHomeLink = (e) => {
+    setClickedLink(true);
     const updatedDirectory = `/users/MattMarsden/Home/${e.target.id}/`;
     setWorkingDirectory(updatedDirectory);
     let updatedTerminal = [...terminalReturn];
-    updatedTerminal.push(`$ cd ${workingDirectory}`);
-    updatedTerminal.push("$ ls");
     const updated = listFilesCommand(updatedDirectory, updatedTerminal);
     setTerminalReturn(updated);
   };
@@ -177,6 +177,7 @@ const Terminal = () => {
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
     } else if (file.includes("$") && !file.includes(" ")) {
+      setClickedLink(false);
       const newDirectory = file.includes("Home")
         ? defaultDirectory
         : `/users/MattMarsden/Home/${file.split("$")[1]}/`;
@@ -270,6 +271,7 @@ const Terminal = () => {
           </div>
         </div>
       )}
+      {clickedLink && <div>Click a purple link</div>}
       <div className="terminal-return-container">
         {terminalReturnHTML}
         <KeepAtBottom />
