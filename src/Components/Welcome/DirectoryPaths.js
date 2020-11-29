@@ -28,10 +28,6 @@ const DirectoryPaths = {
       message: "/users/mattmarsden/home/aboutme/",
       directory: "/users/mattmarsden/home/aboutme/",
     },
-    aboutme: {
-      message: "/users/mattmarsden/home/aboutme/",
-      directory: "/users/mattmarsden/home/aboutme/",
-    },
     portfolio: {
       message: "/users/mattmarsden/home/portfolio/",
       directory: "/users/mattmarsden/home/portfolio/",
@@ -41,10 +37,6 @@ const DirectoryPaths = {
       directory: "/users/mattmarsden/home/portfolio/",
     },
     $portfolio: {
-      message: "/users/mattmarsden/home/portfolio/",
-      directory: "/users/mattmarsden/home/portfolio/",
-    },
-    portfolio: {
       message: "/users/mattmarsden/home/portfolio/",
       directory: "/users/mattmarsden/home/portfolio/",
     },
@@ -60,10 +52,6 @@ const DirectoryPaths = {
       message: "/users/mattmarsden/home/contact/",
       directory: "/users/mattmarsden/home/contact/",
     },
-    contact: {
-      message: "/users/mattmarsden/home/contact/",
-      directory: "/users/mattmarsden/home/contact/",
-    },
     "languages&tools": {
       message: "/users/mattmarsden/home/languages&tools/",
       directory: "/users/mattmarsden/home/languages&tools/",
@@ -73,10 +61,6 @@ const DirectoryPaths = {
       directory: "/users/mattmarsden/home/languages&tools/",
     },
     "$languages&tools": {
-      message: "/users/mattmarsden/home/languages&tools/",
-      directory: "/users/mattmarsden/home/languages&tools/",
-    },
-    "languages&tools": {
       message: "/users/mattmarsden/home/languages&tools/",
       directory: "/users/mattmarsden/home/languages&tools/",
     },
