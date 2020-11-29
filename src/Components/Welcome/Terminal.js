@@ -69,9 +69,12 @@ const Terminal = () => {
         handleTerminalClick(inputText.split(" ")[1], updated);
         setInputText("");
       } else {
-        updated.push(
-          `whim does not recognize ${inputText.split(" ")[1]} as a txt file`
-        );
+        const splitText = inputText.split(" ")[1];
+        if (splitText) {
+          updated.push(`whim does not recognize ${splitText} as a txt file`);
+        } else {
+          updated.push("please specify a txt file for whim to read");
+        }
         setInputText("");
       }
     } else {
@@ -107,7 +110,7 @@ const Terminal = () => {
       const possibilities = directoryItemsKey.filter((item) => {
         return item.includes(textToSearch);
       });
-      if (possibilities.length < 2 && possibilities.length > 0) {
+      if (possibilities.length === 1) {
         setInputText(`${updatedText} ${possibilities[0]}`);
       }
     }
