@@ -38,7 +38,7 @@ const Terminal = () => {
         ];
       if (directPath) {
         updatedDir = directPath.directory;
-        setWorkingDirectory(directPath.directory);
+        setWorkingDirectory(updatedDir);
         setInputText("");
       } else {
         updated.push(`-snap ${inputText}: No such file or directory`);

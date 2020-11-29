@@ -98,6 +98,10 @@ const DirectoryPaths = {
       message: "You do not have required permissions to change into this drive",
       directory: "/users/MattMarsden/Home/AboutMe/",
     },
+    $Home: {
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
+    },
   },
   "/users/MattMarsden/Home/Portfolio/": {
     "~": {
@@ -115,6 +119,10 @@ const DirectoryPaths = {
     "../../": {
       message: "You do not have required permissions to change into this drive",
       directory: "/users/MattMarsden/Home/Portfolio/",
+    },
+    $Home: {
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
   },
   "/users/MattMarsden/Home/Languages&Tools/": {
@@ -134,6 +142,10 @@ const DirectoryPaths = {
       message: "You do not have required permissions to change into this drive",
       directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
+    $Home: {
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
+    },
   },
   "/users/MattMarsden/Home/Contact/": {
     "~": {
@@ -151,6 +163,10 @@ const DirectoryPaths = {
     "../../": {
       message: "You do not have required permissions to change into this drive",
       directory: "/users/MattMarsden/Home/Contact/",
+    },
+    $Home: {
+      message: "/users/MattMarsden/Home/",
+      directory: "/users/MattMarsden/Home/",
     },
   },
   aliases: {
