@@ -1,9 +1,10 @@
 import "./Welcome.scss";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
 import SnapHelp from "./SnapHelp";
 import TextFiles from "./TextFiles";
+import KeepAtBottom from "./KeepAtBottom";
 
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
@@ -249,12 +250,6 @@ const Terminal = () => {
       {item}
     </div>
   ));
-
-  const KeepAtBottom = () => {
-    const reference = useRef();
-    useEffect(() => reference.current.scrollIntoView());
-    return <div ref={reference} />;
-  };
 
   return (
     <div className="terminal-container">
