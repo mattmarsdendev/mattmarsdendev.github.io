@@ -1,16 +1,8 @@
 import "./Navbar.scss";
-import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import Resume from "../../Styles/images/Matt_Marsden_Resume.pdf";
 
 const Navbar = (props) => {
-  const currentPath = window.location.pathname;
-
-  const [current, setCurrent] = useState("/");
-
-  const checkActive = (nav) => {
-    return current === nav;
-  };
-
   return (
     <div className="navbar-container">
       <NavLink exact to="/" className="link-text" activeClassName="current">
@@ -33,7 +25,9 @@ const Navbar = (props) => {
         Contact
       </NavLink>
       <div className="link">
-        <div className="link-text">Resume</div>
+        <a href={Resume} target="_blank" className="link-text" rel="noreferrer">
+          Resume
+        </a>
       </div>
     </div>
   );
