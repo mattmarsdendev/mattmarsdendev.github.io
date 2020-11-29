@@ -1,5 +1,4 @@
 import "./Welcome.scss";
-import Tools from "./Tools";
 import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
