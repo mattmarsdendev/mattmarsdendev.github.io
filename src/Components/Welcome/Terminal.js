@@ -173,6 +173,7 @@ const Terminal = () => {
   };
 
   const handleTerminalClick = (file, updated) => {
+    console.log("file--->", file);
     if (file.includes("txt")) {
       updated.push(TextFiles[file]);
       setTerminalReturn(updated);
@@ -200,7 +201,8 @@ const Terminal = () => {
 
   const handleFileLink = (item) => {
     const file = item.target.id;
-    if (file.includes("#") && !file.includes("whim")) {
+    console.log("file203--->", file);
+    if (file.includes("#") && !file.includes("whim") && !file.includes(".io")) {
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
@@ -217,23 +219,31 @@ const Terminal = () => {
         updated = listFilesCommand(newDirectory, updated);
       }
       setTerminalReturn(updated);
+    } else {
+      if (file.includes(".io") || file.includes(".com")) {
+        handleTerminalClick(file, terminalReturn);
+      }
     }
+  };
+
+  const terminalStyleCheck = (item) => {
+    let style = "terminal-return ";
+    if (item.includes("txt")) {
+      style += "txt-link";
+    } else if (item.includes(".io") || item.includes(".com")) {
+      style += "web-link";
+    } else if (item.includes("$") && !item.includes("$ ")) {
+      style += "tools-link";
+    }
+    return style;
   };
 
   const terminalReturnHTML = terminalReturn.map((item) => (
     <div
-      className={
-        (item.includes("txt") ||
-          item.includes(".com") ||
-          item.includes(".io")) &&
-        !item.includes("whim")
-          ? "terminal-return txt-link"
-          : item.includes("$") && !item.includes("$ ")
-          ? "terminal-return tools-link"
-          : "terminal-return"
-      }
+      className={terminalStyleCheck(item)}
       onClick={(item) => handleFileLink(item)}
       id={item}
+      key={item}
     >
       {item}
     </div>
@@ -294,7 +304,8 @@ const Terminal = () => {
             className="terminal-input"
             onChange={handleChange}
             value={inputText || ""}
-            tabindex="-1"
+            tabIndex="-1"
+            spellCheck="false"
             onKeyDown={handleKeyDown}
           />
         </label>

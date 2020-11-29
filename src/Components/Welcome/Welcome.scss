@@ -221,7 +221,11 @@ $orange: rgb(189, 144, 61);
   cursor: pointer;
   color: $orange;
   transition: 0.3s;
-  width: 125px;
+  // width: 125px;
+}
+
+.web-link {
+  color: blue;
 }
 
 .tools-link:hover {

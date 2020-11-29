@@ -61,6 +61,7 @@ const FourOhFour = () => {
         left: `${Math.random() * 100}%`,
         animationDelay: `${Math.random() * 5}s`,
       }}
+      key={star}
     ></div>
   ));
 

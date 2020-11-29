@@ -7,6 +7,8 @@ const SnapHelp = {
   "→": "will autocomplete file / folder names if applicable",
   "↕": "used to navigate previous snap commands",
   "snap --help": "gives the list of current working commands",
+  $: "dictates folder",
+  "#": "dictates txt file",
 };
 
 export default SnapHelp;
