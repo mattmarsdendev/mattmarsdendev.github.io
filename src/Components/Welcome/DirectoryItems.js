@@ -14,15 +14,7 @@ const DirectoryItems = {
     "#nationalParks.txt",
     "$Home",
   ],
-  "/users/MattMarsden/Home/Languages&Tools/": [
-    "JavaScript, Python",
-    "(Postgre)SQL, MongoDb",
-    "React, Node",
-    "Express, Amazon Web Services(AWS)",
-    "Git / Github",
-    "HTML, CSS / SASS",
-    "$Home",
-  ],
+  "/users/MattMarsden/Home/Languages&Tools/": ["#languages&tools.txt", "$Home"],
   aliases: {
     "/users/MattMarsden/Home/$AboutMe/": "/users/MattMarsden/Home/AboutMe/",
     "/users/MattMarsden/$Home/": "/users/MattMarsden/Home/",

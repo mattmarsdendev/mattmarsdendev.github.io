@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
 import SnapHelp from "./SnapHelp";
+import TextFiles from "./TextFiles";
 
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
@@ -170,28 +171,15 @@ const Terminal = () => {
   };
 
   const handleTerminalClick = (file, updated) => {
-    if (file === "AboutMe.txt") {
-      const aboutMe =
-        "Hey! Thanks for stopping by in the terminal and checking out the about me. Obviously, I love to be creative in my development work. In my free time, I love to cook and bake and am a hobby musician. I love to meet new people so feel free to drop me a line whenever!";
-      setTerminalReturn([...updated, aboutMe]);
+    if (file.includes("txt")) {
+      updated.push(TextFiles[file]);
+      setTerminalReturn(updated);
     } else if (file.includes(".com")) {
       window.open(
         "mailto:mattmarsdendev@gmail.com?subject=Wow, this terminal is really neat!"
       );
     } else if (file.includes(".io")) {
       window.open("/#/portfolio");
-    } else if (file === "portfolioWebsite.txt") {
-      const portfolio =
-        "This portfolio has turned into a bit of a passion project for me and I think it's a great showcase for my front-end skills. This terminal was created from scratch and presented a lot of interesting challenges to overcome. ";
-      setTerminalReturn([...updated, portfolio]);
-    } else if (file === "trividuh.txt") {
-      const trividuh =
-        "Trividuh was a fun trivia front end project that I put together to help me kill time when I'm on the go";
-      setTerminalReturn([...updated, trividuh]);
-    } else if (file === "nationalParks.txt") {
-      const nationalparks =
-        "I built this project to help me keep track of the national parks I've already visited. It helps me plan where to stop along roadtrips";
-      setTerminalReturn([...updated, nationalparks]);
     } else if (file.includes("$")) {
       const newDirectory = file.includes("home" || "Home")
         ? defaultDirectory
@@ -223,6 +211,8 @@ const Terminal = () => {
       updated.push(`$ cd ${newDirectory}`);
       if (file.includes("home") || file.includes("Home")) {
         updated = [];
+      } else {
+        updated = listFilesCommand(newDirectory, updated);
       }
       setTerminalReturn(updated);
     }
