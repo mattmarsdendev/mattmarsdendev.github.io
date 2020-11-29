@@ -30,6 +30,7 @@ const Terminal = () => {
       setInputText("");
     } else if (inputText === "clear") {
       setClear(true);
+      setClickedLink(false);
       updated = ["Type home or snap --help"];
       setInputText("");
     } else if (inputText.includes("cd")) {
@@ -79,6 +80,9 @@ const Terminal = () => {
         }
         setInputText("");
       }
+    } else if (inputText.includes("open")) {
+      window.open(inputText.split(" ")[1]);
+      setInputText("");
     } else {
       updated.push(`-snap: ${inputText}: command not found`);
       setInputText("");
@@ -203,7 +207,8 @@ const Terminal = () => {
       style += "txt-link";
     } else if (
       (item.includes(".io") || item.includes(".com") || item.includes("www")) &&
-      !item.includes("whim")
+      !item.includes("whim") &&
+      !item.includes("open")
     ) {
       style += "web-link";
     } else if (item.includes("$") && !item.includes("$ ")) {
