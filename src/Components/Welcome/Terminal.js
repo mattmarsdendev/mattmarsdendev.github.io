@@ -200,8 +200,8 @@ const Terminal = () => {
       updated.push(`$ cd ${newDirectory}`);
       updated.push(`$ ls`);
 
-      //   const listed = listFilesCommand(newDirectory, updated);
-      //   updated.push(listed);
+      const listed = listFilesCommand(newDirectory, updated);
+      updated.push(listed);
     }
     setTerminalReturn(updated);
   };
@@ -211,16 +211,20 @@ const Terminal = () => {
   const handleFileLink = (item) => {
     const file = item.target.id;
     if (file.includes("#") && !file.includes("whim")) {
-      console.log("file if---->", file);
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
       handleTerminalClick(file, updated);
     } else if (file.includes("$") && !file.includes(" ")) {
-      console.log("file---->", file);
       const newDirectory = file.includes("Home")
         ? defaultDirectory
         : `/users/MattMarsden/Home/${file.split("$")[1]}/`;
       setWorkingDirectory(newDirectory);
+      let updated = [...terminalReturn];
+      updated.push(`$ cd ${newDirectory}`);
+      if (file.includes("home") || file.includes("Home")) {
+        updated = [];
+      }
+      setTerminalReturn(updated);
     }
   };
 
