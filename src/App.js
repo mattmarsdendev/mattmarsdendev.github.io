@@ -9,16 +9,9 @@ import {
   Loading,
   FourOhFour,
 } from "./Components/index";
-import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
-  const pathArr = ["portfolio", "contact"];
-  const [pathName, setPathName] = useState("/");
-  useEffect(() => {
-    setPathName(window.location.pathname);
-    console.log(window.location.pathname);
-  }, [pathName]);
   return (
     <div className="app">
       <Header />

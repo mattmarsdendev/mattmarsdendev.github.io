@@ -224,7 +224,6 @@ const Terminal = () => {
     <div className="terminal-container">
       <div className="loading-snap-container">
         <div className="loading-snap">Loading...</div>
-        <div className="loaded-snap">Loaded</div>
       </div>
       {!clear && (
         <TerminalHome
