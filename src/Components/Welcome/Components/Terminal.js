@@ -174,7 +174,7 @@ const Terminal = () => {
       handleTerminalClick(file, updated);
     } else if (file.includes("$") && !file.includes(" ")) {
       setClickedLink(false);
-      const newDirectory = file.includes("Home")
+      const newDirectory = file.includes("home")
         ? defaultDirectory
         : `/users/mattmarsden/home/${file.split("$")[1]}/`;
       setWorkingDirectory(newDirectory);
