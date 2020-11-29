@@ -129,38 +129,8 @@ const Terminal = () => {
     return updatedTerminalReturn;
   };
 
-  const handleAboutLink = (e) => {
-    const updatedDirectory = "/users/MattMarsden/Home/AboutMe/";
-    setWorkingDirectory(updatedDirectory);
-    let updatedTerminal = [...terminalReturn];
-    updatedTerminal.push(`$ cd ${workingDirectory}`);
-    updatedTerminal.push("$ ls");
-    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
-    setTerminalReturn(updated);
-  };
-
-  const handleContactLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Home/Contact/";
-    setWorkingDirectory(updatedDirectory);
-    let updatedTerminal = [...terminalReturn];
-    updatedTerminal.push(`$ cd ${workingDirectory}`);
-    updatedTerminal.push("$ ls");
-    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
-    setTerminalReturn(updated);
-  };
-
-  const handlePortfolioLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Home/Portfolio/";
-    setWorkingDirectory(updatedDirectory);
-    let updatedTerminal = [...terminalReturn];
-    updatedTerminal.push(`$ cd ${workingDirectory}`);
-    updatedTerminal.push("$ ls");
-    const updated = listFilesCommand(updatedDirectory, updatedTerminal);
-    setTerminalReturn(updated);
-  };
-
-  const handleToolsLink = () => {
-    const updatedDirectory = "/users/MattMarsden/Home/Languages&Tools/";
+  const handleHomeLink = (e) => {
+    const updatedDirectory = `/users/MattMarsden/Home/${e.target.id}/`;
     setWorkingDirectory(updatedDirectory);
     let updatedTerminal = [...terminalReturn];
     updatedTerminal.push(`$ cd ${workingDirectory}`);
@@ -281,16 +251,20 @@ const Terminal = () => {
             Type snap --help for more info
           </div>
           <div className="tool-text-container">
-            <div className="tools-link" onClick={handleAboutLink}>
+            <div className="tools-link" onClick={handleHomeLink} id="AboutMe">
               $AboutMe
             </div>
-            <div className="tools-link" onClick={handleContactLink}>
+            <div className="tools-link" onClick={handleHomeLink} id="Contact">
               $Contact
             </div>
-            <div className="tools-link" onClick={handlePortfolioLink}>
+            <div className="tools-link" onClick={handleHomeLink} id="Portfolio">
               $Portfolio
             </div>
-            <div className="tools-link" onClick={handleToolsLink}>
+            <div
+              className="tools-link"
+              onClick={handleHomeLink}
+              id="Languages&Tools"
+            >
               $Languages&Tools
             </div>
           </div>
