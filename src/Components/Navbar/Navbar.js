@@ -11,7 +11,6 @@ const Navbar = (props) => {
     return current === nav;
   };
 
-  console.log(currentPath);
   return (
     <div className="navbar-container">
       <NavLink exact to="/" className="link-text" activeClassName="current">

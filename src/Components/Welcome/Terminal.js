@@ -122,7 +122,7 @@ const Terminal = () => {
       DirectoryItems[DirectoryItems["aliases"][directory]];
 
     directoryItemsMap.map((item) => {
-      updatedTerminalReturn.push(item);
+      return updatedTerminalReturn.push(item);
     });
     return updatedTerminalReturn;
   };
@@ -173,7 +173,6 @@ const Terminal = () => {
   };
 
   const handleTerminalClick = (file, updated) => {
-    console.log("file--->", file);
     if (file.includes("txt")) {
       updated.push(TextFiles[file]);
       setTerminalReturn(updated);
@@ -201,7 +200,6 @@ const Terminal = () => {
 
   const handleFileLink = (item) => {
     const file = item.target.id;
-    console.log("file203--->", file);
     if (file.includes("#") && !file.includes("whim") && !file.includes(".io")) {
       const updated = [...terminalReturn, `$ whim ${file}`];
       setTerminalReturn(updated);
@@ -228,9 +226,12 @@ const Terminal = () => {
 
   const terminalStyleCheck = (item) => {
     let style = "terminal-return ";
-    if (item.includes("txt")) {
+    if (item.includes("txt") && !item.includes("whim")) {
       style += "txt-link";
-    } else if (item.includes(".io") || item.includes(".com")) {
+    } else if (
+      (item.includes(".io") || item.includes(".com") || item.includes("www")) &&
+      !item.includes("whim")
+    ) {
       style += "web-link";
     } else if (item.includes("$") && !item.includes("$ ")) {
       style += "tools-link";
@@ -243,7 +244,7 @@ const Terminal = () => {
       className={terminalStyleCheck(item)}
       onClick={(item) => handleFileLink(item)}
       id={item}
-      key={item}
+      key={`${Math.random() * 100}${item}`}
     >
       {item}
     </div>

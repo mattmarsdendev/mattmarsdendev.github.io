@@ -9,6 +9,7 @@ const SnapHelp = {
   "snap --help": "gives the list of current working commands",
   $: "dictates folder",
   "#": "dictates txt file",
+  www: "dictates web link",
 };
 
 export default SnapHelp;
