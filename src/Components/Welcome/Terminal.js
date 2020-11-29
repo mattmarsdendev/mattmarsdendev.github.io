@@ -67,7 +67,7 @@ const Terminal = () => {
       setInputText("");
     } else if (inputText.includes("whim")) {
       if (inputText.includes("txt")) {
-        handleTerminalClick(inputText.split(" ")[1], terminalReturn);
+        handleTerminalClick(inputText.split(" ")[1], updated);
         setInputText("");
       } else {
         updated.push(
