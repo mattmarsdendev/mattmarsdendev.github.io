@@ -125,6 +125,7 @@ $orange: rgb(189, 144, 61);
   justify-content: flex-end;
   align-items: flex-start;
   line-height: 22px;
+  letter-spacing: 0.3px;
 }
 
 .terminal-hello-container-animated {
@@ -169,6 +170,10 @@ $orange: rgb(189, 144, 61);
   animation: terminalInputAnimation 8.5s linear;
   margin-bottom: -20px;
   width: 70%;
+}
+
+label {
+  background-color: $darkestblue;
 }
 
 @keyframes terminalInputAnimation {
@@ -222,6 +227,7 @@ $orange: rgb(189, 144, 61);
 form {
   position: fixed;
   width: 100%;
+  background-color: $darkestblue;
 }
 
 .terminal-return-container {
@@ -282,23 +288,7 @@ span {
   opacity: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: textAnimation 1.5s steps(8, end);
+  animation: textAnimation 1s steps(15, end);
   animation-delay: 3s;
   letter-spacing: 0.4em;
-  // animation: textAnimation 4.5s linear infinite;
-}
-
-@keyframes loadedSnap {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.loading-snap-container {
 }

@@ -1,9 +1,11 @@
-import "./Welcome.scss";
+// import "./Welcome.scss";
 import React, { useState, useEffect } from "react";
-import DirectoryItems from "./DirectoryItems";
-import DirectoryPaths from "./DirectoryPaths";
-import SnapHelp from "./SnapHelp";
-import TextFiles from "./TextFiles";
+import {
+  directoryItems,
+  directoryPaths,
+  snapHelp,
+  textFiles,
+} from "../snap/index";
 import KeepAtBottom from "./KeepAtBottom";
 import TerminalHome from "./TerminalHome";
 
@@ -34,9 +36,9 @@ const Terminal = () => {
       updated = ["Type home or snap --help"];
     } else if (inputText.includes("cd")) {
       const directPath =
-        DirectoryPaths[updatedDir][inputText.split(" ")[1]] ||
-        DirectoryPaths[
-          DirectoryPaths["aliases"][`${updatedDir}/${inputText.split(" ")[1]}`]
+        directoryPaths[updatedDir][inputText.split(" ")[1]] ||
+        directoryPaths[
+          directoryPaths["aliases"][`${updatedDir}/${inputText.split(" ")[1]}`]
         ];
       if (directPath) {
         updatedDir = directPath.directory;
@@ -48,7 +50,7 @@ const Terminal = () => {
       updated = listFilesCommand(workingDirectory, updated);
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
-        for (const [key, value] of Object.entries(SnapHelp)) {
+        for (const [key, value] of Object.entries(snapHelp)) {
           updated.push(`${key}: ${value}`);
         }
       } else {
@@ -93,8 +95,8 @@ const Terminal = () => {
       setInputText(previousCommands[commandIndex]);
     } else if (keyCode === 39) {
       const directoryItemsKey =
-        DirectoryItems[workingDirectory] ||
-        DirectoryItems[DirectoryItems["aliases"][workingDirectory]];
+        directoryItems[workingDirectory] ||
+        directoryItems[directoryItems["aliases"][workingDirectory]];
 
       const textToSearch = inputText.includes(" ")
         ? inputText.split(" ")[1]
@@ -115,8 +117,8 @@ const Terminal = () => {
 
   const listFilesCommand = (directory, updatedTerminalReturn) => {
     const directoryItemsMap =
-      DirectoryItems[directory] ||
-      DirectoryItems[DirectoryItems["aliases"][directory]];
+      directoryItems[directory] ||
+      directoryItems[directoryItems["aliases"][directory]];
 
     directoryItemsMap.map((item) => {
       return updatedTerminalReturn.push(item);
@@ -140,7 +142,7 @@ const Terminal = () => {
 
   const handleTerminalClick = (file, updated) => {
     if (file.includes("txt")) {
-      updated.push(TextFiles[file]);
+      updated.push(textFiles[file]);
       setTerminalReturn(updated);
     } else if (file.includes(".com")) {
       window.open(

@@ -1,6 +1,5 @@
 const TerminalHome = (props) => {
   const { show, handleHomeLink } = props;
-  console.log(props);
   return (
     <div
       className={
