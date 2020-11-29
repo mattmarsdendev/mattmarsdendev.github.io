@@ -4,7 +4,6 @@ $orange: rgb(189, 144, 61);
 .welcome-container {
   display: flex;
   flex-direction: row;
-  // animation: popup 4s linear;
   align-items: center;
   background-color: $darkblue;
   justify-content: space-evenly;
@@ -124,17 +123,16 @@ $orange: rgb(189, 144, 61);
 
 .terminal-container {
   width: 70%;
-  height: 270px;
+  height: 240px;
   background-color: $darkestblue;
   font-family: "Monaco";
   color: $teal;
-  overflow-y: hidden;
+  overflow-y: scroll;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-top: 5px;
   line-height: 22px;
 }
 
@@ -178,6 +176,8 @@ $orange: rgb(189, 144, 61);
 
 .input-container {
   animation: terminalInputAnimation 8.5s linear;
+  margin-bottom: -20px;
+  width: 70%;
 }
 
 @keyframes terminalInputAnimation {
@@ -230,11 +230,11 @@ $orange: rgb(189, 144, 61);
 
 form {
   position: fixed;
-  width: 65%;
+  width: 100%;
 }
 
 .terminal-return-container {
-  margin-bottom: 20px;
+  height: 50px;
 }
 
 span {
@@ -269,10 +269,10 @@ span {
 .loading-snap {
   overflow: hidden;
   white-space: nowrap;
-  animation: textAnimation 1s steps(10, end) 3;
+  animation: textAnimation 1s steps(15, end) 3;
   letter-spacing: 0.2em;
   opacity: 0;
-  // display: inline-block;
+  position: absolute;
 }
 
 @keyframes textAnimation {

@@ -1,5 +1,5 @@
 import "./Welcome.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import DirectoryItems from "./DirectoryItems";
 import DirectoryPaths from "./DirectoryPaths";
 import SnapHelp from "./SnapHelp";
@@ -250,6 +250,12 @@ const Terminal = () => {
     </div>
   ));
 
+  const KeepAtBottom = () => {
+    const reference = useRef();
+    useEffect(() => reference.current.scrollIntoView());
+    return <div ref={reference} />;
+  };
+
   return (
     <div className="terminal-container">
       <div className="loading-snap-container">
@@ -294,7 +300,10 @@ const Terminal = () => {
           </div>
         </div>
       )}
-      <div className="terminal-return-container">{terminalReturnHTML}</div>
+      <div className="terminal-return-container">
+        {terminalReturnHTML}
+        <KeepAtBottom />
+      </div>
       <form onSubmit={handleSubmit} className="input-container">
         <label>
           $
