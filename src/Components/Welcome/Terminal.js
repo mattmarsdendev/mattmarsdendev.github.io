@@ -28,7 +28,7 @@ const Terminal = () => {
       setInputText("");
     } else if (inputText === "clear") {
       setClear(true);
-      updated = [];
+      updated = ["Type home or snap --help"];
       setInputText("");
     } else if (inputText.includes("cd")) {
       const directPath =

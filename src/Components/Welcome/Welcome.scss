@@ -12,7 +12,6 @@ $orange: rgb(189, 144, 61);
   width: 100%;
   margin: 0 auto;
   z-index: 8 !important;
-  overflow-y: hidden;
   position: fixed;
   animation-delay: 3s;
   overflow-x: hidden;
@@ -124,40 +123,21 @@ $orange: rgb(189, 144, 61);
 }
 
 .terminal-container {
-  width: 65%;
-  height: 250px;
+  width: 70%;
+  height: 270px;
   background-color: $darkestblue;
   font-family: "Monaco";
   color: $teal;
   overflow-y: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-top: 15px;
-  // animation: loadterminal 4s linear;
+  margin-top: 5px;
+  line-height: 22px;
 }
 
-@keyframes loadterminal {
-  0% {
-    transform: scaleY(0);
-  }
-  5% {
-    transform: scaleY(0);
-  }
-  25% {
-    background-color: $darkblue;
-  }
-  45% {
-    transform: scaleY(1);
-    opacity: 0.7;
-  }
-  100% {
-    background-color: $darkestblue;
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
 .terminal-hello-container-animated {
   animation: animateHelloText 6.5s linear;
 }
@@ -221,13 +201,13 @@ $orange: rgb(189, 144, 61);
   cursor: pointer;
   color: $orange;
   transition: 0.3s;
-  width: 125px;
+  width: 200px;
 }
 
 .web-link {
   color: blue;
   cursor: pointer;
-  width: 150px;
+  width: 250px;
 }
 
 .web-link:hover {

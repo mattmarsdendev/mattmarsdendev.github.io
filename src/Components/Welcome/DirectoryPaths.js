@@ -102,6 +102,18 @@ const DirectoryPaths = {
       message: "/users/MattMarsden/Home/",
       directory: "/users/MattMarsden/Home/",
     },
+    "../Contact/": {
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
+    },
+    "../Portfolio/": {
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
+    },
+    "../Languages&Tools/": {
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    },
   },
   "/users/MattMarsden/Home/Portfolio/": {
     "~": {
@@ -123,6 +135,18 @@ const DirectoryPaths = {
     $Home: {
       message: "/users/MattMarsden/Home/",
       directory: "/users/MattMarsden/Home/",
+    },
+    "../AboutMe/": {
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
+    },
+    "../Contact/": {
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
+    },
+    "../Languages&Tools/": {
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
     },
   },
   "/users/MattMarsden/Home/Languages&Tools/": {
@@ -146,6 +170,18 @@ const DirectoryPaths = {
       message: "/users/MattMarsden/Home/",
       directory: "/users/MattMarsden/Home/",
     },
+    "../AboutMe/": {
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
+    },
+    "../Portfolio/": {
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
+    },
+    "../Contact/": {
+      message: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/MattMarsden/Home/Contact/",
+    },
   },
   "/users/MattMarsden/Home/Contact/": {
     "~": {
@@ -168,9 +204,22 @@ const DirectoryPaths = {
       message: "/users/MattMarsden/Home/",
       directory: "/users/MattMarsden/Home/",
     },
+    "../AboutMe/": {
+      message: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/MattMarsden/Home/AboutMe/",
+    },
+    "../Portfolio/": {
+      message: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/MattMarsden/Home/Portfolio/",
+    },
+    "../Languages&Tools/": {
+      message: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    },
   },
   aliases: {
     "/users/MattMarsden/Home/$Home": "/users/MattMarsden/Home/",
+    "../Contact": "/users/MattMarsden/Contact/",
   },
 };
 
