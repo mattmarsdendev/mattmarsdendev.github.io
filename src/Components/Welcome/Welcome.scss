@@ -16,15 +16,6 @@ $orange: rgb(189, 144, 61);
   overflow-x: hidden;
 }
 
-@keyframes popup {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .arrow {
   margin-right: 5px;
   color: $teal;

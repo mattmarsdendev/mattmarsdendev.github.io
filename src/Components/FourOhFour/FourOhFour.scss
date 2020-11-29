@@ -249,8 +249,8 @@
 }
 
 .star {
-  height: 2px;
-  width: 2px;
+  height: 1px;
+  width: 1px;
   background-color: rgb(161, 161, 117);
   position: absolute;
   animation: starshine 2s linear infinite;
@@ -412,7 +412,7 @@
   background-color: hsl(246, 23%, 36%);
   border-radius: 50%;
   box-shadow: 0px 0px 10px 1px rgb(77, 132, 150);
-  margin-top: 200px;
+  // margin-top: 200px;
 }
 
 .comet {
@@ -421,6 +421,7 @@
 
 .comet2 {
   animation: comet2fly 30s linear infinite;
+  animation-delay: 5s;
 }
 
 .comet3 {

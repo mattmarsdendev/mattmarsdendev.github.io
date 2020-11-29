@@ -1,7 +1,7 @@
 import "./FourOhFour.scss";
 
 const FourOhFour = () => {
-  const starArr = new Array(50).fill(0, 0, 49);
+  const starArr = new Array(100).fill(0, 0, 99);
   const starsHTML = starArr.map((star) => (
     <div
       className="star"
@@ -9,6 +9,11 @@ const FourOhFour = () => {
         bottom: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         animationDelay: `${Math.random() * 5}s`,
+        height: `${Math.round(Math.random() * 2)}px`,
+        width: `${Math.round(Math.random() * 2)}px`,
+        animation: `animation: starshine ${
+          Math.random() * 15
+        }s linear infinite`,
       }}
       key={star}
     ></div>

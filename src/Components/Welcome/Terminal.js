@@ -89,13 +89,14 @@ const Terminal = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.keyCode === 38 && commandIndex > 0) {
+    const { keyCode } = e;
+    if (keyCode === 38 && commandIndex > 0) {
       setCommandIndex(commandIndex - 1);
       setInputText(previousCommands[commandIndex]);
-    } else if (e.keyCode === 40 && commandIndex < previousCommands.length) {
+    } else if (keyCode === 40 && commandIndex < previousCommands.length) {
       setCommandIndex(commandIndex + 1);
       setInputText(previousCommands[commandIndex]);
-    } else if (e.keyCode === 39) {
+    } else if (keyCode === 39) {
       const directoryItemsKey =
         DirectoryItems[workingDirectory] ||
         DirectoryItems[DirectoryItems["aliases"][workingDirectory]];
