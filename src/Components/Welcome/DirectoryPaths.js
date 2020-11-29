@@ -1,225 +1,225 @@
 const DirectoryPaths = {
-  "/users/MattMarsden/Home/": {
+  "/users/mattmarsden/home/": {
     "~": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "./": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/",
-    },
-    AboutMe: {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
-    },
-    "./AboutMe": {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
-    },
-    $AboutMe: {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/mattmarsden/home/",
     },
     aboutme: {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    Portfolio: {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    "./aboutme": {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    "./Portfolio": {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    $aboutme: {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    $Portfolio: {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    aboutme: {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
     portfolio: {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    Contact: {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    "./portfolio": {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    "./Contact": {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    $portfolio: {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    $Contact: {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    portfolio: {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
     contact: {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
-    "Languages&Tools": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    "./contact": {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
-    "./Languages&Tools": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    $contact: {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
-    "$Languages&Tools": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    contact: {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
     "languages&tools": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
+    },
+    "./languages&tools": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
+    },
+    "$languages&tools": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
+    },
+    "languages&tools": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
   },
-  "/users/MattMarsden/Home/AboutMe/": {
+  "/users/mattmarsden/home/aboutme/": {
     "~": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "./": {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
     "../": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
     $Home: {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
-    "../Contact/": {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    "../contact/": {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
-    "../Portfolio/": {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    "../portfolio/": {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    "../Languages&Tools/": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    "../languages&tools/": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
   },
-  "/users/MattMarsden/Home/Portfolio/": {
+  "/users/mattmarsden/home/portfolio/": {
     "~": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "./": {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
     "../": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
     $Home: {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
-    "../AboutMe/": {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+    "../aboutme/": {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    "../Contact/": {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    "../contact/": {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
-    "../Languages&Tools/": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    "../languages&tools/": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
   },
-  "/users/MattMarsden/Home/Languages&Tools/": {
+  "/users/mattmarsden/home/languages&tools/": {
     "~": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "./": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
     "../": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
     $Home: {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
-    "../AboutMe/": {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+    "../aboutme/": {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    "../Portfolio/": {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    "../portfolio/": {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    "../Contact/": {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+    "../contact/": {
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
   },
-  "/users/MattMarsden/Home/Contact/": {
+  "/users/mattmarsden/home/contact/": {
     "~": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "./": {
-      message: "/users/MattMarsden/Home/Contact/",
-      directory: "/users/MattMarsden/Home/Contact/",
+      message: "/users/mattmarsden/home/contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
     "../": {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
     "../../": {
       message: "You do not have required permissions to change into this drive",
-      directory: "/users/MattMarsden/Home/Contact/",
+      directory: "/users/mattmarsden/home/contact/",
     },
     $Home: {
-      message: "/users/MattMarsden/Home/",
-      directory: "/users/MattMarsden/Home/",
+      message: "/users/mattmarsden/home/",
+      directory: "/users/mattmarsden/home/",
     },
-    "../AboutMe/": {
-      message: "/users/MattMarsden/Home/AboutMe/",
-      directory: "/users/MattMarsden/Home/AboutMe/",
+    "../aboutme/": {
+      message: "/users/mattmarsden/home/aboutme/",
+      directory: "/users/mattmarsden/home/aboutme/",
     },
-    "../Portfolio/": {
-      message: "/users/MattMarsden/Home/Portfolio/",
-      directory: "/users/MattMarsden/Home/Portfolio/",
+    "../portfolio/": {
+      message: "/users/mattmarsden/home/portfolio/",
+      directory: "/users/mattmarsden/home/portfolio/",
     },
-    "../Languages&Tools/": {
-      message: "/users/MattMarsden/Home/Languages&Tools/",
-      directory: "/users/MattMarsden/Home/Languages&Tools/",
+    "../languages&tools/": {
+      message: "/users/mattmarsden/home/languages&tools/",
+      directory: "/users/mattmarsden/home/languages&tools/",
     },
   },
   aliases: {
-    "/users/MattMarsden/Home/$Home": "/users/MattMarsden/Home/",
-    "../Contact": "/users/MattMarsden/Contact/",
+    "/users/mattmarsden/home/$Home": "/users/mattmarsden/home/",
+    "../contact": "/users/MattMarsden/contact/",
   },
 };
 

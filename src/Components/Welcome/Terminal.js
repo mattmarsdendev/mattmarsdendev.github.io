@@ -9,7 +9,7 @@ import KeepAtBottom from "./KeepAtBottom";
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
   const [workingDirectory, setWorkingDirectory] = useState(
-    "/users/MattMarsden/Home/"
+    "/users/mattmarsden/home/"
   );
   const [terminalReturn, setTerminalReturn] = useState([]);
   const [clear, setClear] = useState(false);
@@ -17,7 +17,7 @@ const Terminal = () => {
   const [commandIndex, setCommandIndex] = useState(0);
   const [clickedLink, setClickedLink] = useState(false);
 
-  const defaultDirectory = "/users/MattMarsden/Home/";
+  const defaultDirectory = "/users/mattmarsden/home/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -64,7 +64,7 @@ const Terminal = () => {
     } else if (inputText === "home") {
       updated = [];
       setClear(false);
-      setWorkingDirectory("/users/MattMarsden/Home/");
+      setWorkingDirectory("/users/mattmarsden/home/");
       setInputText("");
     } else if (inputText.includes("whim")) {
       if (inputText.includes("txt")) {
@@ -132,7 +132,7 @@ const Terminal = () => {
 
   const handleHomeLink = (e) => {
     setClickedLink(true);
-    const updatedDirectory = `/users/MattMarsden/Home/${e.target.id}/`;
+    const updatedDirectory = `/users/mattmarsden/home/${e.target.id}/`;
     setWorkingDirectory(updatedDirectory);
     let updatedTerminal = [...terminalReturn];
     const updated = listFilesCommand(updatedDirectory, updatedTerminal);
@@ -180,11 +180,11 @@ const Terminal = () => {
       setClickedLink(false);
       const newDirectory = file.includes("Home")
         ? defaultDirectory
-        : `/users/MattMarsden/Home/${file.split("$")[1]}/`;
+        : `/users/mattmarsden/home/${file.split("$")[1]}/`;
       setWorkingDirectory(newDirectory);
       let updated = [...terminalReturn];
       updated.push(`$ cd ${newDirectory}`);
-      if (file.includes("home") || file.includes("Home")) {
+      if (file.includes("home")) {
         updated = [];
       } else {
         updated = listFilesCommand(newDirectory, updated);
@@ -252,21 +252,21 @@ const Terminal = () => {
             Type snap --help for more info
           </div>
           <div className="tool-text-container">
-            <div className="tools-link" onClick={handleHomeLink} id="AboutMe">
-              $AboutMe
+            <div className="tools-link" onClick={handleHomeLink} id="aboutme">
+              $aboutme
             </div>
-            <div className="tools-link" onClick={handleHomeLink} id="Contact">
-              $Contact
+            <div className="tools-link" onClick={handleHomeLink} id="contact">
+              $contact
             </div>
-            <div className="tools-link" onClick={handleHomeLink} id="Portfolio">
-              $Portfolio
+            <div className="tools-link" onClick={handleHomeLink} id="portfolio">
+              $portfolio
             </div>
             <div
               className="tools-link"
               onClick={handleHomeLink}
-              id="Languages&Tools"
+              id="languages&tools"
             >
-              $Languages&Tools
+              $languages&tools
             </div>
           </div>
         </div>
