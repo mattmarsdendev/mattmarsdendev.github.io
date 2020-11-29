@@ -5,6 +5,7 @@ import DirectoryPaths from "./DirectoryPaths";
 import SnapHelp from "./SnapHelp";
 import TextFiles from "./TextFiles";
 import KeepAtBottom from "./KeepAtBottom";
+import TerminalHome from "./TerminalHome";
 
 const Terminal = () => {
   const [inputText, setInputText] = useState("");
@@ -27,12 +28,10 @@ const Terminal = () => {
     setPreviousCommands([...previousCommands, inputText, ""]);
     if (inputText === "pwd") {
       updated.push(updatedDir);
-      setInputText("");
     } else if (inputText === "clear") {
       setClear(true);
       setClickedLink(false);
       updated = ["Type home or snap --help"];
-      setInputText("");
     } else if (inputText.includes("cd")) {
       const directPath =
         DirectoryPaths[updatedDir][inputText.split(" ")[1]] ||
@@ -42,35 +41,28 @@ const Terminal = () => {
       if (directPath) {
         updatedDir = directPath.directory;
         setWorkingDirectory(updatedDir);
-        setInputText("");
       } else {
         updated.push(`-snap ${inputText}: No such file or directory`);
-        setInputText("");
       }
     } else if (inputText === "ls") {
       updated = listFilesCommand(workingDirectory, updated);
-      setInputText("");
     } else if (inputText.includes("snap")) {
       if (inputText.includes("--help")) {
         for (const [key, value] of Object.entries(SnapHelp)) {
           updated.push(`${key}: ${value}`);
         }
-        setInputText("");
       } else {
         updated.push(
           "Currently only the --help flag is supported but there are more features planned! Stay tuned!"
         );
-        setInputText("");
       }
     } else if (inputText === "home") {
       updated = [];
       setClear(false);
       setWorkingDirectory("/users/mattmarsden/home/");
-      setInputText("");
     } else if (inputText.includes("whim")) {
       if (inputText.includes("txt")) {
         handleTerminalClick(inputText.split(" ")[1], updated);
-        setInputText("");
       } else {
         const splitText = inputText.split(" ")[1];
         if (splitText) {
@@ -78,18 +70,16 @@ const Terminal = () => {
         } else {
           updated.push("please specify a txt file for whim to read");
         }
-        setInputText("");
       }
     } else if (inputText.includes("open")) {
       window.open(inputText.split(" ")[1]);
-      setInputText("");
     } else {
       updated.push(`-snap: ${inputText}: command not found`);
-      setInputText("");
     }
     if (updatedDir !== workingDirectory) {
       updated.push(updatedDir);
     }
+    setInputText("");
     setTerminalReturn(updated);
   };
 
@@ -235,46 +225,10 @@ const Terminal = () => {
         <div className="loaded-snap">Loaded</div>
       </div>
       {!clear && (
-        <div
-          className={
-            previousCommands.length > 1
-              ? "terminal-hello-container"
-              : "terminal-hello-container-animated"
-          }
-        >
-          <div className="hello-text">
-            Hi! I'm Matt. I build things for the web!
-          </div>
-          <div className="specialize-text">
-            I specialize in front end development but have experience as a full
-            stack developer working on enterprise software. I love to build
-            clean UI and have a passion for improving user experiences.
-          </div>
-          <div className="click-instructions">
-            <br />
-            Feel free to click an <p className="orange">$orange&nbsp;</p>
-            link below or try out the terminal! <br />
-            Type snap --help for more info
-          </div>
-          <div className="tool-text-container">
-            <div className="tools-link" onClick={handleHomeLink} id="aboutme">
-              $aboutme
-            </div>
-            <div className="tools-link" onClick={handleHomeLink} id="contact">
-              $contact
-            </div>
-            <div className="tools-link" onClick={handleHomeLink} id="portfolio">
-              $portfolio
-            </div>
-            <div
-              className="tools-link"
-              onClick={handleHomeLink}
-              id="languages&tools"
-            >
-              $languages&tools
-            </div>
-          </div>
-        </div>
+        <TerminalHome
+          handleHomeLink={handleHomeLink}
+          show={previousCommands.length}
+        />
       )}
       {clickedLink && <div>Click a purple link</div>}
       <div className="terminal-return-container">
