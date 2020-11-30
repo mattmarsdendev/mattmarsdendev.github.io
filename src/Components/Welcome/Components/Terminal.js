@@ -141,6 +141,7 @@ const Terminal = () => {
   };
 
   const handleTerminalClick = (file, updated) => {
+    console.log(textFiles);
     if (file.includes("txt")) {
       updated.push(textFiles[file]);
       setTerminalReturn(updated);
