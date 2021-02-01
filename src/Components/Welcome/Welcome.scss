@@ -80,7 +80,7 @@ $orange: rgb(189, 144, 61);
 }
 
 .terminal-hello-container-animated {
-  animation: animateHelloText 6.5s linear;
+  animation: animateHelloText 4.5s linear;
 }
 
 @keyframes animateHelloText {
@@ -190,12 +190,7 @@ form {
 
 span {
   display: flex;
-  // flex-direction: row;
 }
-
-// .orange {
-//   color: $orange !important;
-// }
 
 .help-window {
   height: 200px;
