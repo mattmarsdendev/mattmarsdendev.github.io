@@ -231,7 +231,7 @@ const Terminal = () => {
           show={previousCommands.length}
         />
       )}
-      {clickedLink && <div>Click a purple link</div>}
+      {clickedLink && <div>Click a purple link to read file</div>}
       <div className="terminal-return-container">
         {terminalReturnHTML}
         <KeepAtBottom />
