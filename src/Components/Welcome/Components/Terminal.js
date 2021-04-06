@@ -195,18 +195,24 @@ const Terminal = () => {
 
   const terminalStyleCheck = (item) => {
     let style = "terminal-return ";
-    if (item.includes("txt") && !item.includes("whim")) {
-      style += "txt-link";
-    } else if (
-      (item.includes(".io") || item.includes(".com") || item.includes("www")) &&
-      !item.includes("whim") &&
-      !item.includes("open")
-    ) {
-      style += "web-link";
-    } else if (item.includes("$") && !item.includes("$ ")) {
-      style += "tools-link";
+    try {
+      if (item.includes("txt") && !item.includes("whim")) {
+        style += "txt-link";
+      } else if (
+        (item.includes(".io") ||
+          item.includes(".com") ||
+          item.includes("www")) &&
+        !item.includes("whim") &&
+        !item.includes("open")
+      ) {
+        style += "web-link";
+      } else if (item.includes("$") && !item.includes("$ ")) {
+        style += "tools-link";
+      }
+      return style;
+    } catch (err) {
+      return err;
     }
-    return style;
   };
 
   const terminalReturnHTML = terminalReturn.map((item) => (
