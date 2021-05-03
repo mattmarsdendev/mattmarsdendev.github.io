@@ -2,3 +2,9 @@
   height: 100vh;
   width: 100vw;
 }
+
+.placeholder {
+  height: 60vh;
+  width: 100vw;
+  background-color: #2f4c58;
+}
