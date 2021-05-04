@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Raleway:wght@300;500&display=swap");
+
+.navbar-container {
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 25px;
+  color: white;
+}
