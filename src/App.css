@@ -1,10 +1,22 @@
 .App {
   height: 100vh;
   width: 100vw;
+  animation: blurIn 1s linear;
+  /* background-color: #2f4c58; */
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(0.2rem);
+  }
+  100% {
+    filter: blur(0);
+  }
 }
 
 .placeholder {
   height: 60vh;
   width: 100vw;
   background-color: #2f4c58;
+  position: absolute;
 }

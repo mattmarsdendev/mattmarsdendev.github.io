@@ -17,16 +17,30 @@
     transition: 0.5s;
     font-weight: 900;
     margin-bottom: -0.26em;
+    animation: slideLeft 0.75s linear;
+    color: #111b1e;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(75px);
+    }
   }
 
   .developer {
     font-size: 4vw;
     position: absolute;
     z-index: 10;
-    color: white;
-    right: 0;
+    color: #e4dbd9;
+    right: 10px;
     bottom: 0;
     opacity: 0.8;
-    margin-bottom: -0.23em;
+    margin-bottom: -0.235em;
+    animation: slideRight 0.75s linear;
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-75px);
+    }
   }
 }
