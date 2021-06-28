@@ -3,7 +3,7 @@
 .header-container {
   height: 40vh;
   width: 100vw;
-  background-color: #63a583;
+  background-color: #0f78b8;
   position: relative;
 
   display: flex;
@@ -18,12 +18,13 @@
     font-weight: 900;
     margin-bottom: -0.26em;
     animation: slideLeft 0.75s linear;
-    color: #111b1e;
+    color: white;
   }
 
   @keyframes slideLeft {
     0% {
       transform: translateX(75px);
+      letter-spacing: 0.5vw;
     }
   }
 
@@ -31,16 +32,17 @@
     font-size: 4vw;
     position: absolute;
     z-index: 10;
-    color: #e4dbd9;
-    right: 10px;
+    color: #0f78b8;
+    right: 50px;
     bottom: 0;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: -0.235em;
     animation: slideRight 0.75s linear;
   }
   @keyframes slideRight {
     0% {
       transform: translateX(-75px);
+      letter-spacing: 0.25vw;
     }
   }
 }
