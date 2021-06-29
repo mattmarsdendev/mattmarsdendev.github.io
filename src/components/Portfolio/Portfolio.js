@@ -1,5 +1,7 @@
 import "./Portfolio.scss";
 
-const Portfolio = () => {};
+const Portfolio = () => {
+  return <div></div>;
+};
 
 export default Portfolio;
