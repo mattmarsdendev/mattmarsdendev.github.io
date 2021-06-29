@@ -9,7 +9,7 @@
 
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   animation: blurIn2 2.5s linear;
@@ -107,11 +107,11 @@
   // }
 
   .hi {
-    font-size: 25vw;
+    font-size: 24vw;
     color: #2e2f33;
     letter-spacing: -25px;
     z-index: 9;
-    margin-left: -275px;
+    // margin-left: -135px;
   }
 
   .placeholder-text {
@@ -121,6 +121,8 @@
   .welcome-sub-container {
     display: flex;
     flex-direction: column;
+    // justify-content: flex-start;
+    margin-left: 150px;
   }
 
   .other-text {

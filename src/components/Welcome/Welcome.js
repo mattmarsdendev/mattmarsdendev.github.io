@@ -36,7 +36,7 @@ const Welcome = () => {
           javascript javascript
         </div>
       </div>
-      <div className="hi">hi</div>
+      <div className="hi">hey</div>
       <div className="welcome-sub-container">
         <h2 className="placeholder-text">
           I'M MATT! I BUILD THINGS FOR THE WEB
