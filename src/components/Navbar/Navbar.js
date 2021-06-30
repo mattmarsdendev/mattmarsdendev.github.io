@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="navbar-container">
+      <NavLink exact to="/" className="nav-links" activeClassName="current">
+        Home
+      </NavLink>
       <NavLink
         exact
         to="/portfolio"
