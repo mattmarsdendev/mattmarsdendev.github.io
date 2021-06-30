@@ -1,5 +1,11 @@
 import "./App.css";
-import { Header, Navbar, Welcome, Portfolio } from "./components/index.js";
+import {
+  Header,
+  Navbar,
+  Welcome,
+  Portfolio,
+  FourOhFour,
+} from "./components/index.js";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
@@ -9,7 +15,9 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Welcome} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/portfolio" component={Portfolio} />
+        {/* <Route exact path="/portfolio/:project" */}
+        <Route component={FourOhFour} />
       </Switch>
     </div>
   );
