@@ -9,7 +9,7 @@
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all 0.5s ease-out;
-  animation: fillInBackground 1.5s linear;
+  animation: fillInBackground 0.75s linear;
 
   @keyframes fillInBackground {
     from {
@@ -99,7 +99,7 @@
   // }
 }
 
-.navbar {
+.portfolio-navbar {
   //   max-height: 60vh;
   //   height: 50px;
   position: absolute;
@@ -107,11 +107,21 @@
   //   bottom: 0;
   width: 100%;
   //   overflow: hidden;
+  // animation: portfolioNavbar 0.25s linear;
   background-color: #333;
 }
 
+@keyframes portfolioNavbar {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Navigation links */
-.navbar a {
+.portfolio-navbar a {
   float: left;
   font-size: 16px;
   color: white;
@@ -142,7 +152,7 @@
 }
 
 /* Add a red background color to navigation links on hover */
-.navbar a:hover,
+.portfolio-navbar a:hover,
 .subnav:hover .subnavbtn {
   background-color: #0f78b8;
 }

@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const Portfolio = () => {
   return (
     <div className="portfolio-container">
-      <div className="navbar">
+      <div className="portfolio-navbar">
         <NavLink
           exact
           to="/portfolio"
