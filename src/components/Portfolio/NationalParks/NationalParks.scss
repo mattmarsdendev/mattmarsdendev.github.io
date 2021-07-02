@@ -1,0 +1,268 @@
+$orange: rgb(189, 144, 61);
+$darkestblue: #020c1b;
+$darkblue: #060f1d;
+$navy: #0a192f;
+$teal: #008080;
+$lightblue: #22344e;
+$lightblueopac: rgba(34, 52, 78, 0.9);
+$white: white;
+$gray: #777575;
+$darkgray: #222121;
+
+.national-park-container {
+  animation: popup 0.3s linear;
+  background-color: $darkblue;
+  height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.portfolio-image {
+  width: 400px;
+  height: 215px;
+  border: 7px solid $gray;
+  padding-top: 5px;
+  border-radius: 5px;
+  transition: 0.1s;
+  background-color: $gray;
+  box-shadow: 0px 0px 0px 2px #000000;
+}
+
+.portfolio-image:hover {
+  opacity: 0.98;
+  transform: scale(0.98);
+}
+
+.color-block {
+  height: 130px;
+  width: 69px;
+  background-color: $darkgray;
+  border-radius: 9px;
+  border: 2px solid black;
+  transform: rotate(0deg) skew(0deg);
+  -webkit-transform: rotate(0deg) skew(0deg);
+  margin-right: -50px;
+  margin-top: 75px;
+  z-index: 9;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.color-block:hover {
+  transform: scale(0.97);
+}
+
+.color-block::before {
+  content: "";
+  height: 5px;
+  width: 35px;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  margin-left: 17px;
+  margin-top: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+  margin: 0 auto;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.portfolio-links > a {
+  padding: 2px;
+  transition: 0.2s;
+}
+
+.portfolio-links > a:hover {
+  opacity: 0.3 !important;
+  color: $white !important;
+}
+
+.project-nav {
+  padding: 5px 10px;
+  border: 2px solid $lightblue;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  color: $white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.project-nav:hover {
+  background-color: $lightblue;
+}
+
+.project-nav-title {
+  padding: 5px 10px;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+}
+
+.recent-projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+
+.active {
+  background-color: $lightblue;
+  // color: $navy !important;
+  padding: 5px 10px;
+  border: 2px solid $lightblue;
+  margin: 5px 0;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.portfolio-desc {
+  margin-left: -150px;
+  background-color: $lightblue;
+  padding: 25px;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.desc-cont {
+  z-index: 100;
+}
+
+.phone-image {
+  width: 60px;
+  margin-top: 4px;
+  margin-left: 4px;
+  border-radius: 5px;
+  height: 120px;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 1100px) {
+  .portfolio-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-nav-title {
+    display: none;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .recent-projects {
+    flex-direction: row;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0 auto;
+  }
+
+  .portfolio-item {
+    margin-top: 25px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .color-block {
+    margin: 0;
+    margin-bottom: -210px;
+    margin-left: -400px;
+  }
+
+  .desc-cont {
+    z-index: 1;
+  }
+  .portfolio-desc {
+    margin: 0;
+    margin-top: -20px;
+    background-color: $lightblueopac;
+    z-index: 1;
+    width: 550px;
+  }
+
+  .portfolio-image {
+    width: 350px;
+    height: 190px;
+  }
+
+  .portfolio-item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .portfolio-links {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .recent-projects {
+    width: 65%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .portfolio-desc {
+    padding: 20px;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .recent-projects {
+    width: 90%;
+  }
+
+  .color-block {
+    margin-left: -325px;
+    margin-bottom: -200px;
+  }
+
+  .portfolio-item {
+    margin-left: 5px;
+    margin-top: 60px;
+  }
+
+  .portfolio-desc {
+    width: 360px;
+    margin-right: 10px;
+  }
+}

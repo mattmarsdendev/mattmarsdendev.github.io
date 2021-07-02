@@ -13,6 +13,7 @@ $darkgray: #222121;
   width: 100%;
   height: 100%;
   display: flex;
+  max-height: 60vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -25,7 +26,6 @@ $darkgray: #222121;
 
   .title-container {
     //   dont forget to change sunanimation time length
-    margin-bottom: 50px;
     animation: sunblock 50s linear infinite;
   }
   @keyframes sunblock {

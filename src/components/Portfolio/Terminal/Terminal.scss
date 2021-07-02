@@ -193,16 +193,6 @@ span {
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .terminal-container {
-    display: none;
-  }
-
-  .smallscreen-container {
-    display: flex;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .smallscreen-container {
     flex-direction: column;
@@ -235,33 +225,6 @@ span {
     width: 100%;
     margin-left: 7vw;
   }
-
-  @media screen and (max-width: 900px) {
-    .hello {
-      font-size: 5vw;
-    }
-
-    .specialize {
-      text-align: center;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .tools {
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .tool-container {
-      margin-left: 0;
-      grid-template-columns: 33% 33% 33%;
-    }
-
-    .specialize {
-      font-size: 20px;
-    }
-  }
 }
 .outer-term {
   height: 100%;
@@ -270,4 +233,5 @@ span {
   justify-content: center;
   align-items: center;
   background-color: #7e7c88;
+  margin-top: 25px;
 }

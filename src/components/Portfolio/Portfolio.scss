@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&family=Raleway:wght@300;500&display=swap");
+
 .portfolio-container {
   height: 60vh;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
   //   width: 100vw;
 
   //   .portfolio-navigation {
@@ -141,4 +145,17 @@
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
+}
+
+.portfolio-piece {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current {
+  background-color: white;
+  color: black !important;
 }
