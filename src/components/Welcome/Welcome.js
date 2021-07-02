@@ -45,6 +45,10 @@ const Welcome = () => {
           I specialize in the front end but have professional full stack
           experience
         </div>
+        {/* <div style={{ display: "flex", flexDirection: "row" }}>
+          <h4>mattmarsdendev@gmail.com </h4>
+          <h4> in mattmarsdendev</h4>
+        </div> */}
       </div>
     </div>
   );

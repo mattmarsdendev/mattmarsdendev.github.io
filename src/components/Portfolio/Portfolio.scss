@@ -4,6 +4,21 @@
   height: 60vh;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
+
+  background: linear-gradient(to right, #3099d9 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all 0.5s ease-out;
+  animation: fillInBackground 1.5s linear;
+
+  @keyframes fillInBackground {
+    from {
+      background-position: right bottom;
+    }
+    to {
+      background-position: left bottom;
+    }
+  }
   //   width: 100vw;
 
   //   .portfolio-navigation {
@@ -66,6 +81,21 @@
   //   .subnav:hover .subnav-content {
   //     display: block;
   //   }
+  // }
+
+  .portfolio-header {
+    color: white;
+    font-size: 9em;
+    font-weight: 800;
+  }
+
+  // .portfolio-header::before {
+  //   color: white;
+  //   position: absolute;
+  //   content: "PORTFOLIO";
+  //   margin-left: -4px;
+  //   margin-top: -4px;
+  //   z-index: 1;
   // }
 }
 

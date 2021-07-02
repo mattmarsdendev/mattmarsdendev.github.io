@@ -95,6 +95,7 @@ const Portfolio = () => {
         <a href="#contact">misc</a>
       </div>
       <div className="portfolio-piece">
+        <div className="portfolio-header">PORTFOLIO</div>
         <Switch>
           <Route exact path="/portfolio/404" component={FourOhFour} />
           <Route exact path="/portfolio/snap" component={Terminal} />
