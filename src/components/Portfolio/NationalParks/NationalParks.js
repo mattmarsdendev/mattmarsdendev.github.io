@@ -1,22 +1,9 @@
-import nationalphone from "./nationalparkphone.png";
 import nationalimg from "./nationalparks.png";
 import "./NationalParks.scss";
 
 const NationalParks = () => {
-  const newWindow = (e) => {
-    window.open(e.target.id, "mywin", "left=20,top=20,width=480,height=800");
-  };
   return (
-    <div className="portfolio-item">
-      <div className="color-block">
-        <img
-          src={nationalphone}
-          className="phone-image"
-          onClick={(e) => newWindow(e)}
-          id="https://mmarsden89.github.io/national-park"
-          alt="national park phone"
-        />
-      </div>
+    <div className="national-park-container">
       <a
         href="https://mmarsden89.github.io/national-park"
         target="_blank"
@@ -28,7 +15,7 @@ const NationalParks = () => {
           alt="national park computer"
         />
       </a>
-      <div className="desc-cont">
+      <div className="description-container">
         <p className="portfolio-desc">
           I wanted a place to keep track of the national parks I've been to so I
           created a full stack application to do so! Client was built using

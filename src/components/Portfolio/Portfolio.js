@@ -31,7 +31,6 @@ const Portfolio = () => {
             >
               national parks
             </NavLink>
-            <a href="#team">team</a>
             <NavLink
               exact
               to="/portfolio/community"
@@ -55,8 +54,6 @@ const Portfolio = () => {
             >
               triviuh
             </NavLink>
-            <a href="#deliver">deliver</a>
-            <a href="#package">package</a>
             <NavLink
               exact
               to="/portfolio/snap"
@@ -88,15 +85,15 @@ const Portfolio = () => {
             >
               mountain view
             </NavLink>
-            <a href="#link3">link 3</a>
-            <a href="#link4">link 4</a>
           </div>
         </div>
-        <a href="#contact">misc</a>
       </div>
       <div className="portfolio-piece">
-        <div className="portfolio-header">PORTFOLIO</div>
+        {/* <div className="portfolio-header">PORTFOLIO</div> */}
         <Switch>
+          <Route exact path="/portfolio">
+            <div className="portfolio-header">PORTFOLIO</div>
+          </Route>
           <Route exact path="/portfolio/404" component={FourOhFour} />
           <Route exact path="/portfolio/snap" component={Terminal} />
           <Route exact path="/portfolio/mountainview">
@@ -106,7 +103,6 @@ const Portfolio = () => {
               style={{
                 width: "100%",
                 height: "100%",
-                // height: "calc(100% - 50px)",
                 paddingTop: "20px",
               }}
               frameborder="0"
