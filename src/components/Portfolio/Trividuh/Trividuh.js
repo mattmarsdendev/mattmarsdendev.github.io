@@ -1,5 +1,3 @@
-import trividuhphone from "./trividuhphone.png";
-import trividuhimg from "./trividuh.png";
 import "./Trividuh.scss";
 
 const Trividuh = () => {
@@ -12,13 +10,7 @@ const Trividuh = () => {
         href="https://mmarsden89.github.io/trividuh"
         target="_blank"
         rel="noreferrer"
-      >
-        <img
-          src={trividuhimg}
-          className="portfolio-image"
-          alt="trividuh computer"
-        />
-      </a>
+      ></a>
       <div className="desc-cont">
         <p className="portfolio-desc">
           A trivia application (and great timekiller) built with JavaScript and

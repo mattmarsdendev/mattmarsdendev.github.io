@@ -1,4 +1,57 @@
 .portfolio-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 25px;
   height: 100%;
   width: 100%;
+}
+
+.portfolio-image,
+.portfolio-image-main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.portfolio-image-main:hover {
+  opacity: 0;
+}
+
+.portfolio-image-container {
+  width: 400px;
+  height: 215px;
+  position: relative;
+  transition: 0.25s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+.portfolio-desc {
+  padding: 0 25px;
+  width: 400px;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.portfolio-links > a {
+  padding: 2px;
+  transition: 0.2s;
+}
+
+.portfolio-links > a:hover {
+  opacity: 0.3 !important;
+  color: white !important;
 }

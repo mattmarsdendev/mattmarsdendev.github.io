@@ -1,10 +1,7 @@
 import "./Portfolio.scss";
-import { Route, Switch } from "./node_modules/react-router-dom";
 import { FourOhFour } from "../index.js";
-import Terminal from "./Terminal/Terminal.js";
-import NationalParks from "./NationalParks/NationalParks.js";
 import Trividuh from "./Trividuh/Trividuh.js";
-import { NavLink, Link } from "./node_modules/react-router-dom";
+import { NavLink, Link, Route, Switch } from "react-router-dom";
 import PortfolioItem from "./PortfolioItem/PortfolioItem.js";
 
 const Portfolio = () => {
@@ -61,7 +58,7 @@ const Portfolio = () => {
               className="nav-links"
               activeClassName="current"
             >
-              triviuh
+              trividuh
             </NavLink>
             <NavLink
               exact
@@ -132,12 +129,12 @@ const Portfolio = () => {
               frameborder="0"
             ></iframe>
           </Route>
-          <Route
-            exact
-            path="/portfolio/nationalparks"
-            component={NationalParks}
-          />
-          <Route exact path="/portfolio/trividuh" component={Trividuh} />
+          <Route exact path="/portfolio/nationalparks">
+            <PortfolioItem name="nationalparks" />
+          </Route>
+          <Route exact path="/portfolio/trividuh">
+            <PortfolioItem name="trividuh" />
+          </Route>
           <Route exact path="/portfolio/cryptochart">
             <PortfolioItem name={"cryptochart"} />
           </Route>
