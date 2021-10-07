@@ -1,10 +1,11 @@
 import "./Portfolio.scss";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "./node_modules/react-router-dom";
 import { FourOhFour } from "../index.js";
 import Terminal from "./Terminal/Terminal.js";
 import NationalParks from "./NationalParks/NationalParks.js";
 import Trividuh from "./Trividuh/Trividuh.js";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "./node_modules/react-router-dom";
+import PortfolioItem from "./PortfolioItem/PortfolioItem.js";
 
 const Portfolio = () => {
   return (
@@ -48,6 +49,14 @@ const Portfolio = () => {
           <div className="subnav-content">
             <NavLink
               exact
+              to="/portfolio/cryptochart"
+              className="nav-links"
+              activeClassName="current"
+            >
+              cryptochart
+            </NavLink>
+            <NavLink
+              exact
               to="/portfolio/trividuh"
               className="nav-links"
               activeClassName="current"
@@ -89,13 +98,28 @@ const Portfolio = () => {
         </div>
       </div>
       <div className="portfolio-piece">
-        {/* <div className="portfolio-header">PORTFOLIO</div> */}
         <Switch>
           <Route exact path="/portfolio">
             <div className="portfolio-header">PORTFOLIO</div>
+            <div className="portfolio-new">
+              <Link to="/portfolio/cryptochart">
+                <div className="clipped-element"></div>
+                <div className="new-project">new project!</div>
+              </Link>
+            </div>
           </Route>
           <Route exact path="/portfolio/404" component={FourOhFour} />
-          <Route exact path="/portfolio/snap" component={Terminal} />
+          <Route exact path="/portfolio/snap">
+            <iframe
+              src="https://mmarsden89.github.io/snap/"
+              title="snap"
+              style={{
+                height: "100%",
+                width: "100%",
+                border: "none",
+              }}
+            />
+          </Route>
           <Route exact path="/portfolio/mountainview">
             <iframe
               src="https://mmarsden89.github.io/mountain-view/"
@@ -114,6 +138,9 @@ const Portfolio = () => {
             component={NationalParks}
           />
           <Route exact path="/portfolio/trividuh" component={Trividuh} />
+          <Route exact path="/portfolio/cryptochart">
+            <PortfolioItem name={"cryptochart"} />
+          </Route>
           {/* <Route exact path="/portfolio/community" component={Community} /> */}
         </Switch>
       </div>

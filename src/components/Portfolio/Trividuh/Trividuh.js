@@ -1,21 +1,13 @@
 import trividuhphone from "./trividuhphone.png";
 import trividuhimg from "./trividuh.png";
+import "./Trividuh.scss";
 
 const Trividuh = () => {
   const newWindow = (e) => {
     window.open(e.target.id, "mywin", "left=20,top=20,width=480,height=800");
   };
   return (
-    <div className="portfolio-item">
-      <div className="color-block">
-        <img
-          src={trividuhphone}
-          className="phone-image"
-          onClick={(e) => newWindow(e)}
-          id="https://mmarsden89.github.io/trividuh"
-          alt="trividuh phone"
-        />
-      </div>
+    <div className="trividuh-container">
       <a
         href="https://mmarsden89.github.io/trividuh"
         target="_blank"

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "./node_modules/react";
 
 const KeepAtBottom = () => {
   const reference = useRef();
