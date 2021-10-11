@@ -3,6 +3,7 @@ import portfolioDictionary from "./portfolioDictionary.js";
 
 const PortfolioItem = (props) => {
   const { name } = props;
+
   return (
     <div className="portfolio-item-container">
       <div className="portfolio-image-container">
@@ -15,30 +16,15 @@ const PortfolioItem = (props) => {
           className="portfolio-image-main"
         />
       </div>
-      <p className="portfolio-desc">{portfolioDictionary[name].text}</p>
-      <div className="portfolio-links">
-        <a
-          href="https://mmarsden89.github.io/national-park"
-          target="_blank"
-          rel="noreferrer"
-        >
-          deployed app
-        </a>
-        <a
-          href="https://github.com/mmarsden89/national-park"
-          target="_blank"
-          rel="noreferrer"
-        >
-          front-end repo
-        </a>
-
-        <a
-          href="https://github.com/mmarsden89/national-parks-backend"
-          target="_blank"
-          rel="noreferrer"
-        >
-          back-end repo
-        </a>
+      <div className="portfolio-info">
+        <p className="portfolio-desc">{portfolioDictionary[name].text}</p>
+        <div className="portfolio-links">
+          {portfolioDictionary[name].links.map((link) => (
+            <a href={link.link} target="_blank" rel="noreferrer">
+              {link.name}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
