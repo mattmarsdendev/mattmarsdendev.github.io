@@ -20,19 +20,38 @@
     }
   }
 
-  .portfolio-new {
+  .portfolio-new-container {
     position: absolute;
     left: 0;
+    background-color: #3099d9;
+    width: 100%;
+    animation: fadeIn 1s linear;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .portfolio-new {
     filter: drop-shadow(10rem 0 0 rgba(0, 30, 200, 0.8))
       drop-shadow(-10rem 0 0 rgba(0, 30, 200, 0.5))
       drop-shadow(20rem 0 0 rgba(0, 30, 200, 0.7))
       drop-shadow(50rem 0 0 rgba(0, 30, 200, 0.5));
     transition: filter 600ms;
-    animation: portfolio-new 1.5s linear;
+    animation: portfolio-new 2.5s linear;
   }
 
   @keyframes portfolio-new {
     0% {
+      opacity: 0;
+      filter: drop-shadow(0 0 0 rgba(0, 30, 200, 0.8));
+    }
+    50% {
       opacity: 0;
       filter: drop-shadow(0 0 0 rgba(0, 30, 200, 0.8));
     }

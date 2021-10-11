@@ -2,6 +2,7 @@ import cryptochartlight from "../../../Styles/Assets/cryptochartlight.png";
 import cryptochartdark from "../../../Styles/Assets/cryptochartdark.png";
 import nationalparks from "../../../Styles/Assets/nationalparks.png";
 import trividuh from "../../../Styles/Assets/trividuh.png";
+import communitygame from "../../../Styles/Assets/communitygame.png";
 
 const portfolioDictionary = {
   cryptochart: {
@@ -21,6 +22,12 @@ const portfolioDictionary = {
     image2: trividuh,
     text:
       "A trivia application (and great timekiller) built with JavaScript and React. Answer questions, earn points and unlock new question sets!",
+  },
+  community: {
+    image: communitygame,
+    image2: communitygame,
+    text:
+      "Community was my first crack at a full-stack project. We were tasked with building a CRUD application but I wanted to put a spin on it. Community was a place my classmates and I could gather in a virtual environment. Built using JavaScript, HTML Canvas, Ruby and Ruby on Rails.",
   },
 };
 
