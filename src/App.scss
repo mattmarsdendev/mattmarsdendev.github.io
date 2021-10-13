@@ -16,7 +16,12 @@
 
 @media only screen and (max-device-width: 480px) {
   .App {
+    .header-container {
+      height: 30vh;
+    }
+
     .portfolio-container {
+      height: 70vh;
       .portfolio-header {
         font-size: 60px;
       }
@@ -49,6 +54,7 @@
     }
 
     .welcome-container {
+      height: 70vh;
       flex-direction: column;
       justify-content: space-evenly;
 
