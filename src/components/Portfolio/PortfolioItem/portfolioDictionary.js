@@ -39,7 +39,7 @@ const portfolioDictionary = {
       },
     ],
     text:
-      "I wanted a place to keep track of the national parks I've been to so I created a full stack application to do so! Client was built using JavaScript and React and the API was built using Node, Express and MongoDB with authorization handled by Auth0.",
+      "A place to keep track of national park visits. The front-end client was built using JavaScript and React and the API was built using Node, Express and MongoDB with authorization handled by Auth0.",
   },
   trividuh: {
     image: trividuh,
@@ -52,7 +52,7 @@ const portfolioDictionary = {
       { name: "deployed app", link: "https://mmarsden89.github.io/trividuh/" },
     ],
     text:
-      "A trivia application (and great timekiller) built with JavaScript and React. Answer questions, earn points and unlock new question sets!",
+      "A trivia application (and great timekiller) built with JavaScript, React and SASS. Given a JSON file and a few user stories, I was tasked to build this application in four days. Meeting the goals quickly, I decided to build out the application a bit more to include other (and more difficult) question sets unlockable by a points system",
   },
   community: {
     image: communitygame,
