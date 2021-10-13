@@ -22,7 +22,7 @@ const Navbar = () => {
       >
         contact
       </NavLink>
-      <p>resume</p>
+      <p className="nav-links">resume</p>
     </div>
   );
 };

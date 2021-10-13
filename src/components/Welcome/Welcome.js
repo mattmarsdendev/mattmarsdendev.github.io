@@ -21,8 +21,6 @@ const Welcome = () => {
           dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev
           dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev
         </div>
-      </div>
-      <div className="welcome-container-background2">
         <div className="welcome-background-text2">
           javascript javascript javascript javascript javascript javascript
           javascript javascript javascript javascript javascript javascript

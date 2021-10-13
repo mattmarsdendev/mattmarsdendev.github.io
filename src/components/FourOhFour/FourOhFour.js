@@ -15,7 +15,7 @@ const FourOhFour = () => {
           Math.random() * 15
         }s linear infinite`,
       }}
-      key={star}
+      key={star + Math.random()}
     ></div>
   ));
 

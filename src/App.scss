@@ -1,0 +1,137 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  animation: blurIn 1s linear;
+  /* background-color: #2f4c58; */
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(0.2rem);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .App {
+    .portfolio-container {
+      .portfolio-header {
+        font-size: 60px;
+      }
+
+      .portfolio-item-container {
+        flex-direction: column;
+        height: auto;
+
+        .portfolio-desc {
+          margin: 20px;
+        }
+      }
+      .portfolio-navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+
+        & > a {
+          padding: 14px 5px;
+        }
+      }
+      .subnav {
+        white-space: nowrap;
+
+        & > button {
+          padding: 14px 5px;
+        }
+      }
+    }
+
+    .welcome-container {
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .welcome-container-background {
+        width: 250%;
+      }
+
+      .hi {
+        font-size: 30vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+}
+
+@media only screen and (min-device-width: 1400px) {
+  .App {
+    .navbar-container {
+      width: 40vw;
+
+      .nav-links {
+        font-size: 30px;
+      }
+    }
+
+    .portfolio-container {
+      .portfolio-piece {
+        .portfolio-item-container {
+          .portfolio-image-container {
+            transform: scale(1.5);
+          }
+
+          .portfolio-info {
+            justify-content: space-evenly;
+
+            .portfolio-desc {
+              text-align: left;
+              line-height: 33px;
+              font-size: 25px;
+              width: 800px;
+            }
+            .portfolio-links {
+              font-size: 25px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .welcome-container {
+      // background-color: yellow;
+
+      .welcome-container-background {
+        // transform: rotate(0);
+        margin-top: -2000px;
+        width: 125%;
+
+        & > * {
+          font-size: 100px;
+          line-height: 2em;
+        }
+
+        .welcome-background-text {
+          margin-left: -1000px;
+          margin-top: -25px;
+        }
+
+        .welcome-background-text2 {
+          margin-top: 70px;
+          margin-left: -1000px;
+        }
+      }
+
+      .welcome-sub-container {
+        h2 {
+          font-size: 40px;
+        }
+        .other-text {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

@@ -25,22 +25,20 @@
     }
   }
 
-  .welcome-container-background,
-  .welcome-container-background2 {
+  .welcome-container-background {
     height: 100%;
     width: 100%;
     position: absolute;
     align-self: center;
     display: flex;
     opacity: 0.2;
+    transform: rotate(-45deg);
   }
 
   .welcome-background-text {
     position: absolute;
     height: 300%;
     color: rgba(128, 128, 128, 1);
-    // transition: 30s;
-    transform: rotate(-45deg);
     font-weight: 900;
     font-size: 50px;
     line-height: 7rem;
@@ -52,12 +50,11 @@
     position: absolute;
     height: 300%;
     color: rgba(15, 120, 184, 1);
-    transform: rotate(-45deg);
     font-weight: 900;
     font-size: 50px;
     line-height: 7rem;
-    margin-top: -450px;
-    margin-left: 100px;
+    margin-top: -745px;
+    margin-left: 150px;
   }
 
   .hi {
@@ -67,7 +64,6 @@
     z-index: 9;
     font-weight: 800;
     white-space: nowrap;
-    // margin-left: -135px;
   }
 
   .placeholder-text {
@@ -77,23 +73,10 @@
   .welcome-sub-container {
     display: flex;
     flex-direction: column;
-    // justify-content: flex-start;
-    margin-left: 150px;
+    margin-left: 11%;
   }
 
   .other-text {
     z-index: 10;
   }
 }
-
-// .welcome-container::after {
-//   content: "dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev  dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev  dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev  dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev dev";
-//   position: absolute;
-//   color: gray;
-//   transform: rotate(-45deg);
-//   overflow: hidden;
-//   font-weight: 900;
-//   font-size: 50px;
-//   opacity: 0.4;
-//   mix-blend-mode: multiply;
-// }

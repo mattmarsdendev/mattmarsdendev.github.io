@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import {
   Header,
   Navbar,
@@ -6,7 +6,7 @@ import {
   Portfolio,
   FourOhFour,
   Contact,
-} from "./Components/index.js";
+} from "./components/index.js";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
