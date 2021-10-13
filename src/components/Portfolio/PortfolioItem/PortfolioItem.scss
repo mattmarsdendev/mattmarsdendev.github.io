@@ -7,6 +7,16 @@
   position: relative;
   height: 55%;
   width: 100%;
+  animation: portfolioPiece 1s linear;
+}
+
+@keyframes portfolioPiece {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .portfolio-image,

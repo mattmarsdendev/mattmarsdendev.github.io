@@ -30,7 +30,6 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    // background: white;
     align-self: center;
     display: flex;
     opacity: 0.2;
@@ -39,21 +38,7 @@
   .welcome-background-text {
     position: absolute;
     height: 300%;
-    color: #0f78b8;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      90deg,
-      rgba(128, 128, 128, 1) 0%,
-      rgba(128, 128, 128, 1) 40%,
-      rgba(15, 120, 184, 1) 40%,
-      rgba(15, 120, 184, 1) 50%,
-      rgba(15, 120, 184, 1) 60%,
-      rgba(128, 128, 128, 1) 60%,
-      rgba(128, 128, 128, 1) 100%
-    );
-    background-size: 200% 100%;
-    background-position: 100%;
+    color: rgba(128, 128, 128, 1);
     // transition: 30s;
     transform: rotate(-45deg);
     font-weight: 900;
@@ -61,49 +46,19 @@
     line-height: 7rem;
     margin-top: -350px;
     margin-left: -250px;
-    // animation: colorIn 15s linear infinite;
   }
 
   .welcome-background-text2 {
     position: absolute;
     height: 300%;
-    // color: gray;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    // background-image: linear-gradient(to right, #0f78b8, #0f78b8 50%, gray 100%);
-    background-image: linear-gradient(
-      90deg,
-      rgba(15, 120, 184, 1) 0%,
-      rgba(15, 120, 184, 1) 40%,
-      rgba(128, 128, 128, 1) 40%,
-      rgba(128, 128, 128, 1) 50%,
-      rgba(128, 128, 128, 1) 60%,
-      rgba(15, 120, 184, 1) 60%,
-      rgba(15, 120, 184, 1) 100%
-    );
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: 30s;
+    color: rgba(15, 120, 184, 1);
     transform: rotate(-45deg);
     font-weight: 900;
     font-size: 50px;
     line-height: 7rem;
     margin-top: -450px;
     margin-left: 100px;
-    // animation: colorIn 15s linear infinite;
   }
-
-  @keyframes colorIn {
-    to {
-      transition: all 25s cubic-bezier(0, 0, 0.23, 1);
-      background-position: 0%;
-    }
-  }
-
-  // .welcome-background-text2:hover {
-  //   transition: all 25s cubic-bezier(0, 0, 0.23, 1);
-  //   background-position: 0%;
-  // }
 
   .hi {
     font-size: 21vw;

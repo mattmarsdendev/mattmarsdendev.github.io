@@ -8,15 +8,27 @@ const Contact = () => {
     <div className="contact-container">
       <h1>I'm pretty easy to find!</h1>
       <div className="contact-icon-container">
-        <a href="https://github.com/mmarsden89/" target="_blank">
+        <a
+          href="https://github.com/mmarsden89/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} className="icon" />
           <p>github</p>
         </a>
-        <a href="https://www.linkedin.com/in/matthewjmarsden/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/matthewjmarsden/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedin} className="icon" />
           <p>linkedin</p>
         </a>
-        <a href="mailto:mattmarsdendev@gmail.com" target="_blank">
+        <a
+          href="mailto:mattmarsdendev@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faEnvelope} className="icon" />
           <p>email</p>
         </a>

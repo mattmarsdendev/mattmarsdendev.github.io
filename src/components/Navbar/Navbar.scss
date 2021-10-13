@@ -18,5 +18,14 @@
   .nav-links {
     color: white;
     text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .nav-current {
+    color: #333;
   }
 }

@@ -5,7 +5,7 @@ const PortfolioItem = (props) => {
   const { name } = props;
 
   return (
-    <div className="portfolio-item-container">
+    <div className="portfolio-item-container" key={name}>
       <div className="portfolio-image-container">
         <img
           src={portfolioDictionary[name].image2}

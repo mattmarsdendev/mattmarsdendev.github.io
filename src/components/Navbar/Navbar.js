@@ -8,7 +8,6 @@ const Navbar = () => {
         home
       </NavLink>
       <NavLink
-        exact
         to="/portfolio"
         className="nav-links"
         activeClassName="nav-current"
