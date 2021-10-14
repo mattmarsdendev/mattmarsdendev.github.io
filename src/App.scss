@@ -30,9 +30,14 @@
         flex-direction: column;
         height: auto;
 
-        .portfolio-desc {
-          margin: 20px;
-          width: 100%;
+        .portfolio-info {
+          flex-direction: column-reverse;
+          margin-top: 15px;
+
+          .portfolio-desc {
+            margin: 20px;
+            width: 100%;
+          }
         }
       }
       .portfolio-navbar {
