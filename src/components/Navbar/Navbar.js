@@ -1,5 +1,6 @@
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
+import resume from "../../Styles/Assets/Matt Marsden Resume.pdf";
 
 const Navbar = () => {
   return (
@@ -22,7 +23,9 @@ const Navbar = () => {
       >
         contact
       </NavLink>
-      <p className="nav-links">resume</p>
+      <a href={resume} target="_blank" className="nav-links">
+        resume
+      </a>
     </div>
   );
 };
