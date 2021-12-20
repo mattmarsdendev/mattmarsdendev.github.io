@@ -78,14 +78,6 @@ const PortfolioNav = () => {
           >
             404
           </NavLink>
-          <NavLink
-            exact
-            to="/portfolio/mountainview"
-            className="nav-links"
-            activeClassName="current"
-          >
-            mountain view
-          </NavLink>
         </div>
       </div>
     </div>

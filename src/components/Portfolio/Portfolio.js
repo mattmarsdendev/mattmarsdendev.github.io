@@ -33,18 +33,6 @@ const Portfolio = () => {
               }}
             />
           </Route>
-          <Route exact path="/portfolio/mountainview">
-            <iframe
-              src="https://mmarsden89.github.io/mountain-view/"
-              title="mountain-view"
-              style={{
-                width: "100%",
-                height: "100%",
-                paddingTop: "20px",
-              }}
-              frameborder="0"
-            ></iframe>
-          </Route>
           <Route exact path="/portfolio/nationalparks">
             <PortfolioItem name="nationalparks" />
           </Route>
